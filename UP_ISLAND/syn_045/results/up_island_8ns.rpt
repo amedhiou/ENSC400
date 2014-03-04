@@ -1,0 +1,511 @@
+Information: Updating design information... (UID-85)
+Warning: Design 'up_island' contains 2 high-fanout nets. A fanout number of 1000 will be used for delay calculations involving these nets. (TIM-134)
+ 
+****************************************
+Report : reference
+Design : up_island
+Version: Z-2007.03-SP5
+Date   : Mon Mar  3 11:13:42 2014
+****************************************
+
+Attributes:
+    b - black box (unknown)
+   bo - allows boundary optimization
+    d - dont_touch
+   mo - map_only
+    h - hierarchical
+    n - noncombinational
+    r - removable
+    s - synthetic operator
+    u - contains unmapped logic
+
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+AND2_X1            NangateOpenCellLibrary
+                                  1.064000     125    133.000001  
+AND2_X2            NangateOpenCellLibrary
+                                  1.330000     112    148.960005  
+AND2_X4            NangateOpenCellLibrary
+                                  2.394000       6     14.364000  
+AND3_X1            NangateOpenCellLibrary
+                                  1.330000      18     23.940001  
+AND3_X2            NangateOpenCellLibrary
+                                  1.596000      19     30.323999  
+AND3_X4            NangateOpenCellLibrary
+                                  2.926000       3      8.778000  
+AND4_X1            NangateOpenCellLibrary
+                                  1.596000      44     70.223998  
+AND4_X2            NangateOpenCellLibrary
+                                  1.862000       4      7.448000  
+AOI21_X1           NangateOpenCellLibrary
+                                  1.064000      29     30.856000  
+AOI21_X2           NangateOpenCellLibrary
+                                  1.862000       4      7.448000  
+AOI22_X1           NangateOpenCellLibrary
+                                  1.330000     729    969.570031  
+AOI22_X2           NangateOpenCellLibrary
+                                  2.394000       8     19.152000  
+AOI211_X1          NangateOpenCellLibrary
+                                  1.330000      68     90.440003  
+AOI221_X1          NangateOpenCellLibrary
+                                  1.596000      92    146.831996  
+AOI221_X2          NangateOpenCellLibrary
+                                  2.926000       1      2.926000  
+AOI222_X1          NangateOpenCellLibrary
+                                  2.128000     185    393.680004  
+AOI222_X2          NangateOpenCellLibrary
+                                  3.724000       5     18.620000  
+BUF_X1             NangateOpenCellLibrary
+                                  0.798000      25     19.949999  
+BUF_X2             NangateOpenCellLibrary
+                                  1.064000      25     26.600000  
+BUF_X4             NangateOpenCellLibrary
+                                  1.862000      35     65.170000  
+BUF_X16            NangateOpenCellLibrary
+                                  6.650000       1      6.650000  
+DFFR_X1            NangateOpenCellLibrary
+                                  5.320000    1391   7400.120239  n
+DFFR_X2            NangateOpenCellLibrary
+                                  5.852000      53    310.156013  n
+DFFS_X1            NangateOpenCellLibrary
+                                  5.320000      25    133.000004  n
+DFFS_X2            NangateOpenCellLibrary
+                                  5.586000      14     78.204000  n
+INV_X1             NangateOpenCellLibrary
+                                  0.532000    1168    621.376006  
+INV_X2             NangateOpenCellLibrary
+                                  0.798000     259    206.681994  
+INV_X4             NangateOpenCellLibrary
+                                  1.330000      16     21.280001  
+INV_X8             NangateOpenCellLibrary
+                                  2.394000       4      9.576000  
+INV_X32            NangateOpenCellLibrary
+                                  8.778000      31    272.117996  
+NAND2_X1           NangateOpenCellLibrary
+                                  0.798000     270    215.459994  
+NAND2_X2           NangateOpenCellLibrary
+                                  1.330000      16     21.280001  
+NAND2_X4           NangateOpenCellLibrary
+                                  2.394000       5     11.970000  
+NAND3_X1           NangateOpenCellLibrary
+                                  1.064000     151    160.664002  
+NAND3_X2           NangateOpenCellLibrary
+                                  1.862000      17     31.654000  
+NAND3_X4           NangateOpenCellLibrary
+                                  3.458000       1      3.458000  
+NAND4_X1           NangateOpenCellLibrary
+                                  1.330000      34     45.220001  
+NAND4_X4           NangateOpenCellLibrary
+                                  4.788000       1      4.788000  
+NOR2_X1            NangateOpenCellLibrary
+                                  0.798000     199    158.801996  
+NOR2_X2            NangateOpenCellLibrary
+                                  1.330000      11     14.630000  
+NOR2_X4            NangateOpenCellLibrary
+                                  2.394000      11     26.334001  
+NOR3_X1            NangateOpenCellLibrary
+                                  1.064000      62     65.968001  
+NOR3_X2            NangateOpenCellLibrary
+                                  1.862000       6     11.172000  
+NOR3_X4            NangateOpenCellLibrary
+                                  3.724000       4     14.896000  
+NOR4_X1            NangateOpenCellLibrary
+                                  1.330000      75     99.750003  
+OAI21_X1           NangateOpenCellLibrary
+                                  1.064000      86     91.504001  
+OAI21_X2           NangateOpenCellLibrary
+                                  1.862000       1      1.862000  
+OAI21_X4           NangateOpenCellLibrary
+                                  3.458000       2      6.916000  
+OAI22_X1           NangateOpenCellLibrary
+                                  1.330000    1373   1826.090059  
+OAI22_X2           NangateOpenCellLibrary
+                                  2.394000       4      9.576000  
+OAI211_X1          NangateOpenCellLibrary
+                                  1.330000     114    151.620005  
+OAI211_X2          NangateOpenCellLibrary
+                                  2.394000       1      2.394000  
+OAI221_X1          NangateOpenCellLibrary
+                                  1.596000     238    379.847990  
+OAI221_X4          NangateOpenCellLibrary
+                                  3.458000       9     31.122000  
+OAI222_X1          NangateOpenCellLibrary
+                                  2.128000     241    512.848005  
+OAI222_X2          NangateOpenCellLibrary
+                                  3.724000       1      3.724000  
+OAI222_X4          NangateOpenCellLibrary
+                                  3.724000      28    104.271999  
+OR2_X1             NangateOpenCellLibrary
+                                  1.064000     177    188.328002  
+OR2_X2             NangateOpenCellLibrary
+                                  1.330000     442    587.860019  
+OR2_X4             NangateOpenCellLibrary
+                                  2.394000       6     14.364000  
+OR3_X1             NangateOpenCellLibrary
+                                  1.330000       3      3.990000  
+OR4_X1             NangateOpenCellLibrary
+                                  1.596000       1      1.596000  
+SRAM               SRAM         589.722229       2   1179.444458  b, d
+XNOR2_X1           NangateOpenCellLibrary
+                                  1.596000      12     19.151999  
+XOR2_X1            NangateOpenCellLibrary
+                                  1.596000      39     62.243998  
+up_island_DW01_add_0           1085.545994       1   1085.545994  h
+up_island_DW01_add_1            126.616000       1    126.616000  h
+up_island_DW01_add_2             55.327999       1     55.327999  h
+up_island_DW01_add_3            247.911996       1    247.911996  h
+up_island_DW01_bsh_1            838.698010       1    838.698010  h
+up_island_DW01_cmp6_0            97.622000       1     97.622000  h
+up_island_DW01_sub_0            291.801996       1    291.801996  h
+up_island_DW_cmp_0              323.722003       1    323.722003  h
+up_island_DW_cmp_1              336.490003       1    336.490003  h
+up_island_DW_leftsh_1           670.852008       1    670.852008  h
+up_island_DW_mult_tc_1         8370.754133       1   8370.754133  h
+up_island_DW_rbsh_1             838.698010       1    838.698010  h
+up_island_DW_rightsh_1          667.394008       1    667.394008  h
+up_island_DW_sra_1              707.294008       1    707.294008  h
+-----------------------------------------------------------------------------
+Total 79 references                                 32010.972993
+1
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+        -transition_time
+        -capacitance
+Design : up_island
+Version: Z-2007.03-SP5
+Date   : Mon Mar  3 11:13:42 2014
+****************************************
+
+ # A fanout number of 1000 was used for high fanout net computations.
+
+Operating Conditions: slow   Library: NangateOpenCellLibrary
+Wire Load Model Mode: top
+
+  Startpoint: UUT/Mpath/the_mult/Pipe_mult_reg/data_out_reg[1]
+              (rising edge-triggered flip-flop clocked by CLK)
+  Endpoint: UUT/Mpath/the_mult/MulHi_reg/data_out_reg[31]
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: CLK
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  up_island          5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                          Cap     Trans      Incr       Path
+  ------------------------------------------------------------------------------------
+  clock CLK (rise edge)                                             0.00       0.00
+  clock network delay (ideal)                                       0.00       0.00
+  UUT/Mpath/the_mult/Pipe_mult_reg/data_out_reg[1]/CK (DFFR_X1)
+                                                          0.00      0.00 #     0.00 r
+  UUT/Mpath/the_mult/Pipe_mult_reg/data_out_reg[1]/Q (DFFR_X1)
+                                                6.79      0.03      0.28       0.28 f
+  UUT/Mpath/the_mult/accumulate/add_391/B[1] (up_island_DW01_add_0)
+                                                                    0.00       0.28 f
+  UUT/Mpath/the_mult/accumulate/add_391/U268/ZN (INV_X2)
+                                                5.22      0.03      0.08       0.36 r
+  UUT/Mpath/the_mult/accumulate/add_391/U266/ZN (NAND2_X1)
+                                                1.98      0.02      0.05       0.42 f
+  UUT/Mpath/the_mult/accumulate/add_391/U674/ZN (AND2_X2)
+                                                6.65      0.02      0.12       0.53 f
+  UUT/Mpath/the_mult/accumulate/add_391/U272/ZN (NAND2_X1)
+                                                1.88      0.03      0.06       0.60 r
+  UUT/Mpath/the_mult/accumulate/add_391/U260/ZN (NAND3_X1)
+                                                3.84      0.04      0.08       0.68 f
+  UUT/Mpath/the_mult/accumulate/add_391/U270/ZN (NAND2_X1)
+                                                5.91      0.07      0.11       0.78 r
+  UUT/Mpath/the_mult/accumulate/add_391/U255/ZN (NAND3_X1)
+                                                3.35      0.04      0.10       0.88 f
+  UUT/Mpath/the_mult/accumulate/add_391/U479/ZN (AOI21_X2)
+                                                3.28      0.08      0.12       1.01 r
+  UUT/Mpath/the_mult/accumulate/add_391/U78/ZN (AND3_X2)
+                                                1.88      0.03      0.15       1.15 r
+  UUT/Mpath/the_mult/accumulate/add_391/U579/ZN (NAND2_X1)
+                                                1.88      0.02      0.05       1.20 f
+  UUT/Mpath/the_mult/accumulate/add_391/U604/ZN (NAND2_X1)
+                                                1.92      0.03      0.06       1.26 r
+  UUT/Mpath/the_mult/accumulate/add_391/U491/ZN (AND2_X2)
+                                                1.88      0.02      0.09       1.35 r
+  UUT/Mpath/the_mult/accumulate/add_391/U693/ZN (NAND3_X1)
+                                                1.88      0.03      0.06       1.41 f
+  UUT/Mpath/the_mult/accumulate/add_391/U779/ZN (NAND2_X1)
+                                                3.25      0.05      0.08       1.49 r
+  UUT/Mpath/the_mult/accumulate/add_391/U602/ZN (AND2_X2)
+                                                3.84      0.03      0.11       1.60 r
+  UUT/Mpath/the_mult/accumulate/add_391/U607/ZN (NAND2_X1)
+                                                3.20      0.02      0.06       1.66 f
+  UUT/Mpath/the_mult/accumulate/add_391/U764/ZN (NAND2_X1)
+                                                1.88      0.03      0.06       1.72 r
+  UUT/Mpath/the_mult/accumulate/add_391/U366/ZN (NAND3_X1)
+                                                3.84      0.04      0.08       1.80 f
+  UUT/Mpath/the_mult/accumulate/add_391/U362/ZN (NAND2_X1)
+                                                3.84      0.05      0.09       1.89 r
+  UUT/Mpath/the_mult/accumulate/add_391/U354/ZN (NAND3_X1)
+                                                5.22      0.05      0.10       1.99 f
+  UUT/Mpath/the_mult/accumulate/add_391/U212/ZN (NAND2_X1)
+                                                1.88      0.03      0.08       2.07 r
+  UUT/Mpath/the_mult/accumulate/add_391/U210/ZN (NAND3_X1)
+                                                3.31      0.04      0.07       2.14 f
+  UUT/Mpath/the_mult/accumulate/add_391/U207/ZN (NAND2_X2)
+                                                5.96      0.04      0.09       2.23 r
+  UUT/Mpath/the_mult/accumulate/add_391/U205/ZN (OAI211_X1)
+                                                3.83      0.05      0.11       2.34 f
+  UUT/Mpath/the_mult/accumulate/add_391/syn444/ZN (AND2_X2)
+                                                3.84      0.02      0.12       2.46 f
+  UUT/Mpath/the_mult/accumulate/add_391/U85/ZN (NAND2_X1)
+                                                3.20      0.04      0.07       2.53 r
+  UUT/Mpath/the_mult/accumulate/add_391/U228/ZN (NAND2_X1)
+                                                1.88      0.02      0.06       2.59 f
+  UUT/Mpath/the_mult/accumulate/add_391/U374/ZN (NAND2_X1)
+                                                1.92      0.03      0.06       2.65 r
+  UUT/Mpath/the_mult/accumulate/add_391/U230/ZN (AND2_X2)
+                                                3.84      0.03      0.10       2.75 r
+  UUT/Mpath/the_mult/accumulate/add_391/U125/ZN (NAND3_X1)
+                                                1.88      0.03      0.06       2.82 f
+  UUT/Mpath/the_mult/accumulate/add_391/U229/ZN (NAND2_X1)
+                                                1.91      0.03      0.07       2.88 r
+  UUT/Mpath/the_mult/accumulate/add_391/U416/ZN (NAND3_X1)
+                                                3.31      0.04      0.08       2.97 f
+  UUT/Mpath/the_mult/accumulate/add_391/U117/ZN (NAND2_X2)
+                                                5.94      0.04      0.09       3.05 r
+  UUT/Mpath/the_mult/accumulate/add_391/syn117/ZN (NAND3_X1)
+                                                1.88      0.03      0.08       3.13 f
+  UUT/Mpath/the_mult/accumulate/add_391/U178/ZN (NAND2_X1)
+                                                1.88      0.03      0.06       3.20 r
+  UUT/Mpath/the_mult/accumulate/add_391/U177/ZN (NAND2_X1)
+                                                5.25      0.03      0.07       3.27 f
+  UUT/Mpath/the_mult/accumulate/add_391/U373/ZN (AOI21_X1)
+                                                1.92      0.09      0.12       3.38 r
+  UUT/Mpath/the_mult/accumulate/add_391/U97/ZN (AND2_X2)
+                                                3.84      0.03      0.13       3.51 r
+  UUT/Mpath/the_mult/accumulate/add_391/U731/ZN (NAND2_X1)
+                                                3.20      0.02      0.06       3.57 f
+  UUT/Mpath/the_mult/accumulate/add_391/U326/ZN (NAND2_X1)
+                                                1.91      0.03      0.06       3.63 r
+  UUT/Mpath/the_mult/accumulate/add_391/U325/ZN (NAND3_X1)
+                                                3.84      0.04      0.09       3.72 f
+  UUT/Mpath/the_mult/accumulate/add_391/U323/ZN (NAND2_X1)
+                                                1.88      0.03      0.07       3.79 r
+  UUT/Mpath/the_mult/accumulate/add_391/U317/ZN (NAND3_X1)
+                                                5.22      0.05      0.09       3.88 f
+  UUT/Mpath/the_mult/accumulate/add_391/U319/ZN (NAND2_X1)
+                                                3.84      0.05      0.10       3.98 r
+  UUT/Mpath/the_mult/accumulate/add_391/U625/ZN (NAND3_X1)
+                                                3.20      0.04      0.08       4.06 f
+  UUT/Mpath/the_mult/accumulate/add_391/U711/ZN (NAND2_X1)
+                                                1.88      0.03      0.07       4.13 r
+  UUT/Mpath/the_mult/accumulate/add_391/U832/ZN (NAND3_X1)
+                                                3.84      0.04      0.08       4.21 f
+  UUT/Mpath/the_mult/accumulate/add_391/U620/ZN (NAND2_X1)
+                                                3.84      0.05      0.09       4.30 r
+  UUT/Mpath/the_mult/accumulate/add_391/U556/ZN (NAND3_X1)
+                                                3.20      0.04      0.08       4.38 f
+  UUT/Mpath/the_mult/accumulate/add_391/U800/ZN (NAND2_X1)
+                                                1.88      0.03      0.07       4.45 r
+  UUT/Mpath/the_mult/accumulate/add_391/U823/ZN (NAND3_X1)
+                                                3.84      0.04      0.08       4.53 f
+  UUT/Mpath/the_mult/accumulate/add_391/U794/ZN (NAND2_X1)
+                                                5.25      0.06      0.10       4.63 r
+  UUT/Mpath/the_mult/accumulate/add_391/U122/ZN (NAND3_X1)
+                                                1.88      0.03      0.09       4.72 f
+  UUT/Mpath/the_mult/accumulate/add_391/U120/ZN (NAND2_X1)
+                                                1.88      0.04      0.07       4.79 r
+  UUT/Mpath/the_mult/accumulate/add_391/U118/ZN (NAND2_X1)
+                                                3.84      0.02      0.06       4.85 f
+  UUT/Mpath/the_mult/accumulate/add_391/U381/ZN (NAND2_X1)
+                                                1.88      0.03      0.06       4.91 r
+  UUT/Mpath/the_mult/accumulate/add_391/U472/ZN (NAND2_X1)
+                                                3.98      0.03      0.06       4.97 f
+  UUT/Mpath/the_mult/accumulate/add_391/U473/ZN (AND2_X2)
+                                                3.84      0.02      0.11       5.08 f
+  UUT/Mpath/the_mult/accumulate/add_391/U219/ZN (NAND2_X1)
+                                                1.91      0.03      0.06       5.14 r
+  UUT/Mpath/the_mult/accumulate/add_391/U218/ZN (NAND3_X1)
+                                                3.84      0.04      0.09       5.23 f
+  UUT/Mpath/the_mult/accumulate/add_391/U204/ZN (NAND2_X1)
+                                                1.89      0.03      0.08       5.30 r
+  UUT/Mpath/the_mult/accumulate/add_391/U198/ZN (OAI211_X1)
+                                                1.95      0.04      0.09       5.39 f
+  UUT/Mpath/the_mult/accumulate/add_391/U187/ZN (INV_X1)
+                                                3.87      0.04      0.08       5.47 r
+  UUT/Mpath/the_mult/accumulate/add_391/U183/ZN (OAI211_X1)
+                                                1.88      0.03      0.09       5.56 f
+  UUT/Mpath/the_mult/accumulate/add_391/U105/ZN (NAND2_X1)
+                                                3.87      0.05      0.09       5.65 r
+  UUT/Mpath/the_mult/accumulate/add_391/U108/ZN (NAND3_X1)
+                                                3.20      0.04      0.09       5.74 f
+  UUT/Mpath/the_mult/accumulate/add_391/U404/ZN (NAND2_X1)
+                                                1.88      0.03      0.07       5.81 r
+  UUT/Mpath/the_mult/accumulate/add_391/U912/ZN (NAND3_X1)
+                                                3.31      0.04      0.07       5.88 f
+  UUT/Mpath/the_mult/accumulate/add_391/U130/ZN (NAND2_X2)
+                                                5.92      0.04      0.09       5.97 r
+  UUT/Mpath/the_mult/accumulate/add_391/U833/ZN (NAND3_X1)
+                                                1.88      0.03      0.08       6.05 f
+  UUT/Mpath/the_mult/accumulate/add_391/U351/ZN (NAND2_X1)
+                                                3.87      0.05      0.08       6.13 r
+  UUT/Mpath/the_mult/accumulate/add_391/U345/ZN (NAND3_X1)
+                                                5.22      0.05      0.11       6.24 f
+  UUT/Mpath/the_mult/accumulate/add_391/U348/ZN (NAND2_X1)
+                                                3.20      0.04      0.09       6.33 r
+  UUT/Mpath/the_mult/accumulate/add_391/U797/ZN (NAND3_X1)
+                                                3.84      0.04      0.09       6.41 f
+  UUT/Mpath/the_mult/accumulate/add_391/U400/ZN (NAND2_X1)
+                                                3.84      0.05      0.09       6.50 r
+  UUT/Mpath/the_mult/accumulate/add_391/U396/ZN (NAND3_X1)
+                                                3.84      0.04      0.09       6.59 f
+  UUT/Mpath/the_mult/accumulate/add_391/U866/ZN (NAND2_X1)
+                                                1.91      0.03      0.07       6.66 r
+  UUT/Mpath/the_mult/accumulate/add_391/U683/ZN (NAND3_X1)
+                                                3.20      0.04      0.08       6.75 f
+  UUT/Mpath/the_mult/accumulate/add_391/U787/ZN (NAND2_X1)
+                                                1.88      0.03      0.07       6.82 r
+  UUT/Mpath/the_mult/accumulate/add_391/U638/ZN (NAND3_X1)
+                                                3.84      0.04      0.08       6.90 f
+  UUT/Mpath/the_mult/accumulate/add_391/U650/ZN (NAND2_X1)
+                                                1.92      0.03      0.07       6.97 r
+  UUT/Mpath/the_mult/accumulate/add_391/U651/ZN (NAND2_X1)
+                                                3.20      0.02      0.06       7.03 f
+  UUT/Mpath/the_mult/accumulate/add_391/U633/ZN (NAND2_X1)
+                                                1.92      0.03      0.06       7.09 r
+  UUT/Mpath/the_mult/accumulate/add_391/U519/ZN (AND2_X2)
+                                                5.86      0.04      0.11       7.21 r
+  UUT/Mpath/the_mult/accumulate/add_391/U158/ZN (NAND3_X1)
+                                                3.84      0.04      0.08       7.29 f
+  UUT/Mpath/the_mult/accumulate/add_391/U307/ZN (NAND2_X1)
+                                                1.91      0.03      0.07       7.36 r
+  UUT/Mpath/the_mult/accumulate/add_391/U306/ZN (NAND3_X1)
+                                                3.84      0.04      0.09       7.45 f
+  UUT/Mpath/the_mult/accumulate/add_391/U305/ZN (NAND2_X1)
+                                                1.91      0.03      0.07       7.52 r
+  UUT/Mpath/the_mult/accumulate/add_391/U299/ZN (NAND3_X1)
+                                                5.22      0.05      0.10       7.62 f
+  UUT/Mpath/the_mult/accumulate/add_391/U301/ZN (NAND2_X1)
+                                                5.22      0.06      0.11       7.73 r
+  UUT/Mpath/the_mult/accumulate/add_391/U790/ZN (NAND3_X1)
+                                                3.84      0.04      0.09       7.82 f
+  UUT/Mpath/the_mult/accumulate/add_391/U291/ZN (NAND2_X1)
+                                                1.88      0.03      0.07       7.89 r
+  UUT/Mpath/the_mult/accumulate/add_391/U82/ZN (NAND3_X1)
+                                                1.88      0.03      0.06       7.96 f
+  UUT/Mpath/the_mult/accumulate/add_391/U289/ZN (NAND2_X1)
+                                                3.41      0.05      0.08       8.04 r
+  UUT/Mpath/the_mult/accumulate/add_391/U7/ZN (OAI211_X2)
+                                                5.22      0.04      0.11       8.14 f
+  UUT/Mpath/the_mult/accumulate/add_391/U5/ZN (NAND2_X1)
+                                                3.14      0.04      0.09       8.23 r
+  UUT/Mpath/the_mult/accumulate/add_391/U56/ZN (NAND3_X1)
+                                                3.84      0.04      0.09       8.32 f
+  UUT/Mpath/the_mult/accumulate/add_391/U2/ZN (NAND2_X1)
+                                                3.14      0.04      0.08       8.40 r
+  UUT/Mpath/the_mult/accumulate/add_391/U244/ZN (NAND3_X1)
+                                                1.88      0.03      0.07       8.47 f
+  UUT/Mpath/the_mult/accumulate/add_391/U241/ZN (NAND2_X1)
+                                                3.14      0.04      0.08       8.55 r
+  UUT/Mpath/the_mult/accumulate/add_391/U238/ZN (NAND3_X1)
+                                                1.88      0.03      0.07       8.62 f
+  UUT/Mpath/the_mult/accumulate/add_391/U239/ZN (NAND2_X1)
+                                                1.92      0.03      0.06       8.68 r
+  UUT/Mpath/the_mult/accumulate/add_391/U851/ZN (NAND2_X1)
+                                                1.88      0.02      0.05       8.73 f
+  UUT/Mpath/the_mult/accumulate/add_391/SUM[63] (up_island_DW01_add_0)
+                                                                    0.00       8.73 f
+  U5796/ZN (NAND2_X1)                           1.88      0.04      0.06       8.79 r
+  U5797/ZN (NAND2_X1)                           1.40      0.02      0.05       8.85 f
+  UUT/Mpath/the_mult/MulHi_reg/data_out_reg[31]/D (DFFR_X1)
+                                                          0.02      0.01       8.85 f
+  data arrival time                                                            8.85
+
+  clock CLK (rise edge)                                             8.00       8.00
+  clock network delay (ideal)                                       0.00       8.00
+  UUT/Mpath/the_mult/MulHi_reg/data_out_reg[31]/CK (DFFR_X1)        0.00       8.00 r
+  library setup time                                               -0.16       7.84
+  data required time                                                           7.84
+  ------------------------------------------------------------------------------------
+  data required time                                                           7.84
+  data arrival time                                                           -8.85
+  ------------------------------------------------------------------------------------
+  slack (VIOLATED)                                                            -1.01
+
+
+  Startpoint: reset (input port clocked by CLK)
+  Endpoint: UUT/Mcontrol/Program_counter/out_pc_reg[1]/RN
+            (internal path endpoint)
+  Path Group: default
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  up_island          5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                          Cap     Trans      Incr       Path
+  ------------------------------------------------------------------------------------
+  input external delay                                              0.20       0.20 r
+  reset (in)                                 1883.03      1.00      0.00 #     0.20 r
+  UUT/Mcontrol/Program_counter/out_pc_reg[1]/RN (DFFR_X2)
+                                                          1.00      0.06 #     0.26 r
+  data arrival time                                                            0.26
+
+  max_delay                                                        40.00      40.00
+  output external delay                                             0.00      40.00
+  data required time                                                          40.00
+  ------------------------------------------------------------------------------------
+  data required time                                                          40.00
+  data arrival time                                                           -0.26
+  ------------------------------------------------------------------------------------
+  slack (MET)                                                                 39.74
+
+
+1
+Loading db file '/ensc/fac1/fcampi/SOCLAB/LIBRARIES/NangateOpenCellLibrary_PDKv1_3_v2010_12/Front_End/DB/NangateOpenCellLibrary_slow.db'
+Information: Propagating switching activity (low effort zero delay simulation). (PWR-6)
+Warning: Design has unannotated primary inputs. (PWR-414)
+Warning: Design has unannotated sequential cell outputs. (PWR-415)
+Warning: Design has unannotated black-box outputs. (PWR-428)
+ 
+****************************************
+Report : power
+        -analysis_effort low
+Design : up_island
+Version: Z-2007.03-SP5
+Date   : Mon Mar  3 11:13:45 2014
+****************************************
+
+
+Library(s) Used:
+
+    NangateOpenCellLibrary (File: /ensc/fac1/fcampi/SOCLAB/LIBRARIES/NangateOpenCellLibrary_PDKv1_3_v2010_12/Front_End/DB/NangateOpenCellLibrary_slow.db)
+    SRAM (File: /ensc/grad1/cmc-16/ENSC400/UP_ISLAND/syn_045/SRAM.db)
+
+Information: The library cell 'SRAM' in the library 'SRAM' is not characterized for internal power. (PWR-227)
+Information: The design contains cells, other than constants and black boxes, that are not characterized for internal power. (PWR-228)
+
+Operating Conditions: slow   Library: NangateOpenCellLibrary
+Wire Load Model Mode: top
+
+Design        Wire Load Model            Library
+------------------------------------------------
+up_island              5K_hvratio_1_1    NangateOpenCellLibrary
+
+
+Global Operating Voltage = 0.95 
+Power-specific unit information :
+    Voltage Units = 1V
+    Capacitance Units = 1.000000ff
+    Time Units = 1ns
+    Dynamic Power Units = 1uW    (derived from V,C,T units)
+    Leakage Power Units = 1nW
+
+
+  Cell Internal Power  =   1.1067 mW   (88%)
+  Net Switching Power  = 146.9104 uW   (12%)
+                         ---------
+Total Dynamic Power    =   1.2536 mW  (100%)
+
+Cell Leakage Power     = 523.2125 uW
+
+1

@@ -1,0 +1,27 @@
+#######################################################
+#                                                     #
+#  Encounter Command Logging File                     #
+#  Created on Mon Mar  3 15:30:14 2014                #
+#                                                     #
+#######################################################
+
+#@(#)CDS: Encounter v09.10-p004_1 (32bit) 12/02/2009 20:50 (Linux 2.6)
+#@(#)CDS: NanoRoute v09.10-p020 NR091118-1115/USR62-UB (database version 2.30, 86.1.1) {superthreading v1.13}
+#@(#)CDS: CeltIC v09.10-p001_1 (32bit) 11/20/2009 16:06:17 (Linux 2.6.9-78.0.25.ELsmp)
+#@(#)CDS: CTE 09.10-p003_1 (32bit) Dec  2 2009 16:44:23 (Linux 2.6.9-78.ELsmp)
+#@(#)CDS: CPE v09.10-p005
+
+set_global report_precision 5
+loadConfig inputs/up_island.conf
+setCteReport
+saveDesign ./DBS/01-importDesign.enc -relativePath -compress
+setAnalysisMode -analysistype single -checkType setup -skew true -clockPropagation sdcControl
+timeDesign -drvReports -slackReports -pathreports -expandReg2Reg -expandedViews -reportOnly -numPaths 10 -outDir results/timing/01-importDesign-timeDesign.setup
+report_timing -net -format {instance arc cell slew net annotation load delay arrival} -max_paths 10 >  results/timing/01_Timing.rpt
+summaryReport -outfile results/summary/01-importDesign.rpt
+fit
+floorPlan -su 1 0.94 4 4 4 4
+editPin -fixedPin 1 -snap TRACK -side Top -unit TRACK -layer 2 -spreadType center -spacing 5.0 -pin {clk rdn wrn {address[0]} {address[1]} {address[2]} {address[3]} {address[4]} {address[5]} {address[6]} {address[7]} {address[8]} {address[9]} {address[10]} {bit_wen[0]} {bit_wen[1]} {bit_wen[2]} {bit_wen[3]} {bit_wen[4]} {bit_wen[5]} {bit_wen[6]} {bit_wen[7]} {bit_wen[8]} {bit_wen[9]} {bit_wen[10]} {bit_wen[11]} {bit_wen[12]} {bit_wen[13]} {bit_wen[14]} {bit_wen[15]} {bit_wen[16]} {bit_wen[17]} {bit_wen[18]} {bit_wen[19]} {bit_wen[20]} {bit_wen[21]} {bit_wen[22]} {bit_wen[23]} {bit_wen[24]} {bit_wen[25]} {bit_wen[26]} {bit_wen[27]} {bit_wen[28]} {bit_wen[29]} {bit_wen[30]} {bit_wen[31]} {data_in[0]} {data_in[1]} {data_in[2]} {data_in[3]} {data_in[4]} {data_in[5]} {data_in[6]} {data_in[7]} {data_in[8]} {data_in[9]} {data_in[10]} {data_in[11]} {data_in[12]} {data_in[13]} {data_in[14]} {data_in[15]} {data_in[16]} {data_in[17]} {data_in[18]} {data_in[19]} {data_in[20]} {data_in[21]} {data_in[22]} {data_in[23]} {data_in[24]} {data_in[25]} {data_in[26]} {data_in[27]} {data_in[28]} {data_in[29]} {data_in[30]} {data_in[31]}}
+violationBrowser -all -no_display_false
+checkPinAssignment
+fit

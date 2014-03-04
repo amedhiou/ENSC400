@@ -1,0 +1,168 @@
+#######################################################
+#                                                     #
+#  Encounter Command Logging File                     #
+#  Created on Mon Mar  3 16:42:26 2014                #
+#                                                     #
+#######################################################
+
+#@(#)CDS: Encounter v09.10-p004_1 (32bit) 12/02/2009 20:50 (Linux 2.6)
+#@(#)CDS: NanoRoute v09.10-p020 NR091118-1115/USR62-UB (database version 2.30, 86.1.1) {superthreading v1.13}
+#@(#)CDS: CeltIC v09.10-p001_1 (32bit) 11/20/2009 16:06:17 (Linux 2.6.9-78.0.25.ELsmp)
+#@(#)CDS: CTE 09.10-p003_1 (32bit) Dec  2 2009 16:44:23 (Linux 2.6.9-78.ELsmp)
+#@(#)CDS: CPE v09.10-p005
+
+set_global report_precision 5
+loadConfig inputs/up_island.conf
+setCteReport
+saveDesign ./DBS/01-importDesign.enc -relativePath -compress
+setAnalysisMode -analysistype single -checkType setup -skew true -clockPropagation sdcControl
+timeDesign -drvReports -slackReports -pathreports -expandReg2Reg -expandedViews -reportOnly -numPaths 10 -outDir results/timing/01-importDesign-timeDesign.setup
+report_timing -net -format {instance arc cell slew net annotation load delay arrival} -max_paths 10 >  results/timing/01_Timing.rpt
+summaryReport -outfile results/summary/01-importDesign.rpt
+floorPlan -su 1 0.94 4 4 4 4
+editPin -fixedPin 1 -snap TRACK -side Top -unit TRACK -layer 2 -spreadType center -spacing 5.0 -pin {CLK reset BUS_NREADY {BUS_DATA_INBUS[0]} {BUS_DATA_INBUS[1]} {BUS_DATA_INBUS[2]} {BUS_DATA_INBUS[3]} {BUS_DATA_INBUS[4]} {BUS_DATA_INBUS[5]} {BUS_DATA_INBUS[6]} {BUS_DATA_INBUS[7]} {BUS_DATA_INBUS[8]} {BUS_DATA_INBUS[9]} {BUS_DATA_INBUS[10]} {BUS_DATA_INBUS[11]} {BUS_DATA_INBUS[12]} {BUS_DATA_INBUS[13]} {BUS_DATA_INBUS[14]} {BUS_DATA_INBUS[15]} {BUS_DATA_INBUS[16]} {BUS_DATA_INBUS[17]} {BUS_DATA_INBUS[18]} {BUS_DATA_INBUS[19]} {BUS_DATA_INBUS[20]} {BUS_DATA_INBUS[21]} {BUS_DATA_INBUS[22]} {BUS_DATA_INBUS[23]} {BUS_DATA_INBUS[24]} {BUS_DATA_INBUS[25]} {BUS_DATA_INBUS[26]} {BUS_DATA_INBUS[27]} {BUS_DATA_INBUS[28]} {BUS_DATA_INBUS[29]} {BUS_DATA_INBUS[30]} {BUS_DATA_INBUS[31]}}
+editPin -fixedPin 1 -snap TRACK -side Bottom -unit TRACK -layer 2 -spreadType center -spacing 10.0 -pin { BUS_BUSY BUS_MW BUS_MR {BUS_ADDR_OUTBUS[0]} {BUS_ADDR_OUTBUS[1]} {BUS_ADDR_OUTBUS[2]} {BUS_ADDR_OUTBUS[3]} {BUS_ADDR_OUTBUS[4]} {BUS_ADDR_OUTBUS[5]} {BUS_ADDR_OUTBUS[6]} {BUS_ADDR_OUTBUS[7]} {BUS_ADDR_OUTBUS[8]} {BUS_ADDR_OUTBUS[9]} {BUS_ADDR_OUTBUS[10]} {BUS_ADDR_OUTBUS[11]} {BUS_ADDR_OUTBUS[12]} {BUS_ADDR_OUTBUS[13]} {BUS_ADDR_OUTBUS[14]} {BUS_ADDR_OUTBUS[15]} {BUS_ADDR_OUTBUS[16]} {BUS_ADDR_OUTBUS[17]} {BUS_ADDR_OUTBUS[18]} {BUS_ADDR_OUTBUS[19]} {BUS_ADDR_OUTBUS[20]} {BUS_ADDR_OUTBUS[21]} {BUS_ADDR_OUTBUS[22]} {BUS_ADDR_OUTBUS[23]} {BUS_ADDR_OUTBUS[24]} {BUS_ADDR_OUTBUS[25]} {BUS_ADDR_OUTBUS[26]} {BUS_ADDR_OUTBUS[27]} {BUS_ADDR_OUTBUS[28]} {BUS_ADDR_OUTBUS[29]} {BUS_ADDR_OUTBUS[30]} {BUS_ADDR_OUTBUS[31]} {BUS_DATA_OUTBUS[0]} {BUS_DATA_OUTBUS[1]} {BUS_DATA_OUTBUS[2]} {BUS_DATA_OUTBUS[3]} {BUS_DATA_OUTBUS[4]} {BUS_DATA_OUTBUS[5]} {BUS_DATA_OUTBUS[6]} {BUS_DATA_OUTBUS[7]} {BUS_DATA_OUTBUS[8]} {BUS_DATA_OUTBUS[9]} {BUS_DATA_OUTBUS[10]} {BUS_DATA_OUTBUS[11]} {BUS_DATA_OUTBUS[12]} {BUS_DATA_OUTBUS[13]} {BUS_DATA_OUTBUS[14]} {BUS_DATA_OUTBUS[15]}  {BUS_DATA_OUTBUS[16]} {BUS_DATA_OUTBUS[17]} {BUS_DATA_OUTBUS[18]} {BUS_DATA_OUTBUS[19]} {BUS_DATA_OUTBUS[20]} {BUS_DATA_OUTBUS[21]} {BUS_DATA_OUTBUS[22]} {BUS_DATA_OUTBUS[23]} {BUS_DATA_OUTBUS[24]} {BUS_DATA_OUTBUS[25]} {BUS_DATA_OUTBUS[26]} {BUS_DATA_OUTBUS[27]} {BUS_DATA_OUTBUS[28]} {BUS_DATA_OUTBUS[29]} {BUS_DATA_OUTBUS[30]} {BUS_DATA_OUTBUS[31]}}
+addRing -width_left 0.8 -width_bottom 0.8 -width_top 0.8 -width_right 0.8 -spacing_bottom 0.8 -spacing_top 0.8 -spacing_left 0.8 -spacing_right 0.8 -layer_top metal9 -layer_bottom metal9 -layer_left metal10 -layer_right metal10 -lb 1 -lt 1 -rb 1 -rt 1 -nets {VDD VSS}
+addStripe -direction vertical -set_to_set_distance 9.6 -spacing 4 -layer metal10 -width 0.8 -nets {VSS VDD }
+sroute -noPadPins -noPadRings -routingEffort allowShortJogs -nets {VDD VSS}
+defOut -floorplan -noStdCells results/SRAM_floor.def
+saveDesign ./DBS/02-floorplan.enc -relativePath -compress
+lefOut results/up_island.lef
+do_extract_model results/$TOP.lib
+summaryReport -outfile results/summary/02-floorplan.rpt
+placeDesign
+checkPlace
+saveNetlist results/verilog/up_island.place.v
+saveDesign ./DBS/03-place.enc -relativePath -compress
+trialRoute
+setExtractRCMode -engine preRoute
+setDesignMode -process 90
+extractRC
+setAnalysisMode -checktype setup -skew true -clockPropagation sdcControl
+setAnalysisMode -analysistype single -checkType setup -skew true -clockPropagation sdcControl
+timeDesign -drvReports -slackReports -pathreports -expandReg2Reg -expandedViews -reportOnly -numPaths 10 -outDir results/timing/03-place-timeDesign.setup
+report_timing -net -format {instance arc cell slew net annotation load delay arrival} -max_paths 10 > results/timing/03-place.setup.rpt
+summaryReport -outfile results/summary/03-place.rpt
+initECO ipo1.txt
+trialRoute -highEffort
+setExtractRCMode -engine preRoute
+extractRC
+optDesign -preCTS
+endECO
+cleanupECO
+saveNetlist results/verilog/up_island.postplaceopt.v
+saveDesign ./DBS/04-postPlaceOpt.enc -relativePath -compress
+setAnalysisMode -analysistype single -checkType setup -skew true -clockPropagation sdcControl
+timeDesign -drvReports -slackReports -pathreports -expandReg2Reg -expandedViews -reportOnly -numPaths 10 -outDir ./results/timing/04-postPlaceOpt-timeDesign.setup
+report_timing -net -format {instance arc cell slew net annotation load delay arrival} -max_paths 10 > results/timing/04-postPlaceOpt.rpt
+summaryReport -outfile results/summary/04_postPlaceOpt.rpt
+fit
+violationBrowser -all -no_display_false
+setCTSMode -traceDPinAsLeaf true
+specifyClockTree -file inputs/up_island.cts
+initECO temp/ipo2_setup.txt
+trialRoute -highEffort
+setExtractRCMode -engine preRoute
+extractRC
+optDesign -postCTS
+endECO
+cleanupECO
+initECO temp/ipo2_hold.txt
+setExtractRCMode -engine postRoute -effortLevel low
+extractRC
+optDesign -postCTS -hold
+endECO
+cleanupECO
+saveNetlist results/verilog/up_island.postcts.v
+saveDesign ./DBS/06-postCtsOpt.enc -relativePath -compress
+setExtractRCMode -engine postRoute -effortLevel low
+extractRC
+setAnalysisMode -checkType hold -asyncChecks async -skew true -clockPropagation sdcControl
+timeDesign -slackReports -pathreports -expandReg2Reg -expandedViews -reportOnly -numPaths 10 -hold -outDir results/timing/06-postCTSOpt-timeDesign.hold
+report_timing -net -format {instance arc cell slew net annotation load delay arrival} -max_paths 10 >  results/timing/06-postCtsOpt_hold.rpt
+setAnalysisMode -checkType setup -asyncChecks async -skew true -clockPropagation sdcControl
+timeDesign -drvReports -slackReports -pathreports -expandReg2Reg -expandedViews -reportOnly -numPaths 10 -outDir ./results/timing/06-postCTSOpt-timeDesign.setup
+report_timing -net -format {instance arc cell slew net annotation load delay arrival} -max_paths 10 >  results/timing/06-postCtsOpt_setup.rpt
+summaryReport -outfile results/summary/06-postCTSOpt.rpt
+fit
+fit
+setAttribute -net clk -weight 100
+setAttribute -net clk -avoid_detour true
+setAttribute -net clk -bottom_preferred_routing_layer 2
+setAttribute -net clk -top_preferred_routing_layer 4
+setNanoRouteMode -quiet -drouteFixAntenna false
+setNanoRouteMode -quiet -routeInsertAntennaDiode false
+setNanoRouteMode -quiet -routeAntennaCellName default
+setNanoRouteMode -quiet -routeWithTimingDriven true
+setNanoRouteMode -quiet -routeWithSiDriven true
+setNanoRouteMode -quiet -routeSiEffort medium
+setNanoRouteMode -quiet -routeWithSiPostRouteFix false
+setNanoRouteMode -quiet -drouteAutoStop false
+setNanoRouteMode -quiet -routeSelectedNetOnly false
+setNanoRouteMode -quiet -drouteStartIteration default
+setNanoRouteMode -quiet -routeTopRoutingLayer 5
+setNanoRouteMode -quiet -routeBottomRoutingLayer 1
+setNanoRouteMode -quiet -drouteEndIteration default
+setNanoRouteMode -quiet -routeUseBlockageForAutoGgrid true
+globalDetailRoute
+saveNetlist results/verilog/up_island.route.v
+saveDesign ./DBS/07-route.enc -relativePath -compress
+setAnalysisMode -analysisType single -checkType setup -skew true -clockPropagation sdcControl
+setExtractRCMode -engine postRoute -effortLevel low
+extractRC
+setAnalysisMode -checkType hold -skew true -clockPropagation sdcControl
+timeDesign -slackReports -pathreports -expandReg2Reg -expandedViews -reportOnly -numPaths 10 -hold -outDir results/timing/07-route-timeDesign.hold
+report_timing -net -format {instance arc cell slew net annotation load delay arrival} -max_paths 10 > results/timing/07-route.hold.rpt
+setAnalysisMode -analysisType single -checkType setup -skew true -clockPropagation sdcControl
+timeDesign -drvReports -slackReports -pathreports -expandReg2Reg -expandedViews -reportOnly -numPaths 10 -outDir results/timing/07-route-timeDesign.setup
+report_timing -net -format {instance arc cell slew net annotation load delay arrival} -max_paths 10 > results/timing/07-route.setup.rpt
+summaryReport -outfile results/summary/07-route.rpt
+addFiller -cell {FILLCELL_X32 FILLCELL_X16 FILLCELL_X8 FILLCELL_X4 FILLCELL_X2 FILLCELL_X1} -prefix FILL
+fillNotch -reportfile results/fillnotch.rpt
+verifyConnectivity
+verifyGeometry -reportfile results/geometry.rpt -noSameNet -noMinSpacing
+setExtractRCMode -engine postRoute -effortLevel low
+extractRC
+setAnalysisMode -checkType hold -skew true -clockPropagation sdcControl
+timeDesign -slackReports -pathreports -expandReg2Reg -expandedViews -reportOnly -numPaths 10 -hold -outDir results/timing/08-finishing-timeDesign.hold
+report_timing -net -format {instance arc cell slew net annotation load delay arrival} -max_paths 10 > results/timing/08-finishing.hold.rpt
+setAnalysisMode -analysisType single -checkType setup -skew true -clockPropagation sdcControl
+timeDesign -drvReports -slackReports -pathreports -expandReg2Reg -expandedViews -reportOnly -numPaths 10 -outDir results/timing/08-finishing-timeDesign.setup
+report_timing -net -format {instance arc cell slew net annotation load delay arrival} -max_paths 10 > results/timing/08-finishing.setup.rpt
+defOut -placement -routing -floorplan results/up_island.def
+lefOut results/up_island.lef
+saveNetlist -phys -excludeLeafCell results/verilog/up_island.phys.v
+saveNetlist -excludeLeafCell results/verilog/up_island.final.v
+setExtractRCMode -engine postRoute
+extractRC
+rcOut -spef results/up_island.spef
+do_extract_model results/$TOP.tlf
+saveDesign DBS/up_island.final.enc
+summaryReport -outfile results/summary/08-finishing.rpt
+fit
+fit
+fit
+fit
+windowSelect -10.338 106.047 94.669 24.727
+deselectAll
+fit
+windowSelect -5.337 188.419 192.832 -3.696
+fit
+fit
+fit
+fit
+fit
+fit
+fit
+fit
+fit
+fit
+fit
+fit
+fit
+fit
+fit
+fit
+zoomOut
+zoomOut
+fit

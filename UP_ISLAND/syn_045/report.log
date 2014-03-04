@@ -1,0 +1,905 @@
+
+                        DC Professional (TM)
+                           DC Expert (TM)
+                            DC Ultra (TM)
+                       FloorPlan Manager (TM)
+                          HDL Compiler (TM)
+                         VHDL Compiler (TM)
+                        Library Compiler (TM)
+                      DesignWare Developer (TM)
+                          DFT Compiler (TM)
+                            BSD Compiler
+                         Power Compiler (TM)
+
+           Version Z-2007.03-SP5 for linux -- Oct 16, 2007
+              Copyright (c) 1988-2007 by Synopsys, Inc.
+                         ALL RIGHTS RESERVED
+
+This software and the associated documentation are confidential and 
+proprietary to Synopsys, Inc. Your use or disclosure of this software 
+is subject to the terms and conditions of a written license agreement 
+between you, or your company, and Synopsys, Inc.
+
+The above trademark notice does not imply that you are licensed to use 
+all of the listed products. You are licensed to use only those products 
+for which you have lawfully obtained a valid license key.
+
+Initializing...
+# fcampi@sfu.ca July 2013
+# Simple combinational Synthesis example
+set TOP up_island
+up_island
+# -----------------------------
+# Specifying Technology Libraries Design constraints
+# -----------------------------
+# We use SLOW timing libraries for worst case timing estimation and fix timing (Setup) in worst possible case
+# Please note (1): TARGET_LIBRARY    libraries that can be used for synthesis, so the tool can CHOOSE TO USE THEM to implement your VHDL
+#                  LINK_LIBRARY      libraries than can be linked by the tool, that is used by the designer in his design, but not CHOSEN by the tool
+#                                    Example: Memory blocks, or a pre-layouted block or a standard cell explicitly defined by the designer in HDL 
+#                  SYNTHETIC_LIBRARY Synthetic or DesignWare libraries. These slibraries are technology-independent, microarchitecture-level 
+#                                    design libraries offered by synopsys and providing pre-packaged implementations for various IP blocks.
+#                                    They differ from target libraries in that they are technology independent and contain operators 
+#                                    (ex. Multiplier, adder etc) instead of cells
+# Please Note (2) : Sometimes, for simplicity, these variables are set in a configuration file (.synopsys_dc.setup that is read by dc_shell at init
+set search_path   [ list /ensc/fac1/fcampi/SOCLAB/LIBRARIES/NangateOpenCellLibrary_PDKv1_3_v2010_12/Front_End/DB 		    /ensc/grad1/cmc-16/ENSC400/UP_ISLAND/syn_045 ]
+/ensc/fac1/fcampi/SOCLAB/LIBRARIES/NangateOpenCellLibrary_PDKv1_3_v2010_12/Front_End/DB /ensc/grad1/cmc-16/ENSC400/UP_ISLAND/syn_045
+# Target library is the library that is used by the synthesis tool 
+# in order to map the behavioral RTL logic that is being synthesized
+set target_library "NangateOpenCellLibrary_slow.db"
+NangateOpenCellLibrary_slow.db
+# The synthetic library variable specified pre-designed technology independent architectures pre-packaged by Synopsys
+set synthetic_library [list dw01.sldb dw02.sldb dw03.sldb                             dw04.sldb dw05.sldb  dw07.sldb 			    dw_foundation.sldb ]  
+dw01.sldb dw02.sldb dw03.sldb dw04.sldb dw05.sldb dw07.sldb dw_foundation.sldb
+set additional_link_lib_files "SRAM.db"
+SRAM.db
+# The link library must contain ALL CELLS used in the design.cOther than the two above, it shall include any IO cell, memory cell, 
+# or other cell/block that the user wishes to include in the design from other sources
+set link_library  [concat $target_library $synthetic_library $additional_link_lib_files]
+NangateOpenCellLibrary_slow.db dw01.sldb dw02.sldb dw03.sldb dw04.sldb dw05.sldb dw07.sldb dw_foundation.sldb SRAM.db
+# -----------------------------
+# Running Logic Synthesis
+# -----------------------------
+# Reading input VHDL File(s): This steps only parses VHDL determining syntax errors, but the Synthesis process is not performed yet
+analyze -format vhdl ../../Qrisc/vhdl/5.9/CORE/xi_menu.vhd
+Running PRESTO HDLC
+Compiling Package Declaration MENU
+Compiling Package Body MENU
+Presto compilation completed successfully.
+Loading db file '/ensc/fac1/fcampi/SOCLAB/LIBRARIES/NangateOpenCellLibrary_PDKv1_3_v2010_12/Front_End/DB/NangateOpenCellLibrary_slow.db'
+Loading db file '/Lnx_STC/tools/synopsys/syn_vZ-2007.03-SP5/libraries/syn/dw01.sldb'
+Loading db file '/Lnx_STC/tools/synopsys/syn_vZ-2007.03-SP5/libraries/syn/dw02.sldb'
+Loading db file '/Lnx_STC/tools/synopsys/syn_vZ-2007.03-SP5/libraries/syn/dw03.sldb'
+Loading db file '/Lnx_STC/tools/synopsys/syn_vZ-2007.03-SP5/libraries/syn/dw04.sldb'
+Loading db file '/Lnx_STC/tools/synopsys/syn_vZ-2007.03-SP5/libraries/syn/dw05.sldb'
+Loading db file '/Lnx_STC/tools/synopsys/syn_vZ-2007.03-SP5/libraries/syn/dw07.sldb'
+Loading db file '/Lnx_STC/tools/synopsys/syn_vZ-2007.03-SP5/libraries/syn/dw_foundation.sldb'
+Loading db file '/ensc/grad1/cmc-16/ENSC400/UP_ISLAND/syn_045/SRAM.db'
+1
+analyze -format vhdl ../../Qrisc/vhdl/5.9/CORE/xi_basic.vhd
+Running PRESTO HDLC
+Compiling Package Declaration BASIC
+Compiling Package Body BASIC
+Presto compilation completed successfully.
+1
+echo "------------------------ XiRisc Core"   
+------------------------ XiRisc Core
+echo ""
+
+echo "- Miscellaneous"
+- Miscellaneous
+analyze -format vhdl ../../Qrisc/vhdl/5.9/CORE/xi_isa32.vhd
+Running PRESTO HDLC
+Compiling Package Declaration ISA_32
+Compiling Package Body ISA_32
+Presto compilation completed successfully.
+1
+analyze -format vhdl ../../Qrisc/vhdl/5.9/CORE/xi_components.vhd
+Running PRESTO HDLC
+Compiling Entity Declaration IREG_FETCH
+Compiling Architecture BEHAVIORAL of IREG_FETCH
+Warning:  ../../Qrisc/vhdl/5.9/CORE/xi_components.vhd:114: The architecture behavioral has already been analyzed. It is being replaced. (VHD-4)
+Compiling Entity Declaration IREG_EXECUTE
+Compiling Architecture BEHAVIORAL of IREG_EXECUTE
+Warning:  ../../Qrisc/vhdl/5.9/CORE/xi_components.vhd:174: The architecture behavioral has already been analyzed. It is being replaced. (VHD-4)
+Compiling Entity Declaration IREG_MEMORY
+Compiling Architecture BEHAVIORAL of IREG_MEMORY
+Warning:  ../../Qrisc/vhdl/5.9/CORE/xi_components.vhd:237: The architecture behavioral has already been analyzed. It is being replaced. (VHD-4)
+Compiling Entity Declaration DATA_REG
+Compiling Architecture BEHAVIORAL of DATA_REG
+Warning:  ../../Qrisc/vhdl/5.9/CORE/xi_components.vhd:290: The architecture behavioral has already been analyzed. It is being replaced. (VHD-4)
+Compiling Entity Declaration FLIPFLOP
+Compiling Architecture BEHAVIORAL of FLIPFLOP
+Warning:  ../../Qrisc/vhdl/5.9/CORE/xi_components.vhd:322: The architecture behavioral has already been analyzed. It is being replaced. (VHD-4)
+Compiling Entity Declaration BYPASS_MUX
+Compiling Architecture BEHAVIORAL of BYPASS_MUX
+Warning:  ../../Qrisc/vhdl/5.9/CORE/xi_components.vhd:355: The architecture BEHAVIORAL has already been analyzed. It is being replaced. (VHD-4)
+Compiling Entity Declaration GP_ADDER
+Compiling Architecture BEHAVIORAL of GP_ADDER
+Warning:  ../../Qrisc/vhdl/5.9/CORE/xi_components.vhd:385: The architecture behavioral has already been analyzed. It is being replaced. (VHD-4)
+Compiling Package Declaration COMPONENTS
+Compiling Package Body COMPONENTS
+Presto compilation completed successfully.
+1
+analyze -format vhdl ../../Qrisc/vhdl/5.9/CORE/xi_definitions.vhd
+Running PRESTO HDLC
+Compiling Package Declaration DEFINITIONS
+Compiling Package Body DEFINITIONS
+Presto compilation completed successfully.
+1
+echo ""
+
+echo "- Control Logic"
+- Control Logic
+analyze -format vhdl ../../Qrisc/vhdl/5.9/CORE/xi_decodeop32.vhd
+Running PRESTO HDLC
+Compiling Entity Declaration DECODE_OP32
+Compiling Architecture BEHAVIORAL of DECODE_OP32
+Warning:  ../../Qrisc/vhdl/5.9/CORE/xi_decodeop32.vhd:79: The architecture behavioral has already been analyzed. It is being replaced. (VHD-4)
+Presto compilation completed successfully.
+1
+analyze -format vhdl ../../Qrisc/vhdl/5.9/CORE/xi_decodepc.vhd
+Running PRESTO HDLC
+Compiling Entity Declaration DECODE_PC
+Compiling Architecture BEHAVIORAL of DECODE_PC
+Warning:  ../../Qrisc/vhdl/5.9/CORE/xi_decodepc.vhd:62: The architecture behavioral has already been analyzed. It is being replaced. (VHD-4)
+Presto compilation completed successfully.
+1
+analyze -format vhdl ../../Qrisc/vhdl/5.9/CORE/xi_hazards.vhd
+Running PRESTO HDLC
+Compiling Entity Declaration BYPASS_LOGIC
+Compiling Architecture BEHAVIORAL of BYPASS_LOGIC
+Warning:  ../../Qrisc/vhdl/5.9/CORE/xi_hazards.vhd:68: The architecture behavioral has already been analyzed. It is being replaced. (VHD-4)
+Compiling Entity Declaration STALL_LOGIC
+Compiling Architecture BEHAVIORAL of STALL_LOGIC
+Warning:  ../../Qrisc/vhdl/5.9/CORE/xi_hazards.vhd:133: The architecture behavioral has already been analyzed. It is being replaced. (VHD-4)
+Presto compilation completed successfully.
+1
+analyze -format vhdl ../../Qrisc/vhdl/5.9/CORE/xi_pcbvgen.vhd
+Running PRESTO HDLC
+Compiling Entity Declaration PCBVGEN
+Compiling Architecture BEHAVIORAL of PCBVGEN
+Warning:  ../../Qrisc/vhdl/5.9/CORE/xi_pcbvgen.vhd:58: The architecture behavioral has already been analyzed. It is being replaced. (VHD-4)
+Presto compilation completed successfully.
+1
+analyze -format vhdl ../../Qrisc/vhdl/5.9/CORE/xi_addrcheck.vhd
+Running PRESTO HDLC
+Compiling Entity Declaration ADDRCHK
+Compiling Architecture BEHAVIORAL of ADDRCHK
+Warning:  ../../Qrisc/vhdl/5.9/CORE/xi_addrcheck.vhd:96: The architecture behavioral has already been analyzed. It is being replaced. (VHD-4)
+Presto compilation completed successfully.
+1
+analyze -format vhdl ../../Qrisc/vhdl/5.9/CORE/xi_control.vhd
+Running PRESTO HDLC
+Compiling Entity Declaration MAIN_CONTROL
+Compiling Architecture STRUCTURAL of MAIN_CONTROL
+Warning:  ../../Qrisc/vhdl/5.9/CORE/xi_control.vhd:146: The architecture structural has already been analyzed. It is being replaced. (VHD-4)
+Presto compilation completed successfully.
+1
+echo ""
+
+echo "- Data Path"
+- Data Path
+analyze -format vhdl ../../Qrisc/vhdl/5.9/CORE/xi_alu_simple.vhd
+Running PRESTO HDLC
+Compiling Entity Declaration MAIN_ALU
+Compiling Architecture STRUCTURAL of MAIN_ALU
+Warning:  ../../Qrisc/vhdl/5.9/CORE/xi_alu_simple.vhd:49: The architecture structural has already been analyzed. It is being replaced. (VHD-4)
+Presto compilation completed successfully.
+1
+analyze -format vhdl ../../Qrisc/vhdl/5.9/CORE/xi_shifter.vhd
+Running PRESTO HDLC
+Compiling Entity Declaration ROT_LEFT
+Compiling Architecture BEHAVIORAL of ROT_LEFT
+Warning:  ../../Qrisc/vhdl/5.9/CORE/xi_shifter.vhd:52: The architecture behavioral has already been analyzed. It is being replaced. (VHD-4)
+Compiling Entity Declaration ROT_RIGHT
+Compiling Architecture BEHAVIORAL of ROT_RIGHT
+Warning:  ../../Qrisc/vhdl/5.9/CORE/xi_shifter.vhd:78: The architecture behavioral has already been analyzed. It is being replaced. (VHD-4)
+Compiling Entity Declaration SH_RIGHT_ARITH
+Compiling Architecture BEHAVIORAL of SH_RIGHT_ARITH
+Warning:  ../../Qrisc/vhdl/5.9/CORE/xi_shifter.vhd:104: The architecture behavioral has already been analyzed. It is being replaced. (VHD-4)
+Compiling Entity Declaration SH_RIGHT_LOG
+Compiling Architecture BEHAVIORAL of SH_RIGHT_LOG
+Warning:  ../../Qrisc/vhdl/5.9/CORE/xi_shifter.vhd:126: The architecture behavioral has already been analyzed. It is being replaced. (VHD-4)
+Compiling Entity Declaration SH_LEFT_LOG
+Compiling Architecture BEHAVIORAL of SH_LEFT_LOG
+Warning:  ../../Qrisc/vhdl/5.9/CORE/xi_shifter.vhd:148: The architecture behavioral has already been analyzed. It is being replaced. (VHD-4)
+Compiling Entity Declaration SHIFTER
+Compiling Architecture BEHAVIORAL of SHIFTER
+Warning:  ../../Qrisc/vhdl/5.9/CORE/xi_shifter.vhd:177: The architecture behavioral has already been analyzed. It is being replaced. (VHD-4)
+Presto compilation completed successfully.
+1
+analyze -format vhdl ../../Qrisc/vhdl/5.9/CORE/xi_multiplier.vhd
+Running PRESTO HDLC
+Compiling Entity Declaration MULT_BLOCK
+Compiling Architecture BEHAVIORAL of MULT_BLOCK
+Warning:  ../../Qrisc/vhdl/5.9/CORE/xi_multiplier.vhd:64: The architecture BEHAVIORAL has already been analyzed. It is being replaced. (VHD-4)
+Presto compilation completed successfully.
+1
+analyze -format vhdl ../../Qrisc/vhdl/5.9/CORE/xi_memhandle.vhd
+Running PRESTO HDLC
+Compiling Entity Declaration MEM_HANDLE
+Compiling Architecture STRUCTURAL of MEM_HANDLE
+Warning:  ../../Qrisc/vhdl/5.9/CORE/xi_memhandle.vhd:61: The architecture STRUCTURAL has already been analyzed. It is being replaced. (VHD-4)
+Presto compilation completed successfully.
+1
+analyze -format vhdl ../../Qrisc/vhdl/5.9/CORE/xi_mainchannel.vhd
+Running PRESTO HDLC
+Compiling Entity Declaration MAIN_CHANNEL
+Compiling Architecture STRUCTURAL of MAIN_CHANNEL
+Warning:  ../../Qrisc/vhdl/5.9/CORE/xi_mainchannel.vhd:122: The architecture structural has already been analyzed. It is being replaced. (VHD-4)
+Presto compilation completed successfully.
+1
+echo ""
+
+echo "- Register File"
+- Register File
+analyze -format vhdl ../../Qrisc/vhdl/5.9/CORE/xi_rfile.vhd
+Running PRESTO HDLC
+Compiling Entity Declaration RFILE
+Compiling Architecture BEHAVIORAL of RFILE
+Warning:  ../../Qrisc/vhdl/5.9/CORE/xi_rfile.vhd:61: The architecture behavioral has already been analyzed. It is being replaced. (VHD-4)
+Presto compilation completed successfully.
+1
+echo ""
+
+echo "- SCC Coprocessor"
+- SCC Coprocessor
+analyze -format vhdl ../../Qrisc/vhdl/5.9/CORE/xi_scc.vhd
+Running PRESTO HDLC
+Compiling Entity Declaration SCC
+Compiling Architecture STRUCTURAL of SCC
+Warning:  ../../Qrisc/vhdl/5.9/CORE/xi_scc.vhd:268: The architecture structural has already been analyzed. It is being replaced. (VHD-4)
+Compiling Package Declaration SCC_PACK
+Compiling Package Body SCC_PACK
+Presto compilation completed successfully.
+1
+echo ""
+
+echo "- FPU Coprocessor"
+- FPU Coprocessor
+analyze -format vhdl ../../Qrisc/vhdl/5.9/CORE/xi_fpu.vhd
+Running PRESTO HDLC
+Compiling Entity Declaration COP
+Compiling Architecture MILK of COP
+Warning:  ../../Qrisc/vhdl/5.9/CORE/xi_fpu.vhd:37: The architecture milk has already been analyzed. It is being replaced. (VHD-4)
+Compiling Package Declaration COP_PACK
+Compiling Package Body COP_PACK
+Presto compilation completed successfully.
+1
+echo ""
+
+echo "- DBG Coprocessor"
+- DBG Coprocessor
+analyze -format vhdl ../../Qrisc/vhdl/5.9/CORE/xi_dbg.vhd
+Running PRESTO HDLC
+Compiling Entity Declaration DBG
+Compiling Architecture STRUCTURAL of DBG
+Warning:  ../../Qrisc/vhdl/5.9/CORE/xi_dbg.vhd:99: The architecture structural has already been analyzed. It is being replaced. (VHD-4)
+Compiling Package Declaration DBG_PACK
+Compiling Package Body DBG_PACK
+Presto compilation completed successfully.
+1
+echo ""
+
+echo "- Breaks Verification System"
+- Breaks Verification System
+analyze -format vhdl ../../Qrisc/vhdl/5.9/CORE/xi_verify.vhd
+Running PRESTO HDLC
+Compiling Package Declaration CONVCHAR
+Compiling Package Body CONVCHAR
+Compiling Entity Declaration XI_VERIFY
+Compiling Architecture NON_SYNTH of XI_VERIFY
+Warning:  ../../Qrisc/vhdl/5.9/CORE/xi_verify.vhd:225: The architecture NON_SYNTH has already been analyzed. It is being replaced. (VHD-4)
+Presto compilation completed successfully.
+1
+echo ""
+
+echo "- XiRisc Core"
+- XiRisc Core
+analyze -format vhdl ../../Qrisc/vhdl/5.9/CORE/xi_core.vhd 
+Running PRESTO HDLC
+Compiling Entity Declaration XI_CORE
+Compiling Architecture STRUCTURAL of XI_CORE
+Warning:  ../../Qrisc/vhdl/5.9/CORE/xi_core.vhd:172: The architecture structural has already been analyzed. It is being replaced. (VHD-4)
+Presto compilation completed successfully.
+1
+echo ""
+
+analyze -format vhdl ../vhdl/ubus.vhd
+Running PRESTO HDLC
+Compiling Entity Declaration UBUS
+Compiling Architecture STRUCT of UBUS
+Warning:  ../vhdl/ubus.vhd:61: The architecture struct has already been analyzed. It is being replaced. (VHD-4)
+Presto compilation completed successfully.
+1
+analyze -format vhdl ../vhdl/up_island.vhd
+Running PRESTO HDLC
+Compiling Entity Declaration UP_ISLAND
+Compiling Architecture STRUCT of UP_ISLAND
+Warning:  ../vhdl/up_island.vhd:32: The architecture struct has already been analyzed. It is being replaced. (VHD-4)
+Presto compilation completed successfully.
+1
+elaborate $TOP 
+Loading db file '/Lnx_STC/tools/synopsys/syn_vZ-2007.03-SP5/libraries/syn/gtech.db'
+Loading db file '/Lnx_STC/tools/synopsys/syn_vZ-2007.03-SP5/libraries/syn/standard.sldb'
+  Loading link library 'NangateOpenCellLibrary'
+  Loading link library 'SRAM'
+  Loading link library 'gtech'
+Running PRESTO HDLC
+Presto compilation completed successfully.
+Elaborated 1 design.
+Current design is now 'up_island'.
+Information: Building the design 'Xi_core' instantiated from design 'up_island' with
+	the parameters "include_scc=0,include_fpu=0,include_dbg=0,include_shift=1,include_rotate=1,include_hrdwit=0,include_mul=1,include_mult=1,include_mad=1,include_iaddr_check=1,include_daddr_check=1,interrupt_on_exception=1,include_sticky_logic=1,shift_count_width=5,rf_registers_addr_width=5,Word_Width=32,Instr_Width=32,Daddr_width=32,Iaddr_width=24,imem_lowerlimitation_control=0,dmem_lowerlimitation_control=0,imem_upperlimitation_control=0,dmem_upperlimitation_control=0,instr_mem_max_addr_upper=0,instr_mem_max_addr_lower=16383,data_mem_max_addr_upper=0,data_mem_max_addr_lower=65535,Int_table_base=16384,reboot_value_upper=0,reboot_value_lower=0,reset_value_upper=0,reset_value_lower=0,status_bits=49407,intproc_status_bits=0,cause_bits=16". (HDL-193)
+Warning:  ../../Qrisc/vhdl/5.9/CORE/xi_core.vhd:524: Floating pin 'data_in[1] of cell COP1_OUT_REG' connected to ground. (ELAB-294)
+Warning:  ../../Qrisc/vhdl/5.9/CORE/xi_core.vhd:524: Floating pin 'data_in[0] of cell COP1_OUT_REG' connected to ground. (ELAB-294)
+Warning:  ../../Qrisc/vhdl/5.9/CORE/xi_core.vhd:586: Floating pin 'epc[23] of cell Mcontrol' connected to ground. (ELAB-294)
+Warning:  ../../Qrisc/vhdl/5.9/CORE/xi_core.vhd:586: Floating pin 'epc[22] of cell Mcontrol' connected to ground. (ELAB-294)
+Warning:  ../../Qrisc/vhdl/5.9/CORE/xi_core.vhd:586: Floating pin 'epc[21] of cell Mcontrol' connected to ground. (ELAB-294)
+Warning:  ../../Qrisc/vhdl/5.9/CORE/xi_core.vhd:586: Floating pin 'epc[20] of cell Mcontrol' connected to ground. (ELAB-294)
+Warning:  ../../Qrisc/vhdl/5.9/CORE/xi_core.vhd:586: Floating pin 'epc[19] of cell Mcontrol' connected to ground. (ELAB-294)
+Warning:  ../../Qrisc/vhdl/5.9/CORE/xi_core.vhd:586: Floating pin 'epc[18] of cell Mcontrol' connected to ground. (ELAB-294)
+Warning:  ../../Qrisc/vhdl/5.9/CORE/xi_core.vhd:586: Floating pin 'epc[17] of cell Mcontrol' connected to ground. (ELAB-294)
+Warning:  ../../Qrisc/vhdl/5.9/CORE/xi_core.vhd:586: Floating pin 'epc[16] of cell Mcontrol' connected to ground. (ELAB-294)
+Warning:  ../../Qrisc/vhdl/5.9/CORE/xi_core.vhd:586: Floating pin 'epc[15] of cell Mcontrol' connected to ground. (ELAB-294)
+Warning:  ../../Qrisc/vhdl/5.9/CORE/xi_core.vhd:586: Floating pin 'epc[14] of cell Mcontrol' connected to ground. (ELAB-294)
+Warning:  ../../Qrisc/vhdl/5.9/CORE/xi_core.vhd:586: Floating pin 'epc[13] of cell Mcontrol' connected to ground. (ELAB-294)
+Warning:  ../../Qrisc/vhdl/5.9/CORE/xi_core.vhd:586: Floating pin 'epc[12] of cell Mcontrol' connected to ground. (ELAB-294)
+Warning:  ../../Qrisc/vhdl/5.9/CORE/xi_core.vhd:586: Floating pin 'epc[11] of cell Mcontrol' connected to ground. (ELAB-294)
+Warning:  ../../Qrisc/vhdl/5.9/CORE/xi_core.vhd:586: Floating pin 'epc[10] of cell Mcontrol' connected to ground. (ELAB-294)
+Warning:  ../../Qrisc/vhdl/5.9/CORE/xi_core.vhd:586: Floating pin 'epc[9] of cell Mcontrol' connected to ground. (ELAB-294)
+Warning:  ../../Qrisc/vhdl/5.9/CORE/xi_core.vhd:586: Floating pin 'epc[8] of cell Mcontrol' connected to ground. (ELAB-294)
+Warning:  ../../Qrisc/vhdl/5.9/CORE/xi_core.vhd:586: Floating pin 'epc[7] of cell Mcontrol' connected to ground. (ELAB-294)
+Warning:  ../../Qrisc/vhdl/5.9/CORE/xi_core.vhd:586: Floating pin 'epc[6] of cell Mcontrol' connected to ground. (ELAB-294)
+Warning:  ../../Qrisc/vhdl/5.9/CORE/xi_core.vhd:586: Floating pin 'epc[5] of cell Mcontrol' connected to ground. (ELAB-294)
+Warning:  ../../Qrisc/vhdl/5.9/CORE/xi_core.vhd:586: Floating pin 'epc[4] of cell Mcontrol' connected to ground. (ELAB-294)
+Warning:  ../../Qrisc/vhdl/5.9/CORE/xi_core.vhd:586: Floating pin 'epc[3] of cell Mcontrol' connected to ground. (ELAB-294)
+Warning:  ../../Qrisc/vhdl/5.9/CORE/xi_core.vhd:586: Floating pin 'epc[2] of cell Mcontrol' connected to ground. (ELAB-294)
+Warning:  ../../Qrisc/vhdl/5.9/CORE/xi_core.vhd:586: Floating pin 'epc[1] of cell Mcontrol' connected to ground. (ELAB-294)
+Warning:  ../../Qrisc/vhdl/5.9/CORE/xi_core.vhd:586: Floating pin 'epc[0] of cell Mcontrol' connected to ground. (ELAB-294)
+Presto compilation completed successfully.
+Information: Building the design 'ubus' instantiated from design 'up_island' with
+	the parameters "s1_start=32'h40010000,s1_end=32'h40012000,s2_start=32'h50000000,s2_end=32'hf0000000,s3_start=32'h00000000,s3_end=32'h00000000,s4_start=32'h00000000,s4_end=32'h00000000". (HDL-193)
+
+Inferred memory devices in process
+	in routine ubus_40010000_40012000_50000000_f0000000_00000000_00000000_00000000_00000000 line 147 in file
+		'../vhdl/ubus.vhd'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      c2_op_reg      | Flip-flop |   2   |  Y  | N  | N  | Y  | N  | N  | N  |
+|      c2_op_reg      | Flip-flop |   4   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'Data_Reg' instantiated from design 'Xi_core_include_scc0_include_fpu0_include_dbg0_include_shift1_include_rotate1_include_hrdwit0_include_mul1_include_mult1_include_mad1_include_iaddr_check1_include_daddr_check1_interrupt_on_exception1_include_sticky_logic1_shift_count_width5_rf_registers_addr_width5_Word_Width32_Instr_Width32_Daddr_width32_Iaddr_width24_imem_lowerlimitation_control0_dmem_lowerlimitation_control0_imem_upperlimitation_control0_dmem_upperlimitation_control0_instr_mem_max_addr_upper0_instr_mem_max_addr_lower16383_data_mem_max_addr_upper0_data_mem_max_addr_lower65535_Int_table_base16384_reboot_value_upper0_reboot_value_lower0_reset_value_upper0_reset_value_lower0_status_bits49407_intproc_status_bits0_cause_bits16' with
+	the parameters "init_value=0,reg_width=2". (HDL-193)
+
+Inferred memory devices in process
+	in routine Data_Reg_init_value0_reg_width2 line 293 in file
+		'../../Qrisc/vhdl/5.9/CORE/xi_components.vhd'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    data_out_reg     | Flip-flop |   2   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'Rfile' instantiated from design 'Xi_core_include_scc0_include_fpu0_include_dbg0_include_shift1_include_rotate1_include_hrdwit0_include_mul1_include_mult1_include_mad1_include_iaddr_check1_include_daddr_check1_interrupt_on_exception1_include_sticky_logic1_shift_count_width5_rf_registers_addr_width5_Word_Width32_Instr_Width32_Daddr_width32_Iaddr_width24_imem_lowerlimitation_control0_dmem_lowerlimitation_control0_imem_upperlimitation_control0_dmem_upperlimitation_control0_instr_mem_max_addr_upper0_instr_mem_max_addr_lower16383_data_mem_max_addr_upper0_data_mem_max_addr_lower65535_Int_table_base16384_reboot_value_upper0_reboot_value_lower0_reset_value_upper0_reset_value_lower0_status_bits49407_intproc_status_bits0_cause_bits16' with
+	the parameters "Word_Width=32,rf_registers_addr_width=5". (HDL-193)
+Warning:  ../../Qrisc/vhdl/5.9/CORE/xi_rfile.vhd:86: Potential simulation-synthesis mismatch if index exceeds size of array 'reg_out'. (ELAB-349)
+Warning:  ../../Qrisc/vhdl/5.9/CORE/xi_rfile.vhd:95: Potential simulation-synthesis mismatch if index exceeds size of array 'reg_out'. (ELAB-349)
+Presto compilation completed successfully.
+Information: Building the design 'BYPASS_MUX' instantiated from design 'Xi_core_include_scc0_include_fpu0_include_dbg0_include_shift1_include_rotate1_include_hrdwit0_include_mul1_include_mult1_include_mad1_include_iaddr_check1_include_daddr_check1_interrupt_on_exception1_include_sticky_logic1_shift_count_width5_rf_registers_addr_width5_Word_Width32_Instr_Width32_Daddr_width32_Iaddr_width24_imem_lowerlimitation_control0_dmem_lowerlimitation_control0_imem_upperlimitation_control0_dmem_upperlimitation_control0_instr_mem_max_addr_upper0_instr_mem_max_addr_lower16383_data_mem_max_addr_upper0_data_mem_max_addr_lower65535_Int_table_base16384_reboot_value_upper0_reboot_value_lower0_reset_value_upper0_reset_value_lower0_status_bits49407_intproc_status_bits0_cause_bits16' with
+	the parameters "Word_Width=32". (HDL-193)
+
+Statistics for case statements in always block at line 359 in file
+	'../../Qrisc/vhdl/5.9/CORE/xi_components.vhd'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           361            |    auto/auto     |
+===============================================
+Presto compilation completed successfully.
+Information: Building the design 'Main_control' instantiated from design 'Xi_core_include_scc0_include_fpu0_include_dbg0_include_shift1_include_rotate1_include_hrdwit0_include_mul1_include_mult1_include_mad1_include_iaddr_check1_include_daddr_check1_interrupt_on_exception1_include_sticky_logic1_shift_count_width5_rf_registers_addr_width5_Word_Width32_Instr_Width32_Daddr_width32_Iaddr_width24_imem_lowerlimitation_control0_dmem_lowerlimitation_control0_imem_upperlimitation_control0_dmem_upperlimitation_control0_instr_mem_max_addr_upper0_instr_mem_max_addr_lower16383_data_mem_max_addr_upper0_data_mem_max_addr_lower65535_Int_table_base16384_reboot_value_upper0_reboot_value_lower0_reset_value_upper0_reset_value_lower0_status_bits49407_intproc_status_bits0_cause_bits16' with
+	the parameters "include_scc=0,include_hrdwit=0,rf_registers_addr_width=5,Word_Width=32,Instr_Width=32,Iaddr_width=24,reboot_value_upper=0,reboot_value_lower=0,reset_value_upper=0,reset_value_lower=0". (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'Main_channel' instantiated from design 'Xi_core_include_scc0_include_fpu0_include_dbg0_include_shift1_include_rotate1_include_hrdwit0_include_mul1_include_mult1_include_mad1_include_iaddr_check1_include_daddr_check1_interrupt_on_exception1_include_sticky_logic1_shift_count_width5_rf_registers_addr_width5_Word_Width32_Instr_Width32_Daddr_width32_Iaddr_width24_imem_lowerlimitation_control0_dmem_lowerlimitation_control0_imem_upperlimitation_control0_dmem_upperlimitation_control0_instr_mem_max_addr_upper0_instr_mem_max_addr_lower16383_data_mem_max_addr_upper0_data_mem_max_addr_lower65535_Int_table_base16384_reboot_value_upper0_reboot_value_lower0_reset_value_upper0_reset_value_lower0_status_bits49407_intproc_status_bits0_cause_bits16' with
+	the parameters "include_scc=0,include_fpu=0,include_dbg=0,include_shift=1,include_rotate=1,include_hrdwit=0,include_mul=1,include_mult=1,include_mad=1,include_iaddr_check=1,include_daddr_check=1,shift_count_width=5,Word_Width=32,Instr_Width=32,Daddr_width=32,Iaddr_width=24". (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'Data_Reg' instantiated from design 'Rfile_Word_Width32_rf_registers_addr_width5' with
+	the parameters "init_value=0,reg_width=32". (HDL-193)
+
+Inferred memory devices in process
+	in routine Data_Reg_init_value0_reg_width32 line 293 in file
+		'../../Qrisc/vhdl/5.9/CORE/xi_components.vhd'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    data_out_reg     | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'Ireg_Fetch' instantiated from design 'Main_control_include_scc0_include_hrdwit0_rf_registers_addr_width5_Word_Width32_Instr_Width32_Iaddr_width24_reboot_value_upper0_reboot_value_lower0_reset_value_upper0_reset_value_lower0' with
+	the parameters "iaddr_width=24,reset_value_lower=-4,reset_value_upper=0,reboot_value_lower=-4,reboot_value_upper=0". (HDL-193)
+
+Inferred memory devices in process
+	in routine Ireg_Fetch_iaddr_width24_reset_value_lower_4_reset_value_upper0_reboot_value_lower_4_reboot_value_upper0 line 118 in file
+		'../../Qrisc/vhdl/5.9/CORE/xi_components.vhd'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     out_pc_reg      | Flip-flop |  22   |  Y  | N  | N  | Y  | N  | N  | N  |
+|     out_pc_reg      | Flip-flop |   2   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'FlipFlop'. (HDL-193)
+
+Inferred memory devices in process
+	in routine FlipFlop line 325 in file
+		'../../Qrisc/vhdl/5.9/CORE/xi_components.vhd'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|        q_reg        | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'Decode_op32' instantiated from design 'Main_control_include_scc0_include_hrdwit0_rf_registers_addr_width5_Word_Width32_Instr_Width32_Iaddr_width24_reboot_value_upper0_reboot_value_lower0_reset_value_upper0_reset_value_lower0' with
+	the parameters "word_width=32,rf_registers_addr_width=5". (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'Decode_PC' instantiated from design 'Main_control_include_scc0_include_hrdwit0_rf_registers_addr_width5_Word_Width32_Instr_Width32_Iaddr_width24_reboot_value_upper0_reboot_value_lower0_reset_value_upper0_reset_value_lower0' with
+	the parameters "include_scc=0,Word_Width=32,Instr_Width=32,Iaddr_width=24". (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'Bypass_Logic' instantiated from design 'Main_control_include_scc0_include_hrdwit0_rf_registers_addr_width5_Word_Width32_Instr_Width32_Iaddr_width24_reboot_value_upper0_reboot_value_lower0_reset_value_upper0_reset_value_lower0' with
+	the parameters "rf_registers_addr_width=5". (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'Stall_Logic'. (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'Ireg_Execute' instantiated from design 'Main_control_include_scc0_include_hrdwit0_rf_registers_addr_width5_Word_Width32_Instr_Width32_Iaddr_width24_reboot_value_upper0_reboot_value_lower0_reset_value_upper0_reset_value_lower0' with
+	the parameters "Word_Width=32,rf_registers_addr_width=5". (HDL-193)
+
+Inferred memory devices in process
+	in routine Ireg_Execute_Word_Width32_rf_registers_addr_width5 line 176 in file
+		'../../Qrisc/vhdl/5.9/CORE/xi_components.vhd'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    out_rf_we_reg    | Flip-flop |   1   |  N  | N  | N  | Y  | N  | N  | N  |
+| out_alu_command_reg | Flip-flop |   2   |  Y  | N  | N  | Y  | N  | N  | N  |
+|  out_shift_op1_reg  | Flip-flop |   3   |  Y  | N  | Y  | N  | N  | N  | N  |
+|     out_rd1_reg     | Flip-flop |   5   |  Y  | N  | Y  | N  | N  | N  | N  |
+| out_mul_command_reg | Flip-flop |   2   |  Y  | N  | Y  | N  | N  | N  | N  |
+| out_mem_command_reg | Flip-flop |   5   |  Y  | N  | N  | Y  | N  | N  | N  |
+| out_alu_command_reg | Flip-flop |   6   |  Y  | N  | Y  | N  | N  | N  | N  |
+| out_exe_outsel1_reg | Flip-flop |   3   |  Y  | N  | Y  | N  | N  | N  | N  |
+|  out_alu_immed_reg  | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+| out_mul_command_reg | Flip-flop |   4   |  Y  | N  | N  | Y  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'Ireg_Memory' instantiated from design 'Main_control_include_scc0_include_hrdwit0_rf_registers_addr_width5_Word_Width32_Instr_Width32_Iaddr_width24_reboot_value_upper0_reboot_value_lower0_reset_value_upper0_reset_value_lower0' with
+	the parameters "Word_Width=32,rf_registers_addr_width=5". (HDL-193)
+
+Inferred memory devices in process
+	in routine Ireg_Memory_Word_Width32_rf_registers_addr_width5 line 239 in file
+		'../../Qrisc/vhdl/5.9/CORE/xi_components.vhd'.
+===================================================================================
+|      Register Name      |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===================================================================================
+| out_serve_exception_reg | Flip-flop |   1   |  N  | N  | N  | Y  | N  | N  | N  |
+|   out_alu_command_reg   | Flip-flop |   2   |  Y  | N  | N  | Y  | N  | N  | N  |
+|       out_rd1_reg       | Flip-flop |   5   |  Y  | N  | Y  | N  | N  | N  | N  |
+|   out_mem_command_reg   | Flip-flop |   5   |  Y  | N  | N  | Y  | N  | N  | N  |
+|      out_rf_we_reg      | Flip-flop |   1   |  N  | N  | N  | Y  | N  | N  | N  |
+|   out_alu_command_reg   | Flip-flop |   6   |  Y  | N  | Y  | N  | N  | N  | N  |
+|    out_alu_immed_reg    | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+===================================================================================
+Presto compilation completed successfully.
+Information: Building the design 'Main_Alu' instantiated from design 'Main_channel_include_scc0_include_fpu0_include_dbg0_include_shift1_include_rotate1_include_hrdwit0_include_mul1_include_mult1_include_mad1_include_iaddr_check1_include_daddr_check1_shift_count_width5_Word_Width32_Instr_Width32_Daddr_width32_Iaddr_width24' with
+	the parameters "Word_Width=32". (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'Shifter' instantiated from design 'Main_channel_include_scc0_include_fpu0_include_dbg0_include_shift1_include_rotate1_include_hrdwit0_include_mul1_include_mult1_include_mad1_include_iaddr_check1_include_daddr_check1_shift_count_width5_Word_Width32_Instr_Width32_Daddr_width32_Iaddr_width24' with
+	the parameters "Word_Width=32,shift_count_width=5,include_rotate=1". (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'mult_block' instantiated from design 'Main_channel_include_scc0_include_fpu0_include_dbg0_include_shift1_include_rotate1_include_hrdwit0_include_mul1_include_mult1_include_mad1_include_iaddr_check1_include_daddr_check1_shift_count_width5_Word_Width32_Instr_Width32_Daddr_width32_Iaddr_width24' with
+	the parameters "Word_Width=32,include_mul=1,include_mult=1,include_mad=1". (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'Data_Reg' instantiated from design 'Main_channel_include_scc0_include_fpu0_include_dbg0_include_shift1_include_rotate1_include_hrdwit0_include_mul1_include_mult1_include_mad1_include_iaddr_check1_include_daddr_check1_shift_count_width5_Word_Width32_Instr_Width32_Daddr_width32_Iaddr_width24' with
+	the parameters "init_value=0,reg_width=24". (HDL-193)
+
+Inferred memory devices in process
+	in routine Data_Reg_init_value0_reg_width24 line 293 in file
+		'../../Qrisc/vhdl/5.9/CORE/xi_components.vhd'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    data_out_reg     | Flip-flop |  24   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'mem_handle' instantiated from design 'Main_channel_include_scc0_include_fpu0_include_dbg0_include_shift1_include_rotate1_include_hrdwit0_include_mul1_include_mult1_include_mad1_include_iaddr_check1_include_daddr_check1_shift_count_width5_Word_Width32_Instr_Width32_Daddr_width32_Iaddr_width24' with
+	the parameters "Word_Width=32". (HDL-193)
+Warning:  ../../Qrisc/vhdl/5.9/CORE/xi_memhandle.vhd:108: DEFAULT branch of CASE statement cannot be reached. (ELAB-311)
+Warning:  ../../Qrisc/vhdl/5.9/CORE/xi_memhandle.vhd:116: DEFAULT branch of CASE statement cannot be reached. (ELAB-311)
+Warning:  ../../Qrisc/vhdl/5.9/CORE/xi_memhandle.vhd:124: DEFAULT branch of CASE statement cannot be reached. (ELAB-311)
+Warning:  ../../Qrisc/vhdl/5.9/CORE/xi_memhandle.vhd:130: DEFAULT branch of CASE statement cannot be reached. (ELAB-311)
+
+Statistics for case statements in always block at line 104 in file
+	'../../Qrisc/vhdl/5.9/CORE/xi_memhandle.vhd'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           108            |    auto/auto     |
+|           116            |    auto/auto     |
+|           124            |    auto/auto     |
+|           130            |    auto/auto     |
+===============================================
+Presto compilation completed successfully.
+Information: Building the design 'GP_ADDER' instantiated from design 'Decode_PC_include_scc0_Word_Width32_Instr_width32_Iaddr_width24' with
+	the parameters "width=24". (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'rot_left' instantiated from design 'SHIFTER_Word_Width32_shift_count_width5_include_rotate1' with
+	the parameters "Word_Width=32,shift_count_width=5". (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'rot_right' instantiated from design 'SHIFTER_Word_Width32_shift_count_width5_include_rotate1' with
+	the parameters "Word_Width=32,shift_count_width=5". (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'sh_right_arith' instantiated from design 'SHIFTER_Word_Width32_shift_count_width5_include_rotate1' with
+	the parameters "Word_Width=32,shift_count_width=5". (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'sh_right_log' instantiated from design 'SHIFTER_Word_Width32_shift_count_width5_include_rotate1' with
+	the parameters "Word_Width=32,shift_count_width=5". (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'sh_left_log' instantiated from design 'SHIFTER_Word_Width32_shift_count_width5_include_rotate1' with
+	the parameters "Word_Width=32,shift_count_width=5". (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'Data_Reg' instantiated from design 'mult_block_Word_Width32_include_mul1_include_mult1_include_mad1' with
+	the parameters "init_value=0,reg_width=6". (HDL-193)
+
+Inferred memory devices in process
+	in routine Data_Reg_init_value0_reg_width6 line 293 in file
+		'../../Qrisc/vhdl/5.9/CORE/xi_components.vhd'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    data_out_reg     | Flip-flop |   6   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'Data_Reg' instantiated from design 'mult_block_Word_Width32_include_mul1_include_mult1_include_mad1' with
+	the parameters "init_value=0,reg_width=64". (HDL-193)
+
+Inferred memory devices in process
+	in routine Data_Reg_init_value0_reg_width64 line 293 in file
+		'../../Qrisc/vhdl/5.9/CORE/xi_components.vhd'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    data_out_reg     | Flip-flop |  64   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'GP_ADDER' instantiated from design 'mult_block_Word_Width32_include_mul1_include_mult1_include_mad1' with
+	the parameters "width=64". (HDL-193)
+Presto compilation completed successfully.
+1
+# The link command will resolve dependencies in the HDL hierarchy, so that if a sub-module in the hierarchy is missing or badly defined, 
+# the tool will exit with an error.
+# The uniquify command will force the tool to consider "independently" different instances of the same HDL entity. 
+# Suppose that we have 120 FFs in our design: some of them will have high fanout, some low, some tight timing constraints, some loose. 
+# Each must be synthesized independently, not each FF will be mapped on the same cell!
+current_design $TOP
+Current design is 'up_island'.
+{up_island}
+link
+
+  Linking design 'up_island'
+  Using the following designs and libraries:
+  --------------------------------------------------------------------------
+  NangateOpenCellLibrary (library) /ensc/fac1/fcampi/SOCLAB/LIBRARIES/NangateOpenCellLibrary_PDKv1_3_v2010_12/Front_End/DB/NangateOpenCellLibrary_slow.db
+  dw01.sldb (library)         /Lnx_STC/tools/synopsys/syn_vZ-2007.03-SP5/libraries/syn/dw01.sldb
+  dw02.sldb (library)         /Lnx_STC/tools/synopsys/syn_vZ-2007.03-SP5/libraries/syn/dw02.sldb
+  dw03.sldb (library)         /Lnx_STC/tools/synopsys/syn_vZ-2007.03-SP5/libraries/syn/dw03.sldb
+  dw04.sldb (library)         /Lnx_STC/tools/synopsys/syn_vZ-2007.03-SP5/libraries/syn/dw04.sldb
+  dw05.sldb (library)         /Lnx_STC/tools/synopsys/syn_vZ-2007.03-SP5/libraries/syn/dw05.sldb
+  dw07.sldb (library)         /Lnx_STC/tools/synopsys/syn_vZ-2007.03-SP5/libraries/syn/dw07.sldb
+  dw_foundation.sldb (library) /Lnx_STC/tools/synopsys/syn_vZ-2007.03-SP5/libraries/syn/dw_foundation.sldb
+  SRAM (library)              /ensc/grad1/cmc-16/ENSC400/UP_ISLAND/syn_045/SRAM.db
+
+1
+uniquify
+Removing uniquified design 'Data_Reg_init_value0_reg_width2'.
+Removing uniquified design 'BYPASS_MUX_Word_Width32'.
+Removing uniquified design 'Data_Reg_init_value0_reg_width32'.
+Removing uniquified design 'FlipFlop'.
+Removing uniquified design 'Bypass_Logic_rf_registers_addr_width5'.
+Removing uniquified design 'gp_adder_width24'.
+Removing uniquified design 'Data_Reg_init_value0_reg_width6'.
+  Uniquified 2 instances of design 'Data_Reg_init_value0_reg_width2'.
+  Uniquified 4 instances of design 'BYPASS_MUX_Word_Width32'.
+  Uniquified 41 instances of design 'Data_Reg_init_value0_reg_width32'.
+  Uniquified 2 instances of design 'FlipFlop'.
+  Uniquified 2 instances of design 'Bypass_Logic_rf_registers_addr_width5'.
+  Uniquified 2 instances of design 'gp_adder_width24'.
+  Uniquified 2 instances of design 'Data_Reg_init_value0_reg_width6'.
+1
+ungroup -all -flatten
+Information: Updating design information... (UID-85)
+Warning: Design 'up_island' contains 1 high-fanout nets. A fanout number of 1000 will be used for delay calculations involving these nets. (TIM-134)
+1
+# -----------------------------
+# Setting Design constraints
+# -----------------------------
+# After Logic synthesis has been performed, the logic functionality of the HDL is known. With the following step, 
+# the functionality is mapped over the available standard cells, in order to produce a netlist that will represent 
+# the technology implementation of the HDL functionality
+# Since as we know the synthesis process is driven by our CONSTRAINTS, before we perform technology mapping we need to specify the constraints 
+# to our design. In particular, we must impose TIMINGS.
+# If we specify nothing, the tool will produce the smallest AREA not considering timing
+## Boundary Conditions
+set_input_transition -max       1         [all_inputs]
+1
+set_load                        5         [all_outputs]
+1
+## Timing Constraints
+# Establishing clock period:  Since clock is ideal, we don't want the tool to optimize the clk net so we set it as "dont touch"
+create_clock -name CLK -period 9 -waveform {0 4.5}  {CLK}
+1
+# Do not buffer the clk tree
+set_dont_touch_network CLK
+1
+# Delays imposed by the communication to/from other blocks in the system. 
+# This number should be given to us by the designers of other blocks or by who is designing the TOP IC.
+set_input_delay  0.2 -max -clock CLK [all_inputs] 
+1
+set_output_delay 0.1 -max -clock CLK [all_outputs]
+1
+# There is no reason to make the reset line so fast to complete in one clock
+set_max_delay 40 -from reset 
+1
+# Decoupling the contribution of the two clocks
+# Do not use Clktree buffers for logic synthesis
+set_dont_use {NangateOpenCellLibrary/CLKBUF_*}
+1
+# -----------------------------
+# Running Technology Mapping
+# -----------------------------
+current_design $TOP
+Current design is 'up_island'.
+{up_island}
+compile -map_effort high -incremental_mapping
+Information: Checking out the license 'DesignWare'. (SEC-104)
+Information: Evaluating DesignWare library utilization. (UISN-27)
+
+============================================================================
+| DesignWare Building Block Library       |      Version       | Available |
+============================================================================
+| Basic DW Building Blocks                | Z-2007.03-DWBB_0710 |    *     |
+| Licensed DW Building Blocks             | Z-2007.03-DWBB_0710 |    *     |
+============================================================================
+
+
+Information: There are 229 potential problems in your design. Please run 'check_design' for more information. (LINT-99)
+
+
+
+  Beginning Pass 1 Mapping  (Incremental)
+  ------------------------
+  Processing 'up_island'
+Information: The register 'UUT/Mcontrol/irfd/q_reg' is a constant and will be removed. (OPT-1206)
+
+  Updating timing information
+Information: Updating design information... (UID-85)
+
+  Beginning Implementation Selection
+  ----------------------------------
+  Processing 'up_island_DW01_add_0'
+  Processing 'up_island_DW01_add_1'
+  Processing 'up_island_DW01_add_2'
+  Processing 'up_island_DW01_cmp2_0'
+  Processing 'up_island_DW01_cmp2_1'
+  Mapping 'up_island_DW_cmp_0'
+  Mapping 'up_island_DW_cmp_1'
+  Mapping 'up_island_DW_cmp_2'
+  Mapping 'up_island_DW_cmp_3'
+  Processing 'up_island_DW01_cmp6_0'
+  Mapping 'up_island_DW_cmp_4'
+  Mapping 'up_island_DW_cmp_5'
+  Mapping 'up_island_DW_cmp_6'
+  Mapping 'up_island_DW_cmp_7'
+  Mapping 'up_island_DW_cmp_8'
+  Mapping 'up_island_DW_cmp_9'
+  Processing 'up_island_DW01_sub_0'
+  Processing 'up_island_DW01_add_3'
+  Mapping 'up_island_DW_leftsh_0'
+  Mapping 'up_island_DW01_bsh_0'
+  Mapping 'up_island_DW_rbsh_0'
+  Mapping 'up_island_DW_sra_0'
+  Mapping 'up_island_DW_rightsh_0'
+  Mapping 'up_island_DW_mult_tc_0'
+
+  Beginning Mapping Optimizations  (High effort)  (Incremental)
+  -------------------------------
+Information: Added key list 'DesignWare' to design 'up_island'. (DDB-72)
+
+  Beginning Incremental Implementation Selection
+  ----------------------------------------------
+  Mapping 'up_island_DW_rightsh_1'
+  Mapping 'up_island_DW_sra_1'
+  Mapping 'up_island_DW_rbsh_1'
+  Mapping 'up_island_DW01_bsh_1'
+  Mapping 'up_island_DW_leftsh_1'
+  Selecting implementations
+  Mapping 'up_island_DW_mult_tc_0'
+  Mapping 'up_island_DW_mult_tc_0'
+
+  Beginning Delay Optimization Phase
+  ----------------------------------
+
+   ELAPSED            WORST NEG TOTAL NEG  DESIGN                            
+    TIME      AREA      SLACK     SLACK   RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:01:22   29694.1     57.44   74817.8   12750.9                          
+    0:01:28   30341.6      7.94     965.2    8935.1 UUT/Mpath/the_mult/MulHi_reg/data_out_reg[30]/D
+    0:01:31   30561.0      6.19     858.8    9408.5 UUT/Mcontrol/Program_counter/out_pc_reg[19]/D
+    0:01:33   30595.6      5.29     812.6    9140.9 UUT/Mpath/the_mult/MulHi_reg/data_out_reg[31]/D
+    0:01:36   30632.6      4.57     745.9    8782.9 UUT/Mpath/the_mult/MulHi_reg/data_out_reg[30]/D
+    0:01:38   30686.6      4.03     636.5    8145.0 UUT/Mpath/the_mult/MulHi_reg/data_out_reg[30]/D
+    0:01:39   30756.0      3.64     571.1    7979.4 UUT/Mpath/the_mult/MulHi_reg/data_out_reg[31]/D
+    0:01:41   30783.1      3.23     502.0    7708.7 UUT/Mpath/the_mult/MulHi_reg/data_out_reg[31]/D
+    0:01:43   30808.9      2.95     440.9    7281.7 UUT/Mpath/the_mult/MulHi_reg/data_out_reg[31]/D
+    0:01:44   30839.8      2.86     416.8    7019.9 UUT/Mpath/the_mult/MulHi_reg/data_out_reg[31]/D
+    0:01:46   30849.9      2.71     414.2    7019.9 UUT/Mpath/the_mult/MulHi_reg/data_out_reg[31]/D
+    0:01:47   30882.1      2.64     388.1    7008.5 UUT/Mpath/the_mult/MulHi_reg/data_out_reg[31]/D
+    0:01:49   30886.1      2.61     387.7    7008.5 UUT/Mpath/the_mult/MulHi_reg/data_out_reg[31]/D
+    0:01:50   30897.2      2.61     378.0    7032.5 UUT/Mpath/the_mult/MulHi_reg/data_out_reg[31]/D
+    0:01:51   30902.8      2.58     377.6    7032.5 UUT/Mpath/the_mult/MulHi_reg/data_out_reg[31]/D
+    0:01:53   30948.0      2.40     358.3    7073.8 UUT/Mpath/the_mult/MulHi_reg/data_out_reg[31]/D
+    0:01:54   30957.1      2.34     356.9    7073.8 UUT/Mpath/the_mult/MulHi_reg/data_out_reg[31]/D
+    0:01:56   30971.7      2.29     355.0    7075.5 UUT/Mpath/the_mult/MulHi_reg/data_out_reg[31]/D
+    0:01:58   30983.7      2.26     351.4    7078.1 UUT/Mcontrol/Program_counter/out_pc_reg[22]/D
+    0:01:59   31004.2      2.25     338.1    7078.1                          
+    0:02:01   31024.1      2.21     317.8    7014.3 UUT/Mpath/the_mult/MulHi_reg/data_out_reg[31]/D
+    0:02:02   31025.4      2.20     317.8    7014.3 UUT/Mpath/the_mult/MulHi_reg/data_out_reg[31]/D
+    0:02:04   31030.0      2.19     318.3    7019.4 UUT/Mpath/the_mult/MulHi_reg/data_out_reg[31]/D
+    0:02:05   31052.3      2.17     315.7    7019.4                          
+    0:02:07   31064.8      2.12     284.3    6968.5 UUT/Mpath/the_mult/MulHi_reg/data_out_reg[31]/D
+    0:02:08   31068.0      2.11     284.2    6968.5 UUT/Mpath/the_mult/MulHi_reg/data_out_reg[31]/D
+    0:02:10   31068.3      2.10     284.0    6968.5 UUT/Mpath/the_mult/MulHi_reg/data_out_reg[31]/D
+    0:02:12   31069.9      2.10     284.0    6968.5 UUT/Mpath/the_mult/MulHi_reg/data_out_reg[31]/D
+    0:02:13   31073.1      2.08     283.9    6968.5 UUT/Mpath/the_mult/MulHi_reg/data_out_reg[31]/D
+    0:02:15   31076.2      2.07     283.8    6968.5 UUT/Mpath/the_mult/MulHi_reg/data_out_reg[31]/D
+    0:02:16   31071.7      2.06     284.0    6968.5 UUT/Mpath/the_mult/MulHi_reg/data_out_reg[31]/D
+    0:02:17   31074.9      2.01     283.3    6968.5 UUT/Mpath/the_mult/MulHi_reg/data_out_reg[31]/D
+    0:02:20   31087.7      1.98     282.8    6968.5                          
+    0:02:22   31091.1      1.94     282.4    6968.5 UUT/Mpath/the_mult/MulHi_reg/data_out_reg[31]/D
+    0:02:24   31095.4      1.92     281.9    6968.5                          
+    0:02:26   31115.1      1.90     257.0    6942.3 UUT/Mpath/the_mult/MulHi_reg/data_out_reg[31]/D
+    0:02:27   31116.9      1.88     256.7    6942.3 UUT/Mpath/the_mult/MulHi_reg/data_out_reg[31]/D
+    0:02:29   31146.5      1.83     255.9    6942.3                          
+    0:02:30   31149.9      1.74     249.8    6856.8 UUT/Mpath/the_mult/MulHi_reg/data_out_reg[31]/D
+    0:02:31   31159.8      1.72     244.6    6856.8 UUT/Mpath/the_mult/MulHi_reg/data_out_reg[31]/D
+    0:02:33   31161.6      1.72     244.6    6856.8 UUT/Mpath/the_mult/MulHi_reg/data_out_reg[31]/D
+    0:02:34   31167.2      1.70     244.5    6856.8 UUT/Mpath/the_mult/MulHi_reg/data_out_reg[31]/D
+    0:02:36   31187.2      1.70     242.0    6856.8                          
+    0:02:37   31184.5      1.67     224.5    6860.3 UUT/Mpath/the_mult/MulHi_reg/data_out_reg[31]/D
+    0:02:38   31184.8      1.63     224.1    6860.3 UUT/Mpath/the_mult/MulHi_reg/data_out_reg[31]/D
+    0:02:40   31186.9      1.62     223.9    6860.3 UUT/Mpath/the_mult/MulHi_reg/data_out_reg[31]/D
+    0:02:41   31191.7      1.60     223.6    6860.3 UUT/Mpath/the_mult/MulHi_reg/data_out_reg[31]/D
+    0:02:42   31198.6      1.59     223.4    6860.3 UUT/Mpath/the_mult/MulHi_reg/data_out_reg[31]/D
+    0:02:43   31202.6      1.57     221.0    6860.3 UUT/Mpath/the_mult/MulHi_reg/data_out_reg[31]/D
+    0:02:44   31207.1      1.57     221.0    6860.3                          
+    0:02:48   31209.2      1.57     220.9    6860.3                          
+    0:02:49   31214.3      1.53     208.4    6870.8 UUT/Mpath/the_mult/MulHi_reg/data_out_reg[31]/D
+    0:02:51   31216.7      1.52     208.4    6870.8 UUT/Mpath/the_mult/MulHi_reg/data_out_reg[31]/D
+    0:02:53   31257.1      1.51     208.1    6870.8                          
+    0:02:54   31273.9      1.44     186.1    6898.4 UUT/Mcontrol/Program_counter/out_pc_reg[23]/D
+    0:02:56   31263.5      1.35     181.3    6808.7 UUT/Mpath/the_mult/MulHi_reg/data_out_reg[31]/D
+    0:02:58   31267.2      1.34     180.7    6770.8 UUT/Mpath/the_mult/MulHi_reg/data_out_reg[31]/D
+    0:02:59   31268.8      1.32     180.7    6770.8 UUT/Mpath/the_mult/MulHi_reg/data_out_reg[31]/D
+    0:03:01   31288.8      1.32     180.0    6770.8                          
+    0:03:02   31289.8      1.31     180.0    6770.8 UUT/Mpath/the_mult/MulHi_reg/data_out_reg[31]/D
+    0:03:05   31289.8      1.31     151.8    6770.8 UUT/Mpath/the_mult/MulHi_reg/data_out_reg[31]/D
+    0:03:08   31307.7      1.30     151.6    6770.8                          
+    0:03:09   31315.6      1.28     151.4    6770.8 UUT/Mpath/the_mult/MulHi_reg/data_out_reg[31]/D
+    0:03:11   31335.6      1.21     138.2    6773.6 UUT/Mpath/the_mult/MulHi_reg/data_out_reg[31]/D
+    0:03:12   31335.9      1.20     138.2    6773.6 UUT/Mpath/the_mult/MulHi_reg/data_out_reg[31]/D
+    0:03:13   31336.7      1.20     138.1    6773.6 UUT/Mpath/the_mult/MulHi_reg/data_out_reg[31]/D
+    0:03:16   31367.8      1.18     137.7    6773.6                          
+    0:03:17   31383.2      1.14     135.6    6822.3 UUT/Mpath/the_mult/MulHi_reg/data_out_reg[31]/D
+    0:03:18   31382.7      1.13     135.5    6822.3 UUT/Mpath/the_mult/MulHi_reg/data_out_reg[31]/D
+    0:03:19   31392.8      1.10     135.9    6678.4 UUT/Mpath/the_mult/MulHi_reg/data_out_reg[31]/D
+    0:03:22   31404.0      1.07     135.6    6678.4                          
+    0:03:24   31384.5      1.04     124.9    6660.3 UUT/Mpath/the_mult/MulHi_reg/data_out_reg[31]/D
+    0:03:28   31391.5      1.02     123.9    6661.0                          
+    0:03:29   31412.7      0.98     115.2    6666.3 UUT/Mcontrol/Program_counter/out_pc_reg[19]/D
+    0:03:31   31414.3      0.97     115.2    6666.3 UUT/Mpath/the_mult/MulHi_reg/data_out_reg[31]/D
+    0:03:33   31420.7      0.95     115.1    6666.3 UUT/Mpath/the_mult/MulHi_reg/data_out_reg[31]/D
+    0:03:35   31439.9      0.85      91.3    6673.5 UUT/Mcontrol/Program_counter/out_pc_reg[1]/D
+    0:03:36   31466.5      0.77      87.3    6697.9 UUT/Mpath/the_mult/MulHi_reg/data_out_reg[31]/D
+    0:03:37   31460.1      0.76      86.9    6697.9 UUT/Mpath/the_mult/MulHi_reg/data_out_reg[31]/D
+    0:03:39   31465.1      0.74      86.1    6699.3 UUT/Mpath/the_mult/MulHi_reg/data_out_reg[31]/D
+    0:03:40   31477.1      0.72      62.7    6722.6 UUT/Mpath/the_mult/MulHi_reg/data_out_reg[31]/D
+    0:03:41   31463.0      0.70      68.9    6701.0 UUT/Mcontrol/Program_counter/out_pc_reg[1]/D
+    0:03:42   31479.2      0.66      63.0    6701.7 UUT/Mpath/the_mult/MulHi_reg/data_out_reg[31]/D
+    0:03:46   31511.4      0.66      63.0    6701.7                          
+    0:03:48   31529.5      0.61      57.6    6705.7 UUT/Mpath/the_mult/MulHi_reg/data_out_reg[31]/D
+    0:03:49   31539.4      0.60      56.9    6705.7 UUT/Mpath/the_mult/MulHi_reg/data_out_reg[31]/D
+    0:03:50   31539.6      0.60      56.6    6703.1 UUT/Mpath/the_mult/MulHi_reg/data_out_reg[31]/D
+    0:03:51   31540.4      0.59      56.6    6703.1 UUT/Mpath/the_mult/MulHi_reg/data_out_reg[31]/D
+    0:03:52   31541.5      0.59      56.5    6703.1 UUT/Mpath/the_mult/MulHi_reg/data_out_reg[31]/D
+    0:03:53   31543.9      0.58      56.0    6703.1 UUT/Mpath/the_mult/MulHi_reg/data_out_reg[31]/D
+    0:03:57   31560.4      0.56      55.3    6703.1                          
+    0:03:58   31562.8      0.55      53.6    6703.8 UUT/Mpath/the_mult/MulHi_reg/data_out_reg[31]/D
+    0:04:00   31563.6      0.53      50.9    6701.4 UUT/Mpath/the_mult/MulHi_reg/data_out_reg[31]/D
+    0:04:01   31573.1      0.52      48.9    6708.1 UUT/Mpath/the_mult/MulHi_reg/data_out_reg[31]/D
+    0:04:03   31573.1      0.52      48.9    6708.1 UUT/Mpath/the_mult/MulHi_reg/data_out_reg[31]/D
+    0:04:06   31582.2      0.52      48.9    6708.1                          
+    0:04:08   31581.9      0.50      38.7    6679.3 UUT/Mpath/the_mult/MulHi_reg/data_out_reg[31]/D
+    0:04:09   31583.0      0.48      38.5    6679.3 UUT/Mpath/the_mult/MulHi_reg/data_out_reg[31]/D
+    0:04:11   31585.9      0.47      37.9    6679.3 UUT/Mpath/the_mult/MulHi_reg/data_out_reg[31]/D
+    0:04:12   31597.6      0.46      37.9    6681.8 UUT/Mpath/the_mult/MulHi_reg/data_out_reg[31]/D
+    0:04:16   31669.7      0.46      37.7    6681.8                          
+    0:04:18   31669.7      0.39      29.1    6651.2 UUT/Mpath/the_mult/MulHi_reg/data_out_reg[31]/D
+    0:04:19   31652.7      0.33      23.8    6629.5 UUT/Mpath/the_mult/MulHi_reg/data_out_reg[31]/D
+    0:04:21   31656.1      0.32      22.8    6627.7 UUT/Mpath/the_mult/MulHi_reg/data_out_reg[31]/D
+    0:04:22   31657.5      0.29      21.5    6627.7 IMem/address[9]          
+    0:04:23   31662.2      0.29      20.8    6627.7 UUT/Mpath/the_mult/MulHi_reg/data_out_reg[31]/D
+    0:04:25   31674.7      0.28      18.7    6591.6 UUT/Mpath/the_mult/MulHi_reg/data_out_reg[31]/D
+    0:04:28   31680.9      0.27      18.7    6591.6                          
+    0:04:29   31691.8      0.27      12.3    6609.1 UUT/Mpath/the_mult/MulHi_reg/data_out_reg[31]/D
+    0:04:30   31692.6      0.27      12.3    6609.1 UUT/Mpath/the_mult/MulHi_reg/data_out_reg[31]/D
+    0:04:35   31705.1      0.26      12.2    6585.0                          
+    0:04:37   31714.6      0.20      10.2    6586.5 UUT/Mpath/the_mult/MulHi_reg/data_out_reg[30]/D
+    0:04:39   31731.9      0.17       7.5    6590.2 UUT/Mpath/the_mult/MulHi_reg/data_out_reg[30]/D
+    0:04:40   31744.4      0.14       5.7    6614.5 UUT/Mcontrol/Program_counter/out_pc_reg[4]/D
+    0:04:42   31749.5      0.11       5.4    6618.8 UUT/Mpath/the_mult/MulHi_reg/data_out_reg[31]/D
+    0:04:43   31756.4      0.10       4.6    6618.0 UUT/Mpath/the_mult/MulHi_reg/data_out_reg[31]/D
+    0:04:44   31758.0      0.10       4.5    6618.0 UUT/Mpath/the_mult/MulHi_reg/data_out_reg[31]/D
+    0:04:46   31756.9      0.08       3.7    6615.5 UUT/Mcontrol/Program_counter/out_pc_reg[4]/D
+    0:04:49   31768.4      0.07       1.7    6618.0                          
+    0:04:50   31774.2      0.05       1.3    6612.4 UUT/Mpath/the_mult/MulHi_reg/data_out_reg[31]/D
+    0:04:52   31776.1      0.04       1.3    6612.4 UUT/Mpath/the_mult/MulHi_reg/data_out_reg[31]/D
+    0:04:53   31774.8      0.04       1.0    6612.4 IMem/address[7]          
+    0:04:55   31775.6      0.03       1.0    6612.4 UUT/Mpath/the_mult/MulHi_reg/data_out_reg[29]/D
+    0:04:57   31778.0      0.02       0.5    6612.4 UUT/Mpath/the_mult/MulHi_reg/data_out_reg[29]/D
+    0:04:58   31774.5      0.02       0.2    6611.6 IMem/address[7]          
+    0:04:59   31759.9      0.02       0.2    6570.6 UUT/Mpath/the_mult/MulHi_reg/data_out_reg[29]/D
+    0:05:01   31750.3      0.01       0.1    6543.9 UUT/Mpath/the_mult/MulHi_reg/data_out_reg[31]/D
+    0:05:02   31753.0      0.01       0.0    6541.0 UUT/Mpath/the_mult/MulHi_reg/data_out_reg[29]/D
+    0:05:03   31756.4      0.00       0.0    6541.0                          
+
+
+  Beginning Design Rule Fixing  (max_transition)  (max_capacitance)
+  ----------------------------
+
+   ELAPSED            WORST NEG TOTAL NEG  DESIGN                            
+    TIME      AREA      SLACK     SLACK   RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:05:03   31756.4      0.00       0.0    6541.0                          
+    0:05:09   30432.0      0.00       0.0      17.0 UUT/Mcontrol/int_reset   
+Loading db file '/ensc/fac1/fcampi/SOCLAB/LIBRARIES/NangateOpenCellLibrary_PDKv1_3_v2010_12/Front_End/DB/NangateOpenCellLibrary_slow.db'
+Loading db file '/ensc/grad1/cmc-16/ENSC400/UP_ISLAND/syn_045/SRAM.db'
+
+  Optimization Complete
+  ---------------------
+Warning: Design 'up_island' contains 2 high-fanout nets. A fanout number of 1000 will be used for delay calculations involving these nets. (TIM-134)
+     Net 'CLK': 1485 load(s), 1 driver(s)
+     Net 'UUT/Mcontrol/int_reset': 1483 load(s), 1 driver(s)
+1
+# -----------------------------
+# Producing Results
+# -----------------------------
+# Writing out reports: Used cells (Area), Timing, Power
+report_reference  >  ./results/$TOP.rpt
+report_timing    -transition_time -capacitance >> ./results/$TOP.rpt
+report_power     >> ./results/$TOP.rpt
+# Writing out final netlist (Verilog/ddc) and relative constraints
+write -f ddc -hierarchy  -output ./results/$TOP.ddc
+Writing ddc file './results/up_island.ddc'.
+1
+write_sdc -nosplit               ./results/$TOP.sdc
+1
+write -format verilog -hier -o   ./results/$TOP.ref.v
+Writing verilog file '/ensc/grad1/cmc-16/ENSC400/UP_ISLAND/syn_045/results/up_island.ref.v'.
+Warning: Verilog 'assign' or 'tran' statements are written out. (VO-4)
+Warning: Verilog writer has added 3 nets to module up_island using SYNOPSYS_UNCONNECTED_ as prefix.  Please use the change_names command to make the correct changes before invoking the verilog writer.  (VO-11)
+1
+exit
+Information: Defining new variable 'additional_link_lib_files'. (CMD-041)
+Information: Defining new variable 'TOP'. (CMD-041)
+
+Thank you...

@@ -1,6 +1,7 @@
 --------------------------------------------------------------------------
 -- Ahmed Medhioub                                                       --
 -- SFU | ENSC 400 | Spring 2014                                         --
+-- BUS/                                                                 -- 
 --------------------------------------------------------------------------
 
 ==========================================================================
@@ -11,24 +12,15 @@ This directory contains the following:
 	- README  : txt file discribing the containt
 	- vhdl/   : directory containing vhdl of register
 		|
-		-> SRAM.vhd : File discribing REG entity 
-			*Array of size** of std_logic_vector  
-			*Non synthisizable architecture
+		-> BUS.vhd : File containing "BUS_master" entity 
 		|
-		-> PSRAM.vhd: File containing logic to simulate timing at 
-			synthisis
+		-> BUS_M_4S.vhd: File contains the top arch of the bus 
+		|		where the Master is connected to the 4
+		|		slaves.
 		|
-		-> tb_SRAM.vhd : Test bench for SRAM
-		|
-		-> tb_PSRAM.vhd : Test bench for PSRAM
-		|
-		-> SRAM_slave.vhd : // to do
-		|
-		-> SRAM_up_mem.vhd :  // to do
-		|
-		-> SRAM_32b_data.vhd : // to do
+		-> Top_BUS.vhd : address multiplexing  
 	
-	- sim/     : Simulation directory
+	- sim/    : Simulation directory
 		|
 		-> modelsim.ini : // to do
 		|
@@ -39,165 +31,14 @@ This directory contains the following:
 			-> compile.csh : compilation script
 				$ source compile.csh
 			
-	- syn_045/ : Synthisys Directory
-		|
-		->// to do
-		 // add here synth scripts and relavent out put files 
-		// as well as their location
-
-	- BE_045/  : Back end directory
-		|
-		->// to do
-		 // add here synth scripts and relavent out put
-		// as well as their location
-
 ==========================================================================
-= List of files                                                          =
+= List of relevent files                                                 =
 ==========================================================================
 
-./syn_045/scripts/command.log
-./syn_045/scripts/synth.tcl
-./syn_045/results/check_design.log
-./syn_045/results/SRAM.rpt
-./syn_045/results/SRAM.ddc
-./syn_045/results/SRAM.sdc
-./syn_045/results/SRAM.ref.v
-./syn_045/results/PSRAM.rpt
-./syn_045/results/PSRAM.ddc
-./syn_045/results/PSRAM.sdc
-./syn_045/results/PSRAM.ref.v
-./syn_045/command.log
-./syn_045/work/ENTI/PSRAM.vif
-./syn_045/work/ENTI/SRAM.vif
-./syn_045/work/SRAM.mr
-./syn_045/work/ARCH/BEHV-PSRAM.vif
-./syn_045/work/ARCH/BEHV-SRAM.vif.obs
-./syn_045/work/SRAM.syn
-./syn_045/work/SRAM-BEHV.syn
-./syn_045/work/PSRAM.mr
-./syn_045/work/PSRAM.syn
-./syn_045/work/PSRAM-BEHV.syn
-./syn_045/default.svf
-./syn_045/encounter.log
-./syn_045/encounter.cmd
-./syn_045/report.log
-./vhdl/tb_SRAM.vhd
-./vhdl/tb_PSRAM.vhd
-./vhdl/SRAM.vhd
-./vhdl/SRAM_32b_data.vhd
-./vhdl/SRAM_slave.vhd
-./vhdl/SRAM_up_mem.vhd
-./vhdl/PSRAM.vhd
+./vhdl/BUS_M_4S.vhd
+./vhdl/BUS.vhd
+./vhdl/Top_BUS.vhd
 ./sim/scripts/modelsim.ini
-./sim/scripts/simulate.tcl
 ./sim/scripts/vsim.wlf
 ./sim/scripts/compile.csh
-./sim/scripts/work/sram/_primary.dbs
-./sim/scripts/work/sram/_primary.dat
-./sim/scripts/work/sram/behv.dbs
-./sim/scripts/work/sram/behv.dat
-./sim/scripts/work/sram/behv.asm
-./sim/scripts/work/sram/behv.rw
-./sim/scripts/work/psram/_primary.dbs
-./sim/scripts/work/psram/_primary.dat
-./sim/scripts/work/psram/behv.dbs
-./sim/scripts/work/psram/behv.dat
-./sim/scripts/work/psram/behv.asm
-./sim/scripts/work/psram/behv.rw
-./sim/scripts/work/e/_primary.dbs
-./sim/scripts/work/e/_primary.dat
-./sim/scripts/work/e/a.dbs
-./sim/scripts/work/e/a.dat
-./sim/scripts/work/e/a.asm
-./sim/scripts/work/e/a.rw
-./sim/modelsim.ini
-./sim/vsim.wlf
-./BE_045/inputs/up_island.sdc
-./BE_045/inputs/up_island.ddc
-./BE_045/inputs/up_island.ref.v
-./BE_045/inputs/PSRAM.conf
-./BE_045/inputs/SRAM.conf~
-./BE_045/inputs/SRAM.conf
-./BE_045/inputs/SRAM.ddc
-./BE_045/inputs/SRAM.sdc
-./BE_045/inputs/SRAM.ref.v
-./BE_045/scripts/05-cts.tcl
-./BE_045/scripts/05-cts.tcl~
-./BE_045/scripts/04-postPlaceOpt.tcl
-./BE_045/scripts/04-postPlaceOpt.tcl~
-./BE_045/scripts/03-place.tcl~
-./BE_045/scripts/06-postCTSOpt.tcl
-./BE_045/scripts/06-postCTSOpt.tcl~
-./BE_045/scripts/07-route.tcl
-./BE_045/scripts/#08-finishing.tcl#
-./BE_045/scripts/08-finishing.tcl~
-./BE_045/scripts/01-importDesign.tcl~
-./BE_045/scripts/07-route.tcl~
-./BE_045/scripts/top.tcl
-./BE_045/scripts/08-finishing.tcl
-./BE_045/scripts/03-place.tcl
-./BE_045/scripts/encounter.log
-./BE_045/scripts/encounter.cmd
-./BE_045/scripts/02-floorplan.tcl~
-./BE_045/scripts/01-importDesign.tcl
-./BE_045/scripts/02-floorplan.tcl
-./BE_045/encounter.log
-./BE_045/encounter.cmd
-./BE_045/DBS/01-importDesign.enc
-./BE_045/DBS/02-floorplan.enc
-./BE_045/DBS/01-importDesign.enc.dat
-./BE_045/DBS/01-importDesign.enc.dat/SRAM.v.gz
-./BE_045/DBS/01-importDesign.enc.dat/SRAM.conf
-./BE_045/DBS/01-importDesign.enc.dat/enc.pref.tcl
-./BE_045/DBS/01-importDesign.enc.dat/SRAM.mode
-./BE_045/DBS/01-importDesign.enc.dat/SRAM.globals
-./BE_045/DBS/01-importDesign.enc.dat/SRAM.fp.gz
-./BE_045/DBS/01-importDesign.enc.dat/SRAM.fp.spr.gz
-./BE_045/DBS/01-importDesign.enc.dat/SRAM.opconds
-./BE_045/DBS/01-importDesign.enc.dat/SRAM.place.gz
-./BE_045/DBS/01-importDesign.enc.dat/SRAM.route.gz
-./BE_045/DBS/01-importDesign.enc.dat/SRAM_power_constraints.tcl
-./BE_045/DBS/02-floorplan.enc.dat
-./BE_045/DBS/02-floorplan.enc.dat/SRAM.v.gz
-./BE_045/DBS/02-floorplan.enc.dat/SRAM.conf
-./BE_045/DBS/02-floorplan.enc.dat/enc.pref.tcl
-./BE_045/DBS/02-floorplan.enc.dat/SRAM.mode
-./BE_045/DBS/02-floorplan.enc.dat/SRAM.globals
-./BE_045/DBS/02-floorplan.enc.dat/SRAM.fp.gz
-./BE_045/DBS/02-floorplan.enc.dat/SRAM.fp.spr.gz
-./BE_045/DBS/02-floorplan.enc.dat/SRAM.opconds
-./BE_045/DBS/02-floorplan.enc.dat/SRAM.place.gz
-./BE_045/DBS/02-floorplan.enc.dat/SRAM.route.gz
-./BE_045/DBS/02-floorplan.enc.dat/SRAM_power_constraints.tcl
-./BE_045/encounter.log1
-./BE_045/encounter.cmd1
-./BE_045/encounter.log2
-./BE_045/encounter.cmd2
-./BE_045/encounter.log3
-./BE_045/encounter.cmd3
-./BE_045/encounter.log4
-./BE_045/encounter.cmd4
-./BE_045/results/summary/01-importDesign.rpt
-./BE_045/results/summary/02-floorplan.rpt
-./BE_045/results/timing/01-importDesign-timeDesign.setup
-./BE_045/results/timing/01-importDesign-timeDesign.setup/SRAM.summary
-./BE_045/results/timing/01-importDesign-timeDesign.setup/SRAM.slk
-./BE_045/results/timing/01-importDesign-timeDesign.setup/SRAM.fanout
-./BE_045/results/timing/01-importDesign-timeDesign.setup/SRAM.tran
-./BE_045/results/timing/01-importDesign-timeDesign.setup/SRAM.cap
-./BE_045/results/timing/01-importDesign-timeDesign.setup/SRAM_all.tarpt
-./BE_045/results/timing/01-importDesign-timeDesign.setup/SRAM_in2reg.tarpt
-./BE_045/results/timing/01-importDesign-timeDesign.setup/SRAM_in2out.tarpt
-./BE_045/results/timing/01-importDesign-timeDesign.setup/SRAM_reg2out.tarpt
-./BE_045/results/timing/01-importDesign-timeDesign.setup/SRAM_flop2flop.tarpt
-./BE_045/results/timing/01-importDesign-timeDesign.setup/SRAM_clkgate.tarpt
-./BE_045/results/timing/01_Timing.rpt
-./BE_045/results/SRAM_floor.def
-./BE_045/results/SRAM.lef
-./BE_045/results/SRAM.lib
-./BE_045/results/command.log
-./BE_045/results/SRAM.db
-./BE_045/command.log
-
-
 

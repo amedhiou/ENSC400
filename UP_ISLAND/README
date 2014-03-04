@@ -1,0 +1,43 @@
+--------------------------------------------------------------------------
+-- Ahmed Medhioub                                                       --
+-- SFU | ENSC 400 | Spring 2014                                         --
+-- Directoy : UP_ISLAND/  						--
+--------------------------------------------------------------------------
+
+==========================================================================
+= Description:                                                           =
+==========================================================================
+
+This directory contains the following:
+	- README  : txt file discribing the containt
+	- vhdl/   : directory containing vhdl of 
+		|-- Debug_Tool.vhd  : // to do
+		|-- tb_upisland.vhd : where the BUS and CPU are connected
+		|-- ubus.vhd        : // to do
+		`-- up_island.vhd   : // to do
+
+	- sim/     : Simulation directory
+		|
+		-> scripts/ : Directory containing simulation scripts
+			|
+			-> compile_qrisc.csh : compile the CPU
+			|
+			-> compile_upisland.csh : compilation script
+				$ source compile.csh
+			
+	- syn_045/ : Synthisys Directory
+		|
+		->// to do
+		 // add here synth scripts and relavent out put files 
+		// as well as their location
+
+	- BE_045/  : Back end directory
+		|
+		->// to do
+		 // add here synth scripts and relavent out put
+		// as well as their location
+
+==========================================================================
+= List of files                                                          =
+==========================================================================
+
