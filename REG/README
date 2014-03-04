@@ -1,0 +1,22 @@
+--------------------------------------------------------------------------
+-- Ahmed Medhioub                                                       --
+-- SFU | ENSC 400 | Spring 2014                                         --
+--------------------------------------------------------------------------
+
+==========================================================================
+= Description:                                                           =
+==========================================================================
+
+This directory contains the following
+	- README : txt file discribing the containt
+	- vhdl/  : directory containing vhdl of register
+		|
+		-> REG.vhd : File discribing REG entity 
+			*FlipFlop based Register with write enable and read enable 
+			*the default word size is 32 
+
+==========================================================================
+= List of vhdl files                                                     =
+==========================================================================
+./REG/vhdl/REG.vhd
+

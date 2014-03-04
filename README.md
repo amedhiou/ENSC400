@@ -42,4 +42,27 @@
 	* changes in files (what problem does it targets is the issue fixed)
 	* to-do refrences if you have work to do in a file
 
-Contains all project directories used in ENSC 400
+example:
+----------------------------------------------------------------------
+-Author: Ahmed Medhioub
+-Date  : 03-03-2014
+-Title : Updating README.md with commit template and git instructions
+-Description:
+        * Adding clone, pull and push intructions to README.md 
+	* Adding commit message template
+----------------------------------------------------------------------
+
+=====================================================================
+= List of components
+=====================================================================
+
+this file contains a list and short description of all project 
+directories used in ENSC 400 
+
+* REG : 
+	- Description: Basic read/write FF based register that is 
+		used in all other projects
+	
+
+
+
