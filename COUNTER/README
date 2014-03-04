@@ -1,0 +1,21 @@
+--------------------------------------------------------------------------
+-- Ahmed Medhioub                                                       --
+-- SFU | ENSC 400 | Spring 2014                                         --
+-- Directory : COUNTER/
+--------------------------------------------------------------------------
+
+==========================================================================
+= Description:                                                           =
+==========================================================================
+
+This directory contains the following
+	- README : txt file discribing the containt
+	- vhdl/  : directory containing vhdl of the counter
+		|
+		-> counter.vhd : File discribing counter entity 
+			
+==========================================================================
+= List of vhdl files                                                     =
+==========================================================================
+./COUNTER/vhdl/counter.vhd
+

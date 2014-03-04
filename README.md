@@ -73,4 +73,5 @@ directories used in ENSC 400
 	- Description: CPU
 * FIFO :
         - Description: fifo used in this project
-
+* COUNTER : 
+	- Description: counter used in this project
