@@ -70,4 +70,7 @@ directories used in ENSC 400
 * UP_ISLAND :
 	- Description: CPU block (CPU + BUS + 4 Slaves )
 * Qrisc :
-	- Description: CPU 
+	- Description: CPU
+* FIFO :
+        - Description: fifo used in this project
+
