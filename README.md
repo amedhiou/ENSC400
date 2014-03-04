@@ -65,4 +65,5 @@ directories used in ENSC 400
 * SRAM : 
 	- Description: Memory used in this project
 
-
+* BUS : 
+	- Description: Bus architecture
