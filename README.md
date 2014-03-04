@@ -62,7 +62,7 @@ directories used in ENSC 400
 * REG : 
 	- Description: Basic read/write FF based register that is 
 		used in all other projects
-	
-
+* SRAM : 
+	- Description: Memory used in this project
 
 

@@ -1,0 +1,45 @@
+# Create Floorplan (45 nm)
+
+# floorPlan -su <aspectRatio> [<stdCellDensity> [<coreToLeft> <coreToBottom> <coreToRight> <coreToTop>]]
+
+floorPlan -su 1  0.94 4 4 4 4   
+
+editPin -fixedPin 1 -snap TRACK -side Top -unit TRACK -layer 2 -spreadType center -spacing 5.0 \
+    -pin {clk rdn wrn {address[0]} {address[1]} {address[2]} {address[3]} {address[4]} {address[5]} {address[6]} {address[7]} {address[8]} {address[9]} {address[10]} {bit_wen[0]} {bit_wen[1]} {bit_wen[2]} {bit_wen[3]} {bit_wen[4]} {bit_wen[5]} {bit_wen[6]} {bit_wen[7]} {bit_wen[8]} {bit_wen[9]} {bit_wen[10]} {bit_wen[11]} {bit_wen[12]} {bit_wen[13]} {bit_wen[14]} {bit_wen[15]} {bit_wen[16]} {bit_wen[17]} {bit_wen[18]} {bit_wen[19]} {bit_wen[20]} {bit_wen[21]} {bit_wen[22]} {bit_wen[23]} {bit_wen[24]} {bit_wen[25]} {bit_wen[26]} {bit_wen[27]} {bit_wen[28]} {bit_wen[29]} {bit_wen[30]} {bit_wen[31]} {data_in[0]} {data_in[1]} {data_in[2]} {data_in[3]} {data_in[4]} {data_in[5]} {data_in[6]} {data_in[7]} {data_in[8]} {data_in[9]} {data_in[10]} {data_in[11]} {data_in[12]} {data_in[13]} {data_in[14]} {data_in[15]} {data_in[16]} {data_in[17]} {data_in[18]} {data_in[19]} {data_in[20]} {data_in[21]} {data_in[22]} {data_in[23]} {data_in[24]} {data_in[25]} {data_in[26]} {data_in[27]} {data_in[28]} {data_in[29]} {data_in[30]} {data_in[31]}}
+
+editPin -fixedPin 1 -snap TRACK -side Bottom -unit TRACK -layer 2 -spreadType center -spacing 10.0 \
+    -pin {{data_out[0]} {data_out[1]} {data_out[2]} {data_out[3]} {data_out[4]} {data_out[5]} {data_out[6]} {data_out[7]} {data_out[8]} {data_out[9]} {data_out[10]} {data_out[11]} {data_out[12]} {data_out[13]} {data_out[14]} {data_out[15]}  {data_out[16]} {data_out[17]} {data_out[18]} {data_out[19]} {data_out[20]} {data_out[21]} {data_out[22]} {data_out[23]} {data_out[24]} {data_out[25]} {data_out[26]} {data_out[27]} {data_out[28]} {data_out[29]} {data_out[30]} {data_out[31]}}
+
+# Building a Power Ring for Vdd / Vdds, extending top/bottom segments to create pins
+# From the LEF file we know that M9 and M10 are the highest metals, and that the min width of the M9 M10 metals
+# is 0.8. We need to make this ring a multiple of 0.8.Since the area is small, we dont expect huge consumption,
+# we keep it at pitch. 
+# Note that in the foorplan we must reserve enough space between core (rows) and pins to build rings 
+
+addRing -width_left 0.8 -width_bottom 0.8 -width_top 0.8 -width_right 0.8 \
+        -spacing_bottom 0.8 -spacing_top 0.8 -spacing_left 0.8 -spacing_right 0.8 \
+        -layer_top metal9 -layer_bottom metal9 -layer_left metal10 -layer_right metal10 \
+        -lb 1 -lt 1 -rb 1 -rt 1 -nets {VDD VSS}
+
+# Note:for such a small design it is not necessary to build a whole 
+addStripe -direction vertical \
+          -set_to_set_distance 9.6     \
+          -spacing 4 \
+          -layer metal10 -width 0.8 -nets {VSS VDD } 
+          
+sroute -noPadPins -noPadRings -routingEffort allowShortJogs  -nets {VDD VSS}
+
+defOut -floorplan -noStdCells results/SRAM_floor.def
+
+
+
+
+saveDesign ./DBS/02-floorplan.enc -relativePath -compress
+
+# Create LEF
+lefOut results/$TOP.lef
+
+# Generate Timing Model (need for embedded module)
+do_extract_model results/$TOP.lib
+
+summaryReport -outfile results/summary/02-floorplan.rpt

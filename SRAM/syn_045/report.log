@@ -1,0 +1,230 @@
+
+                        DC Professional (TM)
+                           DC Expert (TM)
+                            DC Ultra (TM)
+                       FloorPlan Manager (TM)
+                          HDL Compiler (TM)
+                         VHDL Compiler (TM)
+                        Library Compiler (TM)
+                      DesignWare Developer (TM)
+                          DFT Compiler (TM)
+                            BSD Compiler
+                         Power Compiler (TM)
+
+           Version Z-2007.03-SP5 for linux -- Oct 16, 2007
+              Copyright (c) 1988-2007 by Synopsys, Inc.
+                         ALL RIGHTS RESERVED
+
+This software and the associated documentation are confidential and 
+proprietary to Synopsys, Inc. Your use or disclosure of this software 
+is subject to the terms and conditions of a written license agreement 
+between you, or your company, and Synopsys, Inc.
+
+The above trademark notice does not imply that you are licensed to use 
+all of the listed products. You are licensed to use only those products 
+for which you have lawfully obtained a valid license key.
+
+Initializing...
+# fcampi@sfu.ca July 2013
+# Simple combinational Synthesis example
+set TOP SRAM 
+SRAM
+# -----------------------------
+# Specifying Technology Libraries Design constraints
+# -----------------------------
+# We use SLOW timing libraries for worst case timing estimation and fix timing (Setup) in worst possible case
+# Please note (1): TARGET_LIBRARY    libraries that can be used for synthesis, so the tool can CHOOSE TO USE THEM to implement your VHDL
+#                  LINK_LIBRARY      libraries than can be linked by the tool, that is used by the designer in his design, but not CHOSEN by the tool
+#                                    Example: Memory blocks, or a pre-layouted block or a standard cell explicitly defined by the designer in HDL 
+#                  SYNTHETIC_LIBRARY Synthetic or DesignWare libraries. These slibraries are technology-independent, microarchitecture-level 
+#                                    design libraries offered by synopsys and providing pre-packaged implementations for various IP blocks.
+#                                    They differ from target libraries in that they are technology independent and contain operators 
+#                                    (ex. Multiplier, adder etc) instead of cells
+# Please Note (2) : Sometimes, for simplicity, these variables are set in a configuration file (.synopsys_dc.setup that is read by dc_shell at init
+set search_path    "/ensc/fac1/fcampi/SOCLAB/LIBRARIES/NangateOpenCellLibrary_PDKv1_3_v2010_12/Front_End/DB"
+/ensc/fac1/fcampi/SOCLAB/LIBRARIES/NangateOpenCellLibrary_PDKv1_3_v2010_12/Front_End/DB
+# Target library is the library that is used by the synthesis tool 
+# in order to map the behavioral RTL logic that is being synthesized
+set target_library "NangateOpenCellLibrary_slow.db"
+NangateOpenCellLibrary_slow.db
+# The synthetic library variable specified pre-designed technology independent architectures pre-packaged by Synopsys
+set synthetic_library [list dw01.sldb dw02.sldb dw03.sldb                             dw04.sldb dw05.sldb  dw07.sldb 			    dw_foundation.sldb ]  
+dw01.sldb dw02.sldb dw03.sldb dw04.sldb dw05.sldb dw07.sldb dw_foundation.sldb
+# The link library must contain ALL CELLS used in the design.cOther than the two above, it shall include any IO cell, memory cell, 
+# or other cell/block that the user wishes to include in the design from other sources
+set link_library  [concat $target_library $synthetic_library]
+NangateOpenCellLibrary_slow.db dw01.sldb dw02.sldb dw03.sldb dw04.sldb dw05.sldb dw07.sldb dw_foundation.sldb
+# -----------------------------
+# Running Logic Synthesis
+# -----------------------------
+# Reading input VHDL File(s): This steps only parses VHDL determining syntax errors, but the Synthesis process is not performed yet
+analyze -format vhdl ../vhdl/SRAM_32b_data.vhd
+Running PRESTO HDLC
+Compiling Entity Declaration SRAM
+Compiling Architecture BEHV of SRAM
+Warning:  ../vhdl/SRAM_32b_data.vhd:25: The architecture behv has already been analyzed. It is being replaced. (VHD-4)
+Presto compilation completed successfully.
+Loading db file '/ensc/fac1/fcampi/SOCLAB/LIBRARIES/NangateOpenCellLibrary_PDKv1_3_v2010_12/Front_End/DB/NangateOpenCellLibrary_slow.db'
+Loading db file '/Lnx_STC/tools/synopsys/syn_vZ-2007.03-SP5/libraries/syn/dw01.sldb'
+Loading db file '/Lnx_STC/tools/synopsys/syn_vZ-2007.03-SP5/libraries/syn/dw02.sldb'
+Loading db file '/Lnx_STC/tools/synopsys/syn_vZ-2007.03-SP5/libraries/syn/dw03.sldb'
+Loading db file '/Lnx_STC/tools/synopsys/syn_vZ-2007.03-SP5/libraries/syn/dw04.sldb'
+Loading db file '/Lnx_STC/tools/synopsys/syn_vZ-2007.03-SP5/libraries/syn/dw05.sldb'
+Loading db file '/Lnx_STC/tools/synopsys/syn_vZ-2007.03-SP5/libraries/syn/dw07.sldb'
+Loading db file '/Lnx_STC/tools/synopsys/syn_vZ-2007.03-SP5/libraries/syn/dw_foundation.sldb'
+1
+# Logic Synthesis
+elaborate $TOP 
+Loading db file '/Lnx_STC/tools/synopsys/syn_vZ-2007.03-SP5/libraries/syn/gtech.db'
+Loading db file '/Lnx_STC/tools/synopsys/syn_vZ-2007.03-SP5/libraries/syn/standard.sldb'
+  Loading link library 'NangateOpenCellLibrary'
+  Loading link library 'gtech'
+Running PRESTO HDLC
+Warning:  ../vhdl/SRAM_32b_data.vhd:42: Potential simulation-synthesis mismatch if index exceeds size of array 'ram_array'. (ELAB-349)
+Warning:  ../vhdl/SRAM_32b_data.vhd:42: Potential simulation-synthesis mismatch if index exceeds size of array 'ram_array'. (ELAB-349)
+Warning:  ../vhdl/SRAM_32b_data.vhd:42: Potential simulation-synthesis mismatch if index exceeds size of array 'ram_array'. (ELAB-349)
+Warning:  ../vhdl/SRAM_32b_data.vhd:50: Potential simulation-synthesis mismatch if index exceeds size of array 'ram_array'. (ELAB-349)
+
+Inferred memory devices in process
+	in routine SRAM line 32 in file
+		'../vhdl/SRAM_32b_data.vhd'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    addr_clk_reg     | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|    ram_array_reg    | Flip-flop | 8192  |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Elaborated 1 design.
+Current design is now 'SRAM'.
+1
+# The link command will resolve dependencies in the HDL hierarchy, so that if a sub-module in the hierarchy is missing or badly defined, 
+# the tool will exit with an error.
+# The uniquify command will force the tool to consider "independently" different instances of the same HDL entity. 
+# Suppose that we have 120 FFs in our design: some of them will have high fanout, some low, some tight timing constraints, some loose. 
+# Each must be synthesized independently, not each FF will be mapped on the same cell!
+current_design $TOP
+Current design is 'SRAM'.
+{SRAM}
+link
+
+  Linking design 'SRAM'
+  Using the following designs and libraries:
+  --------------------------------------------------------------------------
+  NangateOpenCellLibrary (library) /ensc/fac1/fcampi/SOCLAB/LIBRARIES/NangateOpenCellLibrary_PDKv1_3_v2010_12/Front_End/DB/NangateOpenCellLibrary_slow.db
+  dw01.sldb (library)         /Lnx_STC/tools/synopsys/syn_vZ-2007.03-SP5/libraries/syn/dw01.sldb
+  dw02.sldb (library)         /Lnx_STC/tools/synopsys/syn_vZ-2007.03-SP5/libraries/syn/dw02.sldb
+  dw03.sldb (library)         /Lnx_STC/tools/synopsys/syn_vZ-2007.03-SP5/libraries/syn/dw03.sldb
+  dw04.sldb (library)         /Lnx_STC/tools/synopsys/syn_vZ-2007.03-SP5/libraries/syn/dw04.sldb
+  dw05.sldb (library)         /Lnx_STC/tools/synopsys/syn_vZ-2007.03-SP5/libraries/syn/dw05.sldb
+  dw07.sldb (library)         /Lnx_STC/tools/synopsys/syn_vZ-2007.03-SP5/libraries/syn/dw07.sldb
+  dw_foundation.sldb (library) /Lnx_STC/tools/synopsys/syn_vZ-2007.03-SP5/libraries/syn/dw_foundation.sldb
+
+1
+uniquify
+1
+check_design > ./results/check_design.log
+# -----------------------------
+# Setting Design constraints
+# -----------------------------
+# After Logic synthesis has been performed, the logic functionality of the HDL is known. With the following step, 
+# the functionality is mapped over the available standard cells, in order to produce a netlist that will represent 
+# the technology implementation of the HDL functionality
+# Since as we know the synthesis process is driven by our CONSTRAINTS, before we perform technology mapping we need to specify the constraints 
+# to our design. In particular, we must impose TIMINGS.
+# If we specify nothing, the tool will produce the smallest AREA not considering timing
+## Boundary Conditions
+set_input_transition -max       1         [all_inputs]
+1
+set_load                        5         [all_outputs]
+1
+## Timing Constraints
+# Establishing clock period:  Since clock is ideal, we don't want the tool to optimize the clk net so we set it as "dont touch"
+create_clock -name clk -period 7 -waveform {0 3.5} {clk}
+1
+set_dont_touch_network clk  
+1
+# Delays imposed by the communication to/from other blocks in the system. 
+# This number should be given to us by the designers of other blocks or by who is designing the TOP IC.
+set_input_delay  0.8 -max -clock clk [all_inputs]
+1
+set_output_delay 0.8 -max -clock clk  [all_outputs]
+1
+# There is no reason to make the reset line so fast to complete in one clock
+#set_max_delay 20 -from resetn
+# -----------------------------
+# Running Technology Mapping
+# -----------------------------
+current_design $TOP
+Current design is 'SRAM'.
+{SRAM}
+compile -map_effort high -incremental_mapping
+Information: Evaluating DesignWare library utilization. (UISN-27)
+
+============================================================================
+| DesignWare Building Block Library       |      Version       | Available |
+============================================================================
+| Basic DW Building Blocks                | Z-2007.03-DWBB_0710 |    *     |
+| Licensed DW Building Blocks             | Z-2007.03-DWBB_0710 |          |
+============================================================================
+
+
+
+  Beginning Pass 1 Mapping  (Incremental)
+  ------------------------
+  Processing 'SRAM'
+
+  Updating timing information
+Information: Updating design information... (UID-85)
+
+  Beginning Mapping Optimizations  (High effort)  (Incremental)
+  -------------------------------
+
+  Beginning Incremental Implementation Selection
+  ----------------------------------------------
+
+  Beginning Delay Optimization Phase
+  ----------------------------------
+
+   ELAPSED            WORST NEG TOTAL NEG  DESIGN                            
+    TIME      AREA      SLACK     SLACK   RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:01:44   62436.6      0.95    7814.3   69867.9                          
+    0:01:52   63560.2      0.00       0.0   27193.3                          
+
+
+  Beginning Design Rule Fixing  (max_transition)  (max_capacitance)
+  ----------------------------
+
+   ELAPSED            WORST NEG TOTAL NEG  DESIGN                            
+    TIME      AREA      SLACK     SLACK   RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:01:52   63560.2      0.00       0.0   27193.3                          
+    0:02:22   64056.0      0.00       0.0      37.0                          
+Loading db file '/ensc/fac1/fcampi/SOCLAB/LIBRARIES/NangateOpenCellLibrary_PDKv1_3_v2010_12/Front_End/DB/NangateOpenCellLibrary_slow.db'
+
+  Optimization Complete
+  ---------------------
+Warning: Design 'SRAM' contains 1 high-fanout nets. A fanout number of 1000 will be used for delay calculations involving these nets. (TIM-134)
+     Net 'clk': 8200 load(s), 1 driver(s)
+1
+# -----------------------------
+# Producing Results
+# -----------------------------
+# Writing out reports: Used cells (Area), Timing, Power
+report_reference  >  ./results/$TOP.rpt
+report_timing    -transition_time -capacitance >> ./results/$TOP.rpt
+report_power     >> ./results/$TOP.rpt
+# Writing out final netlist (Verilog/ddc) and relative constraints
+write -f ddc -hierarchy  -output ./results/$TOP.ddc
+Writing ddc file './results/SRAM.ddc'.
+1
+write_sdc -nosplit               ./results/$TOP.sdc
+1
+write -format verilog -hier -o   ./results/$TOP.ref.v
+Writing verilog file '/ensc/grad1/cmc-16/ENSC400/SRAM/syn_045/results/SRAM.ref.v'.
+1
+exit
+Information: Defining new variable 'TOP'. (CMD-041)
+
+Thank you...

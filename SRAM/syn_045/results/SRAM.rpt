@@ -1,0 +1,150 @@
+Information: Updating design information... (UID-85)
+ 
+****************************************
+Report : reference
+Design : SRAM
+Version: Z-2007.03-SP5
+Date   : Mon Mar  3 09:49:52 2014
+****************************************
+
+Attributes:
+    b - black box (unknown)
+   bo - allows boundary optimization
+    d - dont_touch
+   mo - map_only
+    h - hierarchical
+    n - noncombinational
+    r - removable
+    s - synthetic operator
+    u - contains unmapped logic
+
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+AND2_X2            NangateOpenCellLibrary
+                                  1.330000      32     42.560001  
+AOI22_X1           NangateOpenCellLibrary
+                                  1.330000      32     42.560001  
+CLKBUF_X1          NangateOpenCellLibrary
+                                  0.798000       1      0.798000  
+CLKBUF_X2          NangateOpenCellLibrary
+                                  1.064000       1      1.064000  
+DFF_X1             NangateOpenCellLibrary
+                                  4.522000      75    339.149988  n
+INV_X1             NangateOpenCellLibrary
+                                  0.532000      76     40.432000  
+INV_X2             NangateOpenCellLibrary
+                                  0.798000       2      1.596000  
+OAI22_X1           NangateOpenCellLibrary
+                                  1.330000      43     57.190002  
+OR2_X2             NangateOpenCellLibrary
+                                  1.330000      10     13.300000  
+XOR2_X1            NangateOpenCellLibrary
+                                  1.596000      32     51.071999  
+-----------------------------------------------------------------------------
+Total 10 references                                   589.721992
+1
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+        -transition_time
+        -capacitance
+Design : SRAM
+Version: Z-2007.03-SP5
+Date   : Mon Mar  3 09:49:52 2014
+****************************************
+
+Operating Conditions: slow   Library: NangateOpenCellLibrary
+Wire Load Model Mode: top
+
+  Startpoint: addr_reg_reg[1]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: data_out[9]
+            (output port clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  SRAM               5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                           Cap     Trans      Incr       Path
+  ---------------------------------------------------------------------
+  clock clk (rise edge)                              0.00       0.00
+  clock network delay (ideal)                        0.00       0.00
+  addr_reg_reg[1]/CK (DFF_X1)              0.00      0.00       0.00 r
+  addr_reg_reg[1]/Q (DFF_X1)     1.93      0.02      0.24       0.24 f
+  C213/ZN (OR2_X2)               1.96      0.03      0.18       0.42 f
+  C212/ZN (OR2_X2)               1.96      0.03      0.17       0.58 f
+  C211/ZN (OR2_X2)               1.96      0.03      0.17       0.75 f
+  C210/ZN (OR2_X2)               1.96      0.03      0.17       0.92 f
+  C209/ZN (OR2_X2)               1.96      0.03      0.17       1.08 f
+  C208/ZN (OR2_X2)               1.96      0.03      0.17       1.25 f
+  C207/ZN (OR2_X2)               1.96      0.03      0.17       1.41 f
+  C206/ZN (OR2_X2)               1.96      0.03      0.17       1.58 f
+  C205/ZN (OR2_X2)               1.96      0.03      0.17       1.75 f
+  C204/ZN (OR2_X2)              78.97      0.10      0.30       2.05 f
+  U158/ZN (INV_X2)              74.55      0.31      0.45       2.50 r
+  U92/ZN (AOI22_X1)              1.95      0.09      0.17       2.66 f
+  U91/ZN (INV_X1)                5.31      0.06      0.12       2.79 r
+  data_out[9] (out)                        0.06      0.03       2.82 r
+  data arrival time                                             2.82
+
+  clock clk (rise edge)                              7.00       7.00
+  clock network delay (ideal)                        0.00       7.00
+  output external delay                             -0.80       6.20
+  data required time                                            6.20
+  ---------------------------------------------------------------------
+  data required time                                            6.20
+  data arrival time                                            -2.82
+  ---------------------------------------------------------------------
+  slack (MET)                                                   3.38
+
+
+1
+Loading db file '/ensc/fac1/fcampi/SOCLAB/LIBRARIES/NangateOpenCellLibrary_PDKv1_3_v2010_12/Front_End/DB/NangateOpenCellLibrary_slow.db'
+Information: Propagating switching activity (low effort zero delay simulation). (PWR-6)
+Warning: Design has unannotated primary inputs. (PWR-414)
+Warning: Design has unannotated sequential cell outputs. (PWR-415)
+ 
+****************************************
+Report : power
+        -analysis_effort low
+Design : SRAM
+Version: Z-2007.03-SP5
+Date   : Mon Mar  3 09:49:53 2014
+****************************************
+
+
+Library(s) Used:
+
+    NangateOpenCellLibrary (File: /ensc/fac1/fcampi/SOCLAB/LIBRARIES/NangateOpenCellLibrary_PDKv1_3_v2010_12/Front_End/DB/NangateOpenCellLibrary_slow.db)
+
+
+Operating Conditions: slow   Library: NangateOpenCellLibrary
+Wire Load Model Mode: top
+
+Design        Wire Load Model            Library
+------------------------------------------------
+SRAM                   5K_hvratio_1_1    NangateOpenCellLibrary
+
+
+Global Operating Voltage = 0.95 
+Power-specific unit information :
+    Voltage Units = 1V
+    Capacitance Units = 1.000000ff
+    Time Units = 1ns
+    Dynamic Power Units = 1uW    (derived from V,C,T units)
+    Leakage Power Units = 1nW
+
+
+  Cell Internal Power  =  73.6045 uW   (75%)
+  Net Switching Power  =  23.9519 uW   (25%)
+                         ---------
+Total Dynamic Power    =  97.5564 uW  (100%)
+
+Cell Leakage Power     =   8.5481 uW
+
+1

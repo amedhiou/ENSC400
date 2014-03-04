@@ -1,0 +1,153 @@
+Information: Updating design information... (UID-85)
+ 
+****************************************
+Report : reference
+Design : PSRAM
+Version: Z-2007.03-SP5
+Date   : Mon Feb  3 15:01:36 2014
+****************************************
+
+Attributes:
+    b - black box (unknown)
+   bo - allows boundary optimization
+    d - dont_touch
+   mo - map_only
+    h - hierarchical
+    n - noncombinational
+    r - removable
+    s - synthetic operator
+    u - contains unmapped logic
+
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+AND2_X2            NangateOpenCellLibrary
+                                  1.330000      32     42.560001  
+AOI22_X1           NangateOpenCellLibrary
+                                  1.330000      32     42.560001  
+CLKBUF_X1          NangateOpenCellLibrary
+                                  0.798000       1      0.798000  
+CLKBUF_X2          NangateOpenCellLibrary
+                                  1.064000       1      1.064000  
+DFF_X1             NangateOpenCellLibrary
+                                  4.522000      78    352.715987  n
+INV_X1             NangateOpenCellLibrary
+                                  0.532000      79     42.028000  
+INV_X2             NangateOpenCellLibrary
+                                  0.798000       2      1.596000  
+OAI22_X1           NangateOpenCellLibrary
+                                  1.330000      46     61.180002  
+OR2_X2             NangateOpenCellLibrary
+                                  1.330000      13     17.290001  
+XOR2_X1            NangateOpenCellLibrary
+                                  1.596000      32     51.071999  
+-----------------------------------------------------------------------------
+Total 10 references                                   612.863991
+1
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+        -transition_time
+        -capacitance
+Design : PSRAM
+Version: Z-2007.03-SP5
+Date   : Mon Feb  3 15:01:36 2014
+****************************************
+
+Operating Conditions: slow   Library: NangateOpenCellLibrary
+Wire Load Model Mode: top
+
+  Startpoint: addr_reg_reg[1]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: data_out[9]
+            (output port clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  PSRAM              5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                           Cap     Trans      Incr       Path
+  ---------------------------------------------------------------------
+  clock clk (rise edge)                              0.00       0.00
+  clock network delay (ideal)                        0.00       0.00
+  addr_reg_reg[1]/CK (DFF_X1)              0.00      0.00       0.00 r
+  addr_reg_reg[1]/Q (DFF_X1)     1.93      0.02      0.24       0.24 f
+  C222/ZN (OR2_X2)               1.96      0.03      0.18       0.42 f
+  C221/ZN (OR2_X2)               1.96      0.03      0.17       0.58 f
+  C220/ZN (OR2_X2)               1.96      0.03      0.17       0.75 f
+  C219/ZN (OR2_X2)               1.96      0.03      0.17       0.92 f
+  C218/ZN (OR2_X2)               1.96      0.03      0.17       1.08 f
+  C217/ZN (OR2_X2)               1.96      0.03      0.17       1.25 f
+  C216/ZN (OR2_X2)               1.96      0.03      0.17       1.41 f
+  C215/ZN (OR2_X2)               1.96      0.03      0.17       1.58 f
+  C214/ZN (OR2_X2)               1.96      0.03      0.17       1.75 f
+  C213/ZN (OR2_X2)               1.96      0.03      0.17       1.91 f
+  C212/ZN (OR2_X2)               1.96      0.03      0.17       2.08 f
+  C211/ZN (OR2_X2)               1.96      0.03      0.17       2.24 f
+  C210/ZN (OR2_X2)              78.97      0.10      0.30       2.54 f
+  U164/ZN (INV_X2)              74.55      0.31      0.45       2.99 r
+  U98/ZN (AOI22_X1)              1.95      0.09      0.17       3.16 f
+  U97/ZN (INV_X1)                5.31      0.06      0.12       3.28 r
+  data_out[9] (out)                        0.06      0.03       3.32 r
+  data arrival time                                             3.32
+
+  clock clk (rise edge)                              7.00       7.00
+  clock network delay (ideal)                        0.00       7.00
+  output external delay                             -0.80       6.20
+  data required time                                            6.20
+  ---------------------------------------------------------------------
+  data required time                                            6.20
+  data arrival time                                            -3.32
+  ---------------------------------------------------------------------
+  slack (MET)                                                   2.88
+
+
+1
+Loading db file '/ensc/fac1/fcampi/SOCLAB/LIBRARIES/NangateOpenCellLibrary_PDKv1_3_v2010_12/Front_End/DB/NangateOpenCellLibrary_slow.db'
+Information: Propagating switching activity (low effort zero delay simulation). (PWR-6)
+Warning: Design has unannotated primary inputs. (PWR-414)
+Warning: Design has unannotated sequential cell outputs. (PWR-415)
+ 
+****************************************
+Report : power
+        -analysis_effort low
+Design : PSRAM
+Version: Z-2007.03-SP5
+Date   : Mon Feb  3 15:01:37 2014
+****************************************
+
+
+Library(s) Used:
+
+    NangateOpenCellLibrary (File: /ensc/fac1/fcampi/SOCLAB/LIBRARIES/NangateOpenCellLibrary_PDKv1_3_v2010_12/Front_End/DB/NangateOpenCellLibrary_slow.db)
+
+
+Operating Conditions: slow   Library: NangateOpenCellLibrary
+Wire Load Model Mode: top
+
+Design        Wire Load Model            Library
+------------------------------------------------
+PSRAM                  5K_hvratio_1_1    NangateOpenCellLibrary
+
+
+Global Operating Voltage = 0.95 
+Power-specific unit information :
+    Voltage Units = 1V
+    Capacitance Units = 1.000000ff
+    Time Units = 1ns
+    Dynamic Power Units = 1uW    (derived from V,C,T units)
+    Leakage Power Units = 1nW
+
+
+  Cell Internal Power  =  76.3118 uW   (75%)
+  Net Switching Power  =  24.9110 uW   (25%)
+                         ---------
+Total Dynamic Power    = 101.2228 uW  (100%)
+
+Cell Leakage Power     =   8.9043 uW
+
+1

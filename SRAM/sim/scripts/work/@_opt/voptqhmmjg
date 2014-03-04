@@ -1,0 +1,91 @@
+m255
+K3
+13
+cModel Technology
+Z0 d/ensc/grad1/cmc-16/ENSC400/SRAM/sim/scripts
+T_opt
+Z1 VB_PBfIT:0Cg5SOfaOnJb62
+Z2 04 1 1 work e a 1
+Z3 =2-0023ae78763f-52eeee59-9b6fc-4a9d
+Z4 o-quiet -auto_acc_if_foreign -work work
+Z5 n@_opt
+Z6 OE;O;6.5a;42
+Ee
+Z7 w1391390270
+Z8 DPx17 __model_tech/ieee 15 std_logic_arith 0 22 GJbAT?7@hRQU9IQ702DT]2
+Z9 DPx17 __model_tech/ieee 14 std_logic_1164 0 22 GH1=`jDDBJ=`LM;:Ak`kf2
+32
+Z10 8../../vhdl/tb_PSRAM.vhd
+Z11 F../../vhdl/tb_PSRAM.vhd
+l0
+L8
+Z12 V_bCfS2P5o7@1:oIH=6l`=2
+Z13 OE;C;6.5a;42
+Z14 tExplicit 1
+Z15 !s100 ;fmadTeMV6BhoXCNDij@90
+Aa
+DEx48 /ensc/grad1/cmc-16/ENSC400/SRAM/sim/scripts/work 5 psram 0 22 ZB8b3?Bd2:0][0Qh_64863
+R8
+R9
+DEx48 /ensc/grad1/cmc-16/ENSC400/SRAM/sim/scripts/work 1 e 0 22 _bCfS2P5o7@1:oIH=6l`=2
+32
+Mx2 17 __model_tech/ieee 14 std_logic_1164
+Mx1 17 __model_tech/ieee 15 std_logic_arith
+l37
+L11
+Z16 Vh`9[nG9:PQfPebhzV?OV92
+R13
+R14
+Z17 !s100 b4L9AaZeM6e9dN:Ae>URZ3
+Epsram
+Z18 w1391389347
+Z19 DPx4 ieee 15 std_logic_arith 0 22 GJbAT?7@hRQU9IQ702DT]2
+Z20 DPx4 ieee 14 std_logic_1164 0 22 GH1=`jDDBJ=`LM;:Ak`kf2
+Z21 8../../vhdl/PSRAM.vhd
+Z22 F../../vhdl/PSRAM.vhd
+l0
+L13
+Z23 VZB8b3?Bd2:0][0Qh_64863
+R13
+32
+R14
+Z24 !s100 9EPLCUR7ElnoBzPYz2joX1
+Abehv
+R19
+R20
+Z25 DEx4 work 5 psram 0 22 ZB8b3?Bd2:0][0Qh_64863
+l32
+L27
+Z26 V@Gm7X1>zUVz6@9LGWKO[E2
+R13
+32
+Z27 Mx2 4 ieee 14 std_logic_1164
+Z28 Mx1 4 ieee 15 std_logic_arith
+R14
+Z29 !s100 eP2eXFbJ8ke>S2<M67l@]0
+Esram
+Z30 w1391376190
+R19
+R20
+Z31 8../../vhdl/SRAM.vhd
+Z32 F../../vhdl/SRAM.vhd
+l0
+L13
+Z33 V4F9=QCm;`]X2zDGHJOlCA3
+R13
+32
+R14
+Z34 !s100 JR:11J]ogUM8__@>fDX_[2
+Abehv
+R19
+R20
+Z35 DEx4 work 4 sram 0 22 4F9=QCm;`]X2zDGHJOlCA3
+l33
+L25
+Z36 V@aG17L]8ANM5Cb[LnzfPj2
+R13
+32
+R27
+R28
+R14
+Z37 !s100 6_?PbmE6=UE6mCE3@om6b2
