@@ -1,0 +1,1606 @@
+m255
+K3
+13
+cModel Technology
+Z0 d/ensc/grad1/cmc-16/ENSC400/Qrisc/sim
+T_opt
+Z1 V0FBbR]OVLFJz69c7Xnki32
+Z2 04 1 1 work e a 1
+Z3 =1-f04da2266afd-52f29fc6-15a98-7714
+Z4 o-quiet -auto_acc_if_foreign -work work
+Z5 n@_opt
+Z6 OE;O;6.5a;42
+Eaddrchk
+Z7 w1089366940
+Z8 DPx4 ieee 15 std_logic_arith 0 22 GJbAT?7@hRQU9IQ702DT]2
+Z9 DPx4 ieee 14 std_logic_1164 0 22 GH1=`jDDBJ=`LM;:Ak`kf2
+Z10 8/ensc/fac1/fcampi/Projects/Qrisc/vhdl/5.9/CORE/xi_addrcheck.vhd
+Z11 F/ensc/fac1/fcampi/Projects/Qrisc/vhdl/5.9/CORE/xi_addrcheck.vhd
+l0
+L73
+Z12 VcZ@C]bNNV@2lJ]>RTNob83
+Z13 OE;C;6.5a;42
+32
+Z14 o-quiet
+Z15 tExplicit 1
+Z16 !s100 kB[T=K>9l6;WQ]ijmOF5W3
+Abehavioral
+R8
+R9
+Z17 DEx4 work 7 addrchk 0 22 cZ@C]bNNV@2lJ]>RTNob83
+l98
+L96
+Z18 V>EC2NlZz5PzDzWMh;D7hX0
+R13
+32
+Z19 Mx2 4 ieee 14 std_logic_1164
+Z20 Mx1 4 ieee 15 std_logic_arith
+R14
+R15
+Z21 !s100 2ZU<L_=<?lznFQ5kPlF;>1
+Pbasic
+Z22 DPx41 /ensc/grad1/cmc-16/ENSC400/Qrisc/sim/work 4 menu 0 22 EO4WW1GicDd[FM^Vh5F@n0
+Z23 DPx17 __model_tech/ieee 15 std_logic_arith 0 22 GJbAT?7@hRQU9IQ702DT]2
+Z24 DPx17 __model_tech/ieee 14 std_logic_1164 0 22 GH1=`jDDBJ=`LM;:Ak`kf2
+32
+Z25 Mx3 17 __model_tech/ieee 14 std_logic_1164
+Z26 Mx2 17 __model_tech/ieee 15 std_logic_arith
+Z27 Mx1 41 /ensc/grad1/cmc-16/ENSC400/Qrisc/sim/work 4 menu
+Z28 w1374008918
+Z29 8/ensc/fac1/fcampi/Projects/Qrisc/vhdl/5.9/CORE/xi_basic.vhd
+Z30 F/ensc/fac1/fcampi/Projects/Qrisc/vhdl/5.9/CORE/xi_basic.vhd
+l0
+L45
+Z31 VnFG6FM=8ISg:XBoedHRKI0
+R13
+R14
+R15
+Z32 !s100 oAn0hG`<1aJ29ZP0a[K:43
+Bbody
+DBx41 /ensc/grad1/cmc-16/ENSC400/Qrisc/sim/work 5 basic 0 22 nFG6FM=8ISg:XBoedHRKI0
+R22
+R23
+R24
+32
+R25
+R26
+R27
+l0
+L185
+Z33 V7K:GWYnHX7Ml;o>gd?1Aj2
+R13
+R14
+R15
+nbody
+Z34 !s100 @cUYXXnL;<H70kYboEYB:1
+Ebypass_logic
+R7
+Z35 DPx4 work 4 menu 0 22 EO4WW1GicDd[FM^Vh5F@n0
+R8
+Z36 DPx4 work 5 basic 0 22 nFG6FM=8ISg:XBoedHRKI0
+R9
+Z37 8/ensc/fac1/fcampi/Projects/Qrisc/vhdl/5.9/CORE/xi_hazards.vhd
+Z38 F/ensc/fac1/fcampi/Projects/Qrisc/vhdl/5.9/CORE/xi_hazards.vhd
+l0
+L58
+Z39 V>SmdK]8H3H^JSLJ]4Vakl1
+R13
+32
+R14
+R15
+Z40 !s100 EYaaR;BMPJ=bZM9DX=YLz1
+Abehavioral
+R35
+R8
+R36
+R9
+Z41 DEx4 work 12 bypass_logic 0 22 >SmdK]8H3H^JSLJ]4Vakl1
+l72
+L68
+Z42 VHCaVllEjVdCYUY7:TO1W<2
+R13
+32
+Z43 Mx4 4 ieee 14 std_logic_1164
+Z44 Mx3 4 work 5 basic
+Z45 Mx2 4 ieee 15 std_logic_arith
+Z46 Mx1 4 work 4 menu
+R14
+R15
+Z47 !s100 `8c`?Pd1A>:g9VL[G18Ye2
+Ebypass_mux
+R7
+R35
+R8
+R36
+R9
+Z48 8/ensc/fac1/fcampi/Projects/Qrisc/vhdl/5.9/CORE/xi_components.vhd
+Z49 F/ensc/fac1/fcampi/Projects/Qrisc/vhdl/5.9/CORE/xi_components.vhd
+l0
+L346
+Z50 V8WdoWXEm2R[hTocH3WM7X1
+R13
+32
+R14
+R15
+Z51 !s100 AQ`UQQ;0fl[6?]jm:6YmR3
+Abehavioral
+R35
+R8
+R36
+R9
+Z52 DEx4 work 10 bypass_mux 0 22 8WdoWXEm2R[hTocH3WM7X1
+l357
+L355
+Z53 VHeC`UO>7S<oTfU6kzlZUZ3
+R13
+32
+R43
+R44
+R45
+R46
+R14
+R15
+Z54 !s100 M^N3645f6cEVT`c7f=PLl2
+Pcomponents
+R22
+R23
+Z55 DPx41 /ensc/grad1/cmc-16/ENSC400/Qrisc/sim/work 5 basic 0 22 nFG6FM=8ISg:XBoedHRKI0
+R24
+32
+Z56 Mx4 17 __model_tech/ieee 14 std_logic_1164
+Z57 Mx3 41 /ensc/grad1/cmc-16/ENSC400/Qrisc/sim/work 5 basic
+R26
+R27
+R7
+R48
+R49
+l0
+L410
+Z58 V[jh3]>Kd>QS;hEmbd;nZh0
+R13
+R14
+R15
+Z59 !s100 6kUUfokjo4:CNFL<3;[YE0
+Bbody
+DBx41 /ensc/grad1/cmc-16/ENSC400/Qrisc/sim/work 10 components 0 22 [jh3]>Kd>QS;hEmbd;nZh0
+R22
+R23
+R55
+R24
+32
+R56
+R57
+R26
+R27
+l0
+L501
+Z60 VXe1k2>QIQ<>h<n2?kW5m?0
+R13
+R14
+R15
+nbody
+Z61 !s100 ]gM^Xkd>BRIQM;Uzbn@J:3
+Pconvchar
+Z62 DPx16 __model_tech/std 6 textio 0 22 m2KQDRRhmF833<<DjYdL70
+32
+b1
+Z63 Mx1 16 __model_tech/std 6 textio
+Z64 w1391063300
+Z65 8/ensc/fac1/fcampi/Projects/Qrisc/vhdl/5.9/TESTBENCH/Debug_Tool.vhd
+Z66 F/ensc/fac1/fcampi/Projects/Qrisc/vhdl/5.9/TESTBENCH/Debug_Tool.vhd
+l0
+L34
+Z67 VLXbaE5_13f<<5kUL;8SaV1
+R13
+b1
+R14
+R15
+Z68 !s100 jn0W<UneR2Ungj3OKPUhD1
+Bbody
+DBx41 /ensc/grad1/cmc-16/ENSC400/Qrisc/sim/work 8 convchar 0 22 LXbaE5_13f<<5kUL;8SaV1
+R62
+32
+R63
+l0
+L41
+Z69 VH]zKX4XCM>;bQIo;LEgaN1
+R13
+R14
+R15
+nbody
+Z70 !s100 ISlQni4mC1o=TX@X>J>?I3
+Ecop
+R7
+R35
+R8
+R9
+Z71 8/ensc/fac1/fcampi/Projects/Qrisc/vhdl/5.9/CORE/xi_fpu.vhd
+Z72 F/ensc/fac1/fcampi/Projects/Qrisc/vhdl/5.9/CORE/xi_fpu.vhd
+l0
+L16
+Z73 VIEJV86j?5Ylh`<NP_UkNn1
+R13
+32
+R14
+R15
+Z74 !s100 ize<YmNR1SS5K2@Q>D1_Q2
+Amilk
+R35
+R8
+R9
+Z75 DEx4 work 3 cop 0 22 IEJV86j?5Ylh`<NP_UkNn1
+l38
+L37
+Z76 Vo`SL[IP8NI^R3b^I0RdLg1
+R13
+32
+Z77 Mx3 4 ieee 14 std_logic_1164
+R45
+R46
+R14
+R15
+Z78 !s100 dP_XcoZf3mo1blWA^mV<?2
+Pcop_pack
+R23
+R22
+R24
+32
+R25
+Z79 Mx2 41 /ensc/grad1/cmc-16/ENSC400/Qrisc/sim/work 4 menu
+Z80 Mx1 17 __model_tech/ieee 15 std_logic_arith
+R7
+R71
+R72
+l0
+L51
+Z81 V2XLGSj>@j>[;DV9JYTGX12
+R13
+R14
+R15
+Z82 !s100 GzX3B@oK65HBEKHdh@9N41
+Bbody
+DBx41 /ensc/grad1/cmc-16/ENSC400/Qrisc/sim/work 8 cop_pack 0 22 2XLGSj>@j>[;DV9JYTGX12
+R23
+R22
+R24
+32
+R25
+R79
+R80
+l0
+L86
+Z83 VoKdWla[OXoFBON;LbE>6P1
+R13
+R14
+R15
+nbody
+Z84 !s100 mMkkoB@]hJf>:m>l7OQIg1
+Edata_reg
+R7
+R35
+R8
+R9
+R48
+R49
+l0
+L280
+Z85 VidQW5n>@UAC6EX9Q2lkJK1
+R13
+32
+R14
+R15
+Z86 !s100 bk;E`oXQ8Bz48BTQWV0<D0
+Abehavioral
+R35
+R8
+R9
+Z87 DEx4 work 8 data_reg 0 22 idQW5n>@UAC6EX9Q2lkJK1
+l291
+L290
+Z88 V>C[35lP4L:X=2k:ama`Kc1
+R13
+32
+R77
+R45
+R46
+R14
+R15
+Z89 !s100 g<b6VUR5kV7581TXmlJj50
+Edbg
+Z90 w1094823156
+Z91 DPx4 work 6 isa_32 0 22 ?9N1S8jY8MoOVV;l=^PfY3
+R36
+R35
+R8
+Z92 DPx4 ieee 18 std_logic_unsigned 0 22 hEMVMlaNCR^<OOoVNV;m90
+R9
+Z93 8/ensc/fac1/fcampi/Projects/Qrisc/vhdl/5.9/CORE/xi_dbg.vhd
+Z94 F/ensc/fac1/fcampi/Projects/Qrisc/vhdl/5.9/CORE/xi_dbg.vhd
+l0
+L62
+Z95 VIcJX=d1^YUVObZBA5izia3
+R13
+32
+R14
+R15
+Z96 !s100 a4Dz:KjA>8lST0QH0[Mz52
+Astructural
+R91
+R92
+Z97 DEx4 work 3 dbg 0 22 IcJX=d1^YUVObZBA5izia3
+Z98 DPx4 work 10 components 0 22 [jh3]>Kd>QS;hEmbd;nZh0
+R36
+R35
+R8
+R9
+l157
+L99
+Z99 VV`SDS_FJ37m]l@bif=DPJ1
+R13
+32
+Z100 Mx7 4 ieee 14 std_logic_1164
+Z101 Mx6 4 ieee 15 std_logic_arith
+Z102 Mx5 4 work 4 menu
+Z103 Mx4 4 work 5 basic
+Z104 Mx3 4 work 10 components
+Z105 Mx2 4 ieee 18 std_logic_unsigned
+Z106 Mx1 4 work 6 isa_32
+R14
+R15
+Z107 !s100 >AnjkUN82>dKU;z??F1]h0
+Pdbg_pack
+R55
+R23
+R22
+R24
+32
+R56
+Z108 Mx3 41 /ensc/grad1/cmc-16/ENSC400/Qrisc/sim/work 4 menu
+R26
+Z109 Mx1 41 /ensc/grad1/cmc-16/ENSC400/Qrisc/sim/work 5 basic
+R90
+R93
+R94
+l0
+L529
+Z110 V;9:37K`jU]bf@`Le><=FS1
+R13
+R14
+R15
+Z111 !s100 iJ?26W`lcGNzYjSO_Ub8?3
+Bbody
+DBx41 /ensc/grad1/cmc-16/ENSC400/Qrisc/sim/work 8 dbg_pack 0 22 ;9:37K`jU]bf@`Le><=FS1
+R55
+R23
+R22
+R24
+32
+R56
+R108
+R26
+R109
+l0
+L557
+Z112 V5I:nh48d5G;PT9k>nN]9j2
+R13
+R14
+R15
+nbody
+Z113 !s100 Y4JSn_006Fi5XJ:;XQ_i22
+Edebug_tool
+R64
+R91
+R36
+R35
+Z114 DPx4 work 8 convchar 0 22 LXbaE5_13f<<5kUL;8SaV1
+Z115 DPx3 std 6 textio 0 22 m2KQDRRhmF833<<DjYdL70
+Z116 DPx4 ieee 16 std_logic_textio 0 22 8YS?iX`WD1REQG`ZRYQGB2
+R8
+R9
+R65
+R66
+l0
+L153
+Z117 VKCfL^oO?FGH=dW<VV2dZo3
+R13
+32
+R14
+R15
+Z118 !s100 cAgFmcQj;NOCG_gZX?Pf=1
+Anon_synth
+R91
+R36
+R35
+R114
+R115
+R116
+R8
+R9
+Z119 DEx4 work 10 debug_tool 0 22 KCfL^oO?FGH=dW<VV2dZo3
+l165
+L163
+Z120 V2Zb_XV0AhTBiVFWGI@nA90
+R13
+32
+Z121 Mx8 4 ieee 14 std_logic_1164
+Z122 Mx7 4 ieee 15 std_logic_arith
+Z123 Mx6 4 ieee 16 std_logic_textio
+Z124 Mx5 3 std 6 textio
+Z125 Mx4 4 work 8 convchar
+Z126 Mx3 4 work 4 menu
+Z127 Mx2 4 work 5 basic
+R106
+R14
+R15
+Z128 !s100 5[]=dVF9HGUj`1Rzabn;l0
+Edecode_op32
+R7
+Z129 DPx41 /ensc/grad1/cmc-16/ENSC400/Qrisc/sim/work 6 isa_32 0 22 ?9N1S8jY8MoOVV;l=^PfY3
+R55
+R22
+R23
+R24
+32
+Z130 8/ensc/fac1/fcampi/Projects/Qrisc/vhdl/5.9/CORE/xi_decodeop32.vhd
+Z131 F/ensc/fac1/fcampi/Projects/Qrisc/vhdl/5.9/CORE/xi_decodeop32.vhd
+l0
+L62
+Z132 V7[N7J0G7f@jUae_]WcfoC0
+R13
+R14
+R15
+Z133 !s100 obZLg42]c>H=<LlAGRf:i0
+Abehavioral
+R129
+R55
+R22
+R23
+R24
+Z134 DEx41 /ensc/grad1/cmc-16/ENSC400/Qrisc/sim/work 11 decode_op32 0 22 7[N7J0G7f@jUae_]WcfoC0
+32
+Mx5 17 __model_tech/ieee 14 std_logic_1164
+Mx4 17 __model_tech/ieee 15 std_logic_arith
+R108
+Z135 Mx2 41 /ensc/grad1/cmc-16/ENSC400/Qrisc/sim/work 5 basic
+Z136 Mx1 41 /ensc/grad1/cmc-16/ENSC400/Qrisc/sim/work 6 isa_32
+l87
+L79
+Z137 VScO<m^_LC?nTEl:=UKJZH3
+R13
+R14
+R15
+Z138 !s100 7NC^eE1PYWQQiNkM81YWX3
+Edecode_pc
+R7
+Z139 DPx41 /ensc/grad1/cmc-16/ENSC400/Qrisc/sim/work 10 components 0 22 [jh3]>Kd>QS;hEmbd;nZh0
+R129
+R22
+R55
+R23
+R24
+32
+Z140 8/ensc/fac1/fcampi/Projects/Qrisc/vhdl/5.9/CORE/xi_decodepc.vhd
+Z141 F/ensc/fac1/fcampi/Projects/Qrisc/vhdl/5.9/CORE/xi_decodepc.vhd
+l0
+L43
+Z142 Vgb60f<Q]^gR5b]GcC0iGe2
+R13
+R14
+R15
+Z143 !s100 Mig5l1RPF=S`jdo`22@Wh2
+Abehavioral
+Z144 DEx41 /ensc/grad1/cmc-16/ENSC400/Qrisc/sim/work 8 gp_adder 0 22 NFdeiO2DNO4K8V7G87D[E1
+R139
+R129
+R22
+R55
+R23
+R24
+Z145 DEx41 /ensc/grad1/cmc-16/ENSC400/Qrisc/sim/work 9 decode_pc 0 22 gb60f<Q]^gR5b]GcC0iGe2
+32
+Z146 Mx6 17 __model_tech/ieee 14 std_logic_1164
+Z147 Mx5 17 __model_tech/ieee 15 std_logic_arith
+Z148 Mx4 41 /ensc/grad1/cmc-16/ENSC400/Qrisc/sim/work 5 basic
+R108
+Z149 Mx2 41 /ensc/grad1/cmc-16/ENSC400/Qrisc/sim/work 6 isa_32
+Z150 Mx1 41 /ensc/grad1/cmc-16/ENSC400/Qrisc/sim/work 10 components
+l79
+L62
+Z151 Vl_PfI0TgfUPeFKA1<oUZ_0
+R13
+R14
+R15
+Z152 !s100 Rd>dVgHA^5m>Ta:D4zA_U3
+Pdefinitions
+R22
+R55
+R23
+R24
+32
+R56
+Z153 Mx3 17 __model_tech/ieee 15 std_logic_arith
+R135
+R27
+Z154 w1391054946
+Z155 8/ensc/fac1/fcampi/Projects/Qrisc/vhdl/5.9/CORE/xi_definitions.vhd
+Z156 F/ensc/fac1/fcampi/Projects/Qrisc/vhdl/5.9/CORE/xi_definitions.vhd
+l0
+L38
+Z157 VAaCb<N>M0Ym@@9[D2?h480
+R13
+R14
+R15
+Z158 !s100 H53JdHQ5i4:fb4]TOjFiX2
+Bbody
+DBx41 /ensc/grad1/cmc-16/ENSC400/Qrisc/sim/work 11 definitions 0 22 AaCb<N>M0Ym@@9[D2?h480
+R22
+R55
+R23
+R24
+32
+R56
+R153
+R135
+R27
+l0
+L392
+Z159 V0P8I3=dMnzkQzNNa:7PiZ3
+R13
+R14
+R15
+nbody
+Z160 !s100 3`jOKPHDkL]5LLRnN3c^Z3
+Ee
+Z161 w1391110856
+R22
+Z162 DPx17 __model_tech/ieee 16 std_logic_textio 0 22 8YS?iX`WD1REQG`ZRYQGB2
+R23
+R24
+R62
+32
+Z163 8/ensc/fac1/fcampi/Projects/Qrisc/vhdl/5.9/TESTBENCH/tb_qrisc_light.vhd
+Z164 F/ensc/fac1/fcampi/Projects/Qrisc/vhdl/5.9/TESTBENCH/tb_qrisc_light.vhd
+l0
+L16
+Z165 V2HUz2nfC8Zm1E;9GLEh_f3
+R13
+R14
+R15
+Z166 !s100 NWPa]>P@L]RMO@4zYDaIl1
+Aa
+R129
+R55
+DPx41 /ensc/grad1/cmc-16/ENSC400/Qrisc/sim/work 8 convchar 0 22 LXbaE5_13f<<5kUL;8SaV1
+DEx41 /ensc/grad1/cmc-16/ENSC400/Qrisc/sim/work 10 debug_tool 0 22 KCfL^oO?FGH=dW<VV2dZo3
+DEx41 /ensc/grad1/cmc-16/ENSC400/Qrisc/sim/work 4 sram 0 22 goOa=D_1=2LOL@1amSH2L3
+Z167 DEx41 /ensc/grad1/cmc-16/ENSC400/Qrisc/sim/work 7 xi_core 0 22 eNiQ^TYlg2M@=4oK`Cc;j2
+R22
+R162
+R23
+R24
+R62
+DEx41 /ensc/grad1/cmc-16/ENSC400/Qrisc/sim/work 1 e 0 22 2HUz2nfC8Zm1E;9GLEh_f3
+32
+Mx8 16 __model_tech/std 6 textio
+Z168 Mx7 17 __model_tech/ieee 14 std_logic_1164
+Z169 Mx6 17 __model_tech/ieee 15 std_logic_arith
+Mx5 17 __model_tech/ieee 16 std_logic_textio
+Z170 Mx4 41 /ensc/grad1/cmc-16/ENSC400/Qrisc/sim/work 4 menu
+Mx3 41 /ensc/grad1/cmc-16/ENSC400/Qrisc/sim/work 8 convchar
+R135
+R136
+l168
+L18
+Z171 VA@RP:C[I;I0GbVF2EV3CL2
+R13
+R14
+R15
+Z172 !s100 0n11Rn>M=G6LiXAeQ_YVK2
+Eflipflop
+R7
+R8
+R35
+R9
+R48
+R49
+l0
+L316
+Z173 VZn7`VSbEYM5QS`hIP1;P_1
+R13
+32
+R14
+R15
+Z174 !s100 4f_Xhd[z=Y?UMTBm]hMWW3
+Abehavioral
+R8
+R35
+R9
+Z175 DEx4 work 8 flipflop 0 22 Zn7`VSbEYM5QS`hIP1;P_1
+l323
+L322
+Z176 V:[B=]5G>kL=5Efd6UilI13
+R13
+32
+R77
+Z177 Mx2 4 work 4 menu
+R20
+R14
+R15
+Z178 !s100 mk_S1QKgH`8iBUOANVSQ83
+Egp_adder
+R7
+R8
+R9
+R48
+R49
+l0
+L378
+Z179 VNFdeiO2DNO4K8V7G87D[E1
+R13
+32
+R14
+R15
+Z180 !s100 5=zz?bBY`6h_Y@_ZEZI382
+Abehavioral
+R8
+R9
+Z181 DEx4 work 8 gp_adder 0 22 NFdeiO2DNO4K8V7G87D[E1
+l389
+L385
+Z182 Vi^6kC>9EN3<jeeUUA7jkV3
+R13
+32
+R19
+R20
+R14
+R15
+Z183 !s100 @:i^Mlf^2zH[OG:9dZEAF0
+Eireg_execute
+R7
+R91
+R36
+R8
+R35
+R9
+R48
+R49
+l0
+L149
+Z184 V5cA:d6jMP4zaC;5l^?SA@3
+R13
+32
+R14
+R15
+Z185 !s100 AnbgN`8SoXMOFJP@LWOaz3
+Abehavioral
+R91
+R36
+R8
+R35
+R9
+Z186 DEx4 work 12 ireg_execute 0 22 5cA:d6jMP4zaC;5l^?SA@3
+l175
+L174
+Z187 VV]BIgVR1=Fcb?KzMT^EnM3
+R13
+32
+Z188 Mx5 4 ieee 14 std_logic_1164
+Z189 Mx4 4 work 4 menu
+Z190 Mx3 4 ieee 15 std_logic_arith
+R127
+R106
+R14
+R15
+Z191 !s100 FI7dUS`m[^bOR`PCKj@N73
+Eireg_fetch
+R7
+R35
+R8
+R9
+R48
+R49
+l0
+L101
+Z192 V:Ahj;OjzYeiS=D5H@NG:i1
+R13
+32
+R14
+R15
+Z193 !s100 M<aHE;8I2NiOiOljhV9nQ1
+Abehavioral
+R35
+R8
+R9
+Z194 DEx4 work 10 ireg_fetch 0 22 :Ahj;OjzYeiS=D5H@NG:i1
+l116
+L114
+Z195 VX7`><R2YKBV351G63Fa7z1
+R13
+32
+R77
+R45
+R46
+R14
+R15
+Z196 !s100 5g<GfJX^lFDFOF@Yg<j]b1
+Eireg_memory
+R7
+R91
+R36
+R8
+R35
+R9
+R48
+R49
+l0
+L217
+Z197 V?U6o;RC0dM@^4dcRDj`T;1
+R13
+32
+R14
+R15
+Z198 !s100 dV:5G@:MUAJdQljAdVb6F0
+Abehavioral
+R91
+R36
+R8
+R35
+R9
+Z199 DEx4 work 11 ireg_memory 0 22 ?U6o;RC0dM@^4dcRDj`T;1
+l238
+L237
+Z200 V@RbZf^hKGA[P;^nkUW1JG0
+R13
+32
+R188
+R189
+R190
+R127
+R106
+R14
+R15
+Z201 !s100 n4Hj;o6TLNna>cmJ=[ZL50
+Pisa_32
+R22
+R55
+R23
+R24
+32
+R56
+R153
+R135
+R27
+R7
+Z202 8/ensc/fac1/fcampi/Projects/Qrisc/vhdl/5.9/CORE/xi_isa32.vhd
+Z203 F/ensc/fac1/fcampi/Projects/Qrisc/vhdl/5.9/CORE/xi_isa32.vhd
+l0
+L39
+Z204 V?9N1S8jY8MoOVV;l=^PfY3
+R13
+R14
+R15
+Z205 !s100 dCRO5?5HmGlBG3d?aDCR_3
+Bbody
+DBx41 /ensc/grad1/cmc-16/ENSC400/Qrisc/sim/work 6 isa_32 0 22 ?9N1S8jY8MoOVV;l=^PfY3
+R22
+R55
+R23
+R24
+32
+R56
+R153
+R135
+R27
+l0
+L261
+Z206 Voa9j4BLX]ik:=1jm3DO1<3
+R13
+R14
+R15
+nbody
+Z207 !s100 o:8>FXlAnP[oJE_zmQ3721
+Emain_alu
+R7
+R35
+R36
+R91
+R8
+R9
+Z208 8/ensc/fac1/fcampi/Projects/Qrisc/vhdl/5.9/CORE/xi_alu_simple.vhd
+Z209 F/ensc/fac1/fcampi/Projects/Qrisc/vhdl/5.9/CORE/xi_alu_simple.vhd
+l0
+L39
+Z210 V@dTzQELc[_ZgjLB5H_:]b1
+R13
+32
+R14
+R15
+Z211 !s100 M]7ZQ`9Y@8PcKZa6W]z?=3
+Astructural
+R35
+R36
+R91
+R8
+R9
+Z212 DEx4 work 8 main_alu 0 22 @dTzQELc[_ZgjLB5H_:]b1
+l61
+L49
+Z213 VUW^LOBoQSLbe_`;E6`6h32
+R13
+32
+R188
+Z214 Mx4 4 ieee 15 std_logic_arith
+Z215 Mx3 4 work 6 isa_32
+R127
+R46
+R14
+R15
+Z216 !s100 e3ijl0@Q25cPGSfPEY;S60
+Emain_channel
+Z217 w1391052093
+Z218 DPx41 /ensc/grad1/cmc-16/ENSC400/Qrisc/sim/work 11 definitions 0 22 AaCb<N>M0Ym@@9[D2?h480
+R129
+R139
+R22
+R55
+R23
+R24
+32
+Z219 8/ensc/fac1/fcampi/Projects/Qrisc/vhdl/5.9/CORE/xi_mainchannel.vhd
+Z220 F/ensc/fac1/fcampi/Projects/Qrisc/vhdl/5.9/CORE/xi_mainchannel.vhd
+l0
+L44
+Z221 VC3hnBkdPEef3M36SY5CMA3
+R13
+R14
+R15
+Z222 !s100 NC0[oQT[YKjXR4ed`PK5z3
+Astructural
+DEx41 /ensc/grad1/cmc-16/ENSC400/Qrisc/sim/work 10 mem_handle 0 22 A1KKFoklNhh1D<;`gL;gd3
+Z223 DEx41 /ensc/grad1/cmc-16/ENSC400/Qrisc/sim/work 10 mult_block 0 22 H[91:B_^^G16^a5Zng3?M0
+Z224 DEx41 /ensc/grad1/cmc-16/ENSC400/Qrisc/sim/work 7 shifter 0 22 4ABF6IKC2gMDaI>UnL@Gb2
+DEx41 /ensc/grad1/cmc-16/ENSC400/Qrisc/sim/work 8 main_alu 0 22 @dTzQELc[_ZgjLB5H_:]b1
+Z225 DEx41 /ensc/grad1/cmc-16/ENSC400/Qrisc/sim/work 8 data_reg 0 22 idQW5n>@UAC6EX9Q2lkJK1
+R218
+R129
+R139
+R22
+R55
+R23
+R24
+Z226 DEx41 /ensc/grad1/cmc-16/ENSC400/Qrisc/sim/work 12 main_channel 0 22 C3hnBkdPEef3M36SY5CMA3
+32
+R168
+R169
+Z227 Mx5 41 /ensc/grad1/cmc-16/ENSC400/Qrisc/sim/work 5 basic
+R170
+Z228 Mx3 41 /ensc/grad1/cmc-16/ENSC400/Qrisc/sim/work 10 components
+R149
+Mx1 41 /ensc/grad1/cmc-16/ENSC400/Qrisc/sim/work 11 definitions
+l149
+L122
+Z229 VgQ;:8JHEEd;RazV5OK?Za0
+R13
+R14
+R15
+Z230 !s100 mj82V2SK>eVYPK<DX`j4M2
+Emain_control
+Z231 w1391052130
+R218
+R139
+R22
+R55
+R23
+R24
+32
+Z232 8/ensc/fac1/fcampi/Projects/Qrisc/vhdl/5.9/CORE/xi_control.vhd
+Z233 F/ensc/fac1/fcampi/Projects/Qrisc/vhdl/5.9/CORE/xi_control.vhd
+l0
+L48
+Z234 V<POXS1?:3Y;PScJ99:T;l1
+R13
+R14
+R15
+Z235 !s100 jG@0hDf9oU0^XYY1WLEFJ2
+Astructural
+R129
+DEx41 /ensc/grad1/cmc-16/ENSC400/Qrisc/sim/work 11 ireg_memory 0 22 ?U6o;RC0dM@^4dcRDj`T;1
+DEx41 /ensc/grad1/cmc-16/ENSC400/Qrisc/sim/work 12 ireg_execute 0 22 5cA:d6jMP4zaC;5l^?SA@3
+DEx41 /ensc/grad1/cmc-16/ENSC400/Qrisc/sim/work 11 stall_logic 0 22 V13Vcc5g7L<QN1J94>TH>2
+DEx41 /ensc/grad1/cmc-16/ENSC400/Qrisc/sim/work 12 bypass_logic 0 22 >SmdK]8H3H^JSLJ]4Vakl1
+R145
+R134
+Z236 DEx41 /ensc/grad1/cmc-16/ENSC400/Qrisc/sim/work 8 flipflop 0 22 Zn7`VSbEYM5QS`hIP1;P_1
+R225
+DEx41 /ensc/grad1/cmc-16/ENSC400/Qrisc/sim/work 10 ireg_fetch 0 22 :Ahj;OjzYeiS=D5H@NG:i1
+DEx41 /ensc/grad1/cmc-16/ENSC400/Qrisc/sim/work 7 pcbvgen 0 22 d`9Y@MccQUd3f=mX<zdhY0
+R218
+R139
+R22
+R55
+R23
+R24
+Z237 DEx41 /ensc/grad1/cmc-16/ENSC400/Qrisc/sim/work 12 main_control 0 22 <POXS1?:3Y;PScJ99:T;l1
+32
+R168
+R169
+R227
+R170
+R228
+Mx2 41 /ensc/grad1/cmc-16/ENSC400/Qrisc/sim/work 11 definitions
+R136
+l253
+L146
+Z238 VIVzCNXjZFAYAI5CAj2log1
+R13
+R14
+R15
+Z239 !s100 ;NoDoHiJCAb8X:[O_nS3n2
+Emem_handle
+Z240 w1391055917
+R98
+R36
+R35
+R8
+R9
+Z241 8/ensc/fac1/fcampi/Projects/Qrisc/vhdl/5.9/CORE/xi_memhandle.vhd
+Z242 F/ensc/fac1/fcampi/Projects/Qrisc/vhdl/5.9/CORE/xi_memhandle.vhd
+l0
+L43
+Z243 VA1KKFoklNhh1D<;`gL;gd3
+R13
+32
+R14
+R15
+Z244 !s100 f[UaWS0L`D@WoK0b_Kn?50
+Astructural
+R98
+R36
+R35
+R8
+R9
+Z245 DEx4 work 10 mem_handle 0 22 A1KKFoklNhh1D<;`gL;gd3
+l65
+L61
+Z246 VV2BmH7zfzjB5Yi:9;:iRb1
+R13
+32
+R188
+R214
+R126
+R127
+Z247 Mx1 4 work 10 components
+R14
+R15
+Z248 !s100 SCMP?DYHBTSWE[gQR9Mm@2
+Pmenu
+R23
+R24
+32
+Z249 Mx2 17 __model_tech/ieee 14 std_logic_1164
+R80
+R7
+Z250 8/ensc/fac1/fcampi/Projects/Qrisc/vhdl/5.9/CORE/xi_menu.vhd
+Z251 F/ensc/fac1/fcampi/Projects/Qrisc/vhdl/5.9/CORE/xi_menu.vhd
+l0
+L41
+Z252 VEO4WW1GicDd[FM^Vh5F@n0
+R13
+R14
+R15
+Z253 !s100 n1PH[K@Y@jR:Rdf3nXg4<1
+Bbody
+DBx41 /ensc/grad1/cmc-16/ENSC400/Qrisc/sim/work 4 menu 0 22 EO4WW1GicDd[FM^Vh5F@n0
+R23
+R24
+32
+R249
+R80
+l0
+L310
+Z254 V^:NF]c8f=i8]PoCBD2PP^0
+R13
+R14
+R15
+nbody
+Z255 !s100 czbUG>jz0FeD>[Roz83L60
+Emult_block
+R7
+R139
+R129
+R22
+R55
+R23
+R24
+32
+Z256 8/ensc/fac1/fcampi/Projects/Qrisc/vhdl/5.9/CORE/xi_multiplier.vhd
+Z257 F/ensc/fac1/fcampi/Projects/Qrisc/vhdl/5.9/CORE/xi_multiplier.vhd
+l0
+L47
+Z258 VH[91:B_^^G16^a5Zng3?M0
+R13
+R14
+R15
+Z259 !s100 HgL^g>Um<MXM:Yl==@kjA3
+Abehavioral
+R236
+R144
+R225
+R139
+R129
+R22
+R55
+R23
+R24
+R223
+32
+R146
+R147
+R148
+R108
+R149
+R150
+l98
+L64
+Z260 Vz_mfY6o9m^WK^jfbVG8EP1
+R13
+R14
+R15
+Z261 !s100 >Yo]R>bgT:=h5]FjFfKO^2
+Epcbvgen
+R7
+R98
+R91
+R36
+R8
+R35
+R9
+Z262 8/ensc/fac1/fcampi/Projects/Qrisc/vhdl/5.9/CORE/xi_pcbvgen.vhd
+Z263 F/ensc/fac1/fcampi/Projects/Qrisc/vhdl/5.9/CORE/xi_pcbvgen.vhd
+l0
+L47
+Z264 Vd`9Y@MccQUd3f=mX<zdhY0
+R13
+32
+R14
+R15
+Z265 !s100 A[iB@B`M>[ZkFIR_kY^NW0
+Abehavioral
+R98
+R91
+R36
+R8
+R35
+R9
+Z266 DEx4 work 7 pcbvgen 0 22 d`9Y@MccQUd3f=mX<zdhY0
+l63
+L58
+Z267 Vo2iE=hGXKGgQbV;CK;S3Z1
+R13
+32
+Z268 Mx6 4 ieee 14 std_logic_1164
+R102
+R214
+R44
+Z269 Mx2 4 work 6 isa_32
+R247
+R14
+R15
+Z270 !s100 YOC6U[DX7N56S7FbfUoNS3
+Erfile
+R7
+R22
+R55
+R139
+R162
+R23
+R24
+R62
+32
+Z271 8/ensc/fac1/fcampi/Projects/Qrisc/vhdl/5.9/CORE/xi_rfile.vhd
+Z272 F/ensc/fac1/fcampi/Projects/Qrisc/vhdl/5.9/CORE/xi_rfile.vhd
+l0
+L45
+Z273 VeI098U`8HIO:[22c<QoZi3
+R13
+R14
+R15
+Z274 !s100 ZI0^IKFFk`Af>mShMz2nm0
+Abehavioral
+R225
+R22
+R55
+R139
+R162
+R23
+R24
+R62
+Z275 DEx41 /ensc/grad1/cmc-16/ENSC400/Qrisc/sim/work 5 rfile 0 22 eI098U`8HIO:[22c<QoZi3
+32
+Mx7 16 __model_tech/std 6 textio
+R146
+R147
+Mx4 17 __model_tech/ieee 16 std_logic_textio
+R228
+R135
+R27
+l68
+L61
+Z276 V@Ka62M0oQ2LeI;Z^6_0PB3
+R13
+R14
+R15
+Z277 !s100 FC6Pz<`SFO2z:dBBceWmk2
+Erot_left
+R7
+R36
+R8
+R35
+Z278 DPx4 ieee 11 numeric_std 0 22 =NSdli^?T5OD8;4F<blj<3
+R9
+Z279 8/ensc/fac1/fcampi/Projects/Qrisc/vhdl/5.9/CORE/xi_shifter.vhd
+Z280 F/ensc/fac1/fcampi/Projects/Qrisc/vhdl/5.9/CORE/xi_shifter.vhd
+l0
+L43
+Z281 V>Kf2?<^1KhQ;@GPFN;SL;0
+R13
+32
+R14
+R15
+Z282 !s100 WF>lcLJlj<?UT77X1fTJz0
+Abehavioral
+R36
+R8
+R35
+R278
+R9
+Z283 DEx4 work 8 rot_left 0 22 >Kf2?<^1KhQ;@GPFN;SL;0
+l54
+L52
+Z284 VY8lGf0aFeKP@1;5j4O85z3
+R13
+32
+R188
+Z285 Mx4 4 ieee 11 numeric_std
+R126
+R45
+Z286 Mx1 4 work 5 basic
+R14
+R15
+Z287 !s100 Oi7lJaU@^YMQ[PaB`QRLA3
+Erot_right
+R7
+R36
+R8
+R35
+R278
+R9
+R279
+R280
+l0
+L69
+Z288 V_Ceofd1Y8_KXB7OWVYBo=2
+R13
+32
+R14
+R15
+Z289 !s100 N0A?E@mZO20Ee7[mIlW5o1
+Abehavioral
+R36
+R8
+R35
+R278
+R9
+Z290 DEx4 work 9 rot_right 0 22 _Ceofd1Y8_KXB7OWVYBo=2
+l80
+L78
+Z291 Vz]<dVS?dO1z[NZekm8LiC2
+R13
+32
+R188
+R285
+R126
+R45
+R286
+R14
+R15
+Z292 !s100 d<La[]Wd]afeiRh`F5oGZ0
+Escc
+Z293 w1386398773
+R91
+R36
+R8
+R35
+R9
+Z294 8/ensc/fac1/fcampi/Projects/Qrisc/vhdl/5.9/CORE/xi_scc.vhd
+Z295 F/ensc/fac1/fcampi/Projects/Qrisc/vhdl/5.9/CORE/xi_scc.vhd
+l0
+L228
+Z296 VHbk83HU4Y@HE4_WXV@^ii3
+R13
+32
+R14
+R15
+Z297 !s100 ;_cfOg7gmi^Z:]nec?9>23
+Astructural
+R91
+Z298 DEx4 work 3 scc 0 22 Hbk83HU4Y@HE4_WXV@^ii3
+R98
+R36
+R35
+R8
+R9
+l305
+L268
+Z299 V<OkXcKIUa3lFf`^hCim;J1
+R13
+32
+R268
+Z300 Mx5 4 ieee 15 std_logic_arith
+R189
+R44
+Z301 Mx2 4 work 10 components
+R106
+R14
+R15
+Z302 !s100 g9Lj;[S80GQ4=NONfX^1L0
+Pscc_pack
+R22
+R23
+R55
+R24
+32
+R56
+R57
+R26
+R27
+R293
+R294
+R295
+l0
+L1008
+Z303 VbHMGC9HRJ>gLWi1R1GGTn1
+R13
+R14
+R15
+Z304 !s100 RbAD:89^LzD9Z`W@]mH<S0
+Bbody
+DBx41 /ensc/grad1/cmc-16/ENSC400/Qrisc/sim/work 8 scc_pack 0 22 bHMGC9HRJ>gLWi1R1GGTn1
+R22
+R23
+R55
+R24
+32
+R56
+R57
+R26
+R27
+l0
+L1039
+Z305 VQRoVXKD^@4Qjl7[`;^V661
+R13
+R14
+R15
+nbody
+Z306 !s100 ddT?BTAdK]F:G=<VloSH?0
+Esh_left_log
+R7
+R36
+R35
+R8
+R9
+R279
+R280
+l0
+L139
+Z307 VH_Nj5>f0d7Pl9gJYJ:8hY3
+R13
+32
+R14
+R15
+Z308 !s100 MIO>ick2B;j:AN7=2Ehcb2
+Abehavioral
+R36
+R35
+R8
+R9
+Z309 DEx4 work 11 sh_left_log 0 22 H_Nj5>f0d7Pl9gJYJ:8hY3
+l149
+L148
+Z310 VfjbJm80P4kO_1>A6UBO=71
+R13
+32
+R43
+R190
+R177
+R286
+R14
+R15
+Z311 !s100 b0h<<4YFjo=fzV61iioJ<0
+Esh_right_arith
+R7
+R36
+R35
+R8
+R9
+R279
+R280
+l0
+L95
+Z312 VSaRT`Uj_QXdHHJ1[<=E0Y0
+R13
+32
+R14
+R15
+Z313 !s100 8bWS8gP9@PVclUg_knFBM0
+Abehavioral
+R36
+R35
+R8
+R9
+Z314 DEx4 work 14 sh_right_arith 0 22 SaRT`Uj_QXdHHJ1[<=E0Y0
+l105
+L104
+Z315 Vbdo01Y8]EMFZdkeP7IoiG0
+R13
+32
+R43
+R190
+R177
+R286
+R14
+R15
+Z316 !s100 iZH4RIie3J:cCJZj8Gd1Z0
+Esh_right_log
+R7
+R36
+R35
+R8
+R9
+R279
+R280
+l0
+L117
+Z317 V5:5NZ;K99]HiOP;4aljf?3
+R13
+32
+R14
+R15
+Z318 !s100 fn?hT25a`W7CdOoeKakH[2
+Abehavioral
+R36
+R35
+R8
+R9
+Z319 DEx4 work 12 sh_right_log 0 22 5:5NZ;K99]HiOP;4aljf?3
+l127
+L126
+Z320 Vk7CVm@L]7<^9b`=H1QZYJ0
+R13
+32
+R43
+R190
+R177
+R286
+R14
+R15
+Z321 !s100 A6aaRGGJCd7Pgk3OE:gbD0
+Eshifter
+R7
+R129
+R55
+R22
+R23
+R24
+32
+R279
+R280
+l0
+L166
+Z322 V4ABF6IKC2gMDaI>UnL@Gb2
+R13
+R14
+R15
+Z323 !s100 =GPJ=3PPGl;CB3eEODYb00
+Abehavioral
+DPx17 __model_tech/ieee 11 numeric_std 0 22 =NSdli^?T5OD8;4F<blj<3
+DEx41 /ensc/grad1/cmc-16/ENSC400/Qrisc/sim/work 11 sh_left_log 0 22 H_Nj5>f0d7Pl9gJYJ:8hY3
+DEx41 /ensc/grad1/cmc-16/ENSC400/Qrisc/sim/work 12 sh_right_log 0 22 5:5NZ;K99]HiOP;4aljf?3
+DEx41 /ensc/grad1/cmc-16/ENSC400/Qrisc/sim/work 14 sh_right_arith 0 22 SaRT`Uj_QXdHHJ1[<=E0Y0
+DEx41 /ensc/grad1/cmc-16/ENSC400/Qrisc/sim/work 9 rot_right 0 22 _Ceofd1Y8_KXB7OWVYBo=2
+DEx41 /ensc/grad1/cmc-16/ENSC400/Qrisc/sim/work 8 rot_left 0 22 >Kf2?<^1KhQ;@GPFN;SL;0
+R129
+R55
+R22
+R23
+R24
+R224
+32
+R146
+R147
+R170
+R57
+R149
+Mx1 17 __model_tech/ieee 11 numeric_std
+l224
+L177
+Z324 VzHd]FbSZPmJYgZM4gJhdR2
+R13
+R14
+R15
+Z325 !s100 2E@>4ehdH_QElDB6kGCc=1
+Esram
+Z326 w1391105731
+R8
+R9
+Z327 8/ensc/fac1/fcampi/Projects/Qrisc/vhdl/5.9/TESTBENCH/SRAM.vhd
+Z328 F/ensc/fac1/fcampi/Projects/Qrisc/vhdl/5.9/TESTBENCH/SRAM.vhd
+l0
+L13
+Z329 VgoOa=D_1=2LOL@1amSH2L3
+R13
+32
+R14
+R15
+Z330 !s100 8@z7iG=9[<?i8e5:[;ZRU2
+Abehv
+R8
+R9
+Z331 DEx4 work 4 sram 0 22 goOa=D_1=2LOL@1amSH2L3
+l30
+L25
+Z332 VV0hZgf[bz?RS@c?Y@oVF=3
+R13
+32
+R19
+R20
+R14
+R15
+Z333 !s100 _BC9m6WW7Ob]`cUm5Unz02
+Estall_logic
+R7
+R91
+R35
+R8
+R36
+R9
+R37
+R38
+l0
+L123
+Z334 VV13Vcc5g7L<QN1J94>TH>2
+R13
+32
+R14
+R15
+Z335 !s100 ANM=IKcPL6gAIkBTd7?S30
+Abehavioral
+R91
+R35
+R8
+R36
+R9
+Z336 DEx4 work 11 stall_logic 0 22 V13Vcc5g7L<QN1J94>TH>2
+l139
+L133
+Z337 VOYP<>ZC6YRjI2NOd5U`RV1
+R13
+32
+R188
+R103
+R190
+R177
+R106
+R14
+R15
+Z338 !s100 8oFTahDU>EK>zFBmo3[Cl3
+Exi_core
+Z339 w1391062400
+Z340 DPx41 /ensc/grad1/cmc-16/ENSC400/Qrisc/sim/work 8 dbg_pack 0 22 ;9:37K`jU]bf@`Le><=FS1
+Z341 DPx41 /ensc/grad1/cmc-16/ENSC400/Qrisc/sim/work 8 cop_pack 0 22 2XLGSj>@j>[;DV9JYTGX12
+Z342 DPx41 /ensc/grad1/cmc-16/ENSC400/Qrisc/sim/work 8 scc_pack 0 22 bHMGC9HRJ>gLWi1R1GGTn1
+R218
+R139
+R129
+R55
+R22
+Z343 DPx17 __model_tech/ieee 18 std_logic_unsigned 0 22 hEMVMlaNCR^<OOoVNV;m90
+R23
+R24
+32
+Z344 8/ensc/fac1/fcampi/Projects/Qrisc/vhdl/5.9/CORE/xi_core.vhd
+Z345 F/ensc/fac1/fcampi/Projects/Qrisc/vhdl/5.9/CORE/xi_core.vhd
+l0
+L55
+Z346 VeNiQ^TYlg2M@=4oK`Cc;j2
+R13
+R14
+R15
+Z347 !s100 7?_nD@0]V<?L@M`ILJ`?l1
+Astructural
+DEx41 /ensc/grad1/cmc-16/ENSC400/Qrisc/sim/work 7 addrchk 0 22 cZ@C]bNNV@2lJ]>RTNob83
+R226
+R237
+DEx41 /ensc/grad1/cmc-16/ENSC400/Qrisc/sim/work 10 bypass_mux 0 22 8WdoWXEm2R[hTocH3WM7X1
+R275
+DEx41 /ensc/grad1/cmc-16/ENSC400/Qrisc/sim/work 3 dbg 0 22 IcJX=d1^YUVObZBA5izia3
+R225
+DEx41 /ensc/grad1/cmc-16/ENSC400/Qrisc/sim/work 3 cop 0 22 IEJV86j?5Ylh`<NP_UkNn1
+DEx41 /ensc/grad1/cmc-16/ENSC400/Qrisc/sim/work 3 scc 0 22 Hbk83HU4Y@HE4_WXV@^ii3
+R340
+R341
+R342
+R218
+R139
+R129
+R55
+R22
+R343
+R23
+R24
+R167
+32
+Mx11 17 __model_tech/ieee 14 std_logic_1164
+Mx10 17 __model_tech/ieee 15 std_logic_arith
+Mx9 17 __model_tech/ieee 18 std_logic_unsigned
+Mx8 41 /ensc/grad1/cmc-16/ENSC400/Qrisc/sim/work 4 menu
+Mx7 41 /ensc/grad1/cmc-16/ENSC400/Qrisc/sim/work 5 basic
+Mx6 41 /ensc/grad1/cmc-16/ENSC400/Qrisc/sim/work 6 isa_32
+Mx5 41 /ensc/grad1/cmc-16/ENSC400/Qrisc/sim/work 10 components
+Mx4 41 /ensc/grad1/cmc-16/ENSC400/Qrisc/sim/work 11 definitions
+Mx3 41 /ensc/grad1/cmc-16/ENSC400/Qrisc/sim/work 8 scc_pack
+Mx2 41 /ensc/grad1/cmc-16/ENSC400/Qrisc/sim/work 8 cop_pack
+Mx1 41 /ensc/grad1/cmc-16/ENSC400/Qrisc/sim/work 8 dbg_pack
+l268
+L172
+Z348 V[mUJF3nXF:ZFn?8_^ZH:b3
+R13
+R14
+R15
+Z349 !s100 =A45CFJ`87LTaYHDA6SoM0
+Exi_verify
+R7
+R91
+R36
+R35
+R114
+R115
+R116
+R8
+R9
+Z350 8/ensc/fac1/fcampi/Projects/Qrisc/vhdl/5.9/CORE/xi_verify.vhd
+Z351 F/ensc/fac1/fcampi/Projects/Qrisc/vhdl/5.9/CORE/xi_verify.vhd
+l0
+L201
+Z352 V3[XD23@o4bJla3U4:ha@`2
+R13
+32
+R14
+R15
+Z353 !s100 cN2^bjI:PJmRQjJiQn>=o0
+Anon_synth
+R91
+R36
+R35
+R114
+R115
+R116
+R8
+R9
+Z354 DEx4 work 9 xi_verify 0 22 3[XD23@o4bJla3U4:ha@`2
+l227
+L225
+Z355 Ve<h1HACc?L=RF?S<oZODP1
+R13
+32
+R121
+R122
+R123
+R124
+R125
+R126
+R127
+R106
+R14
+R15
+Z356 !s100 G>HIhPIVa5Ui3Tcl1B7NU1

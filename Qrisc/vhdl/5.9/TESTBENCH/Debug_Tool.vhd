@@ -1,0 +1,224 @@
+------------------------------------------------------------------------ 
+--                             Debug_Tool.vhd                         --
+--                                                                    --
+------------------------------------------------------------------------
+-- fcampi@sfu.ca, Jan 2014
+
+
+
+-- This block include non-synthesizable logic that can be included in any
+-- processor-based environment to enable debugging, text IO, etc
+
+
+
+
+--             VERIFICATION  SERVICES  OFFERED  BY  XI_VERIFY:
+
+-- 1) Writeback Trace (Under verification)
+--    -> Trace on
+--    -> Trace off
+--
+-- 2) Putchar, used to implement standard IO on the simulation Host OS
+--    -> Put Current Databus on std_output
+--
+-- 3) Clock stop. This code will generate an output signal that can be used to
+-- halt the system clock causing the stop of the modelsim HDL simulation
+
+-------------------------------------------------------------------------------
+--                               CONVCHAR  --
+--                                                                           --
+-- Package used to implement writes on std_output from a VHDL environment    --
+-- There has to be a better way but hey, it works                            --
+-------------------------------------------------------------------------------
+
+package convchar is
+  use std.textio.all;
+  procedure conv_char(c: out character; value: in integer);
+end convchar;
+
+use std.textio.all;
+
+package body convchar is  
+  procedure  conv_char(c: out character; value: in integer) is
+  begin
+        case (value) is
+              when character'pos('0') => c:='0'; 
+              when character'pos('1') => c:='1';
+              when character'pos('2') => c:='2';
+              when character'pos('3') => c:='3';
+              when character'pos('4') => c:='4';
+              when character'pos('5') => c:='5';
+              when character'pos('6') => c:='6';
+              when character'pos('7') => c:='7';
+              when character'pos('8') => c:='8';
+              when character'pos('9') => c:='9';                         
+              when character'pos('a') => c:='a';
+              when character'pos('b') => c:='b';
+              when character'pos('c') => c:='c';
+              when character'pos('d') => c:='d';
+              when character'pos('e') => c:='e';
+              when character'pos('f') => c:='f';
+              when character'pos('g') => c:='g';
+              when character'pos('h') => c:='h';
+              when character'pos('i') => c:='i';
+              when character'pos('l') => c:='l';
+              when character'pos('m') => c:='m';
+              when character'pos('n') => c:='n';
+              when character'pos('o') => c:='o';
+              when character'pos('p') => c:='p';
+              when character'pos('q') => c:='q';
+              when character'pos('r') => c:='r';
+              when character'pos('s') => c:='s';
+              when character'pos('t') => c:='t';                         
+              when character'pos('u') => c:='u';
+              when character'pos('v') => c:='v';
+              when character'pos('w') => c:='w';
+              when character'pos('z') => c:='z';
+              when character'pos('x') => c:='x';
+              when character'pos('y') => c:='y';
+              when character'pos('j') => c:='j';
+              when character'pos('k') => c:='k';
+              when character'pos('A') => c:='A';
+              when character'pos('B') => c:='B';
+              when character'pos('C') => c:='C';
+              when character'pos('D') => c:='D';
+              when character'pos('E') => c:='E';
+              when character'pos('F') => c:='F';
+              when character'pos('G') => c:='G';
+              when character'pos('H') => c:='H';
+              when character'pos('I') => c:='I';
+              when character'pos('L') => c:='L';
+              when character'pos('M') => c:='M';
+              when character'pos('N') => c:='N';
+              when character'pos('O') => c:='O';
+              when character'pos('P') => c:='P';
+              when character'pos('Q') => c:='Q';
+              when character'pos('R') => c:='R';
+              when character'pos('S') => c:='S';
+              when character'pos('T') => c:='T';                         
+              when character'pos('U') => c:='U';
+              when character'pos('V') => c:='V';
+              when character'pos('W') => c:='W';                           
+              when character'pos('Z') => c:='Z';
+              when character'pos('X') => c:='X';
+              when character'pos('Y') => c:='Y';
+              when character'pos('J') => c:='J';
+              when character'pos('K') => c:='K';              
+              when character'pos('(') => c:='(';
+              when character'pos(')') => c:=')';                         
+              when 91 => c:='[';
+              when 93 => c:=']';
+              when character'pos('{') => c:='{';
+              when character'pos('}') => c:='}';
+              when 45 => c:='-';
+              when character'pos('`') => c:='`';
+              when character'pos('+') => c:='+';
+              when character'pos('=') => c:='=';
+              when character'pos('*') => c:='*';
+              when character'pos('/') => c:='/';
+              when character'pos('\') => c:='\';
+              when character'pos('>') => c:='>';
+              when character'pos('<') => c:='<';
+              when character'pos('.') => c:='.';
+              when character'pos(',') => c:=',';
+              when character'pos(';') => c:=';';
+              when character'pos(':') => c:=':';
+              when character'pos('!') => c:='!';
+              when character'pos('@') => c:='@';
+              when character'pos('#') => c:='#';
+              when character'pos('$') => c:='$';
+              when character'pos('%') => c:='%';
+              when character'pos('^') => c:='^';
+              when character'pos('&') => c:='&';
+              when character'pos('_') => c:='_';
+              when character'pos('?') => c:='?';              
+              when 0  => c:=nul;                                         
+              when 10 => c:=lf; 
+              when others => c :=' ';
+        end case;   
+    end conv_char;
+end convchar;
+
+
+library IEEE;
+use IEEE.std_logic_1164.all;
+use IEEE.std_logic_arith.all;
+use IEEE.std_logic_textio.all;
+use std.textio.all;
+use work.convchar.all;
+use work.menu.all;
+use work.basic.all;
+use work.isa_32.all;
+
+entity Debug_Tool is
+    generic ( addr_size : integer := 8;word_size : integer := 16 );
+  port (  clk       :   in  std_logic;
+          reset     :   in  std_logic;
+          wrn       :   in  std_logic;
+          address   :   in  std_logic_vector(addr_size-1 downto 0);
+          data_in   :   in  std_logic_vector(word_size-1 downto 0);
+          clock_out :   out std_logic );
+end Debug_Tool;
+
+architecture NON_SYNTH of Debug_Tool is
+
+begin  -- NON_SYNTH
+
+                                          
+  -- This logic performs putchars and putints on the negative edge of clock,
+  -- where we suppose signals are stable. Note, for post-synthesis TIMED
+  -- simulation this may not work too well!!!!
+  PUTCHAR_HANDLE: process(CLK)
+    file output : text;
+    variable open_status : file_open_status;
+    variable l:line;
+    variable c:character;
+    variable v:integer;
+  begin
+    if clk'event and clk='0' then
+
+      clock_out <= '1';                 -- default configuration, continue clocking
+      
+      if reset=reset_active then
+        -- Cleaning the std_output file
+        file_open(open_status,output,"std_output",write_mode);
+        if open_status/=open_ok then
+          report("Experiencing problems in opening output file!") severity Error;
+        else
+          file_close(output);
+        end if;             
+      
+      elsif ( wrn='0' and conv_integer(unsigned(address))=16#20000#) then
+        -- PUTCHAR
+        file_open(open_status,output,"std_output",append_mode);
+      
+        v:=conv_integer(unsigned(data_in(7 downto 0)) );
+        conv_char(c,v);
+        report "Carattere: " & character'image(c);
+        if (c=lf) or (c=nul) then
+          writeline(output,l);
+          file_close(output);
+        else
+          write(l,c);
+        end if;       
+        
+      elsif ( wrn='0' and conv_integer(unsigned(address))=16#20010#) then      
+           -- PUTINT
+           file_open(open_status,output,"std_output",append_mode);      
+           hwrite(l,data_in,RIGHT,8);  -- Hexadecimal output
+           writeline(output,l);
+           file_close(output);
+
+      elsif (wrn='0' and conv_integer(unsigned(address))=16#20050#) then
+           -- STOPCLOCK
+           report "ClockOut";
+           clock_out <= '0';
+      end if;
+      
+    end if;
+  end process;
+  
+end NON_SYNTH;
+
+
+

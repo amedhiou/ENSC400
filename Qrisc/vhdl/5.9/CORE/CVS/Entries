@@ -1,0 +1,25 @@
+/xi_addrcheck.vhd/1.3/Mon Jun  7 15:05:24 2004//
+/xi_alu.vhd/1.3/Mon Jun  7 15:05:24 2004//
+/xi_alu_simple.vhd/1.4/Mon Jun  7 15:05:24 2004//
+/xi_components.vhd/1.4/Mon Jun  7 15:05:24 2004//
+/xi_decodepc.vhd/1.4/Mon Jun  7 15:05:24 2004//
+/xi_hazards.vhd/1.4/Mon Jun  7 15:05:24 2004//
+/xi_isa32.vhd/1.4/Mon Jun  7 15:05:24 2004//
+/xi_mainchannel.vhd/1.4/Mon Jun  7 15:05:24 2004//
+/xi_memhandle.vhd/1.3/Mon Jun  7 15:05:24 2004//
+/xi_multiplier.vhd/1.3/Mon Jun  7 15:05:24 2004//
+/xi_pcbvgen.vhd/1.3/Mon Jun  7 15:05:24 2004//
+/xi_shifter.vhd/1.3/Mon Jun  7 15:05:24 2004//
+/xi_basic.vhd/1.4/Mon Jun  7 16:56:51 2004//
+/cop_pack.vhd/1.2/Tue Jun 15 15:56:07 2004//
+/xi_control.vhd/1.5/Tue Jun 15 15:15:59 2004//
+/xi_fpu.vhd/1.2/Tue Jun 15 15:57:58 2004//
+/xi_scc.vhd/1.5/Tue Jun 15 18:04:12 2004//
+/xi_decodeop32.vhd/1.5/Sun Jun 20 13:31:11 2004//
+/xi_rfile.vhd/1.6/Sun Jun 20 09:55:43 2004//
+/xi_core.vhd/1.9/Fri Jul  9 08:18:40 2004//
+/xi_dbg.vhd/1.5/Fri Jul  9 08:30:35 2004//
+/xi_definitions.vhd/1.8/Fri Jun 25 16:02:51 2004//
+/xi_menu.vhd/1.6/Thu Jul  8 13:36:19 2004//
+/xi_verify.vhd/1.3/Fri Jul  9 09:23:19 2004//
+D

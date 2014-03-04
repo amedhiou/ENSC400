@@ -1,0 +1,29 @@
+--------------------------------------------------------------------------
+-- Ahmed Medhioub                                                       --
+-- SFU | ENSC 400 | Spring 2014                                         --
+-- Directoy : Qrisc/        						--
+--------------------------------------------------------------------------
+
+==========================================================================
+= Description:                                                           =
+==========================================================================
+
+This directory contains the following:
+	- README  : txt file discribing the containt
+	- vhdl/   : directory containing vhdl  
+	- sim/     : Simulation directory
+		|
+		-> scripts/ : Directory containing simulation scripts
+			|
+			-> compile_qrisc.csh : compile the CPU
+			
+	- syn_045/ : Synthisys Directory
+		|
+		->// to do
+		 // add here synth scripts and relavent out put files 
+		// as well as their location
+
+==========================================================================
+= List of files                                                          =
+==========================================================================
+

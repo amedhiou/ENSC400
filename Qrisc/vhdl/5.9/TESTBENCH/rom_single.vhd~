@@ -1,0 +1,102 @@
+library IEEE;
+	use IEEE.std_logic_1164.all;
+	use IEEE.std_logic_arith.all;
+
+library WORK;
+	use work.basic.all;
+	use work.components.all;
+	use work.xi_rom_package.all;
+       
+entity bootup_rom is
+  port( clk      : in  std_logic;
+        reset    : in  std_logic;
+        freeze   : in  std_logic;
+        addr_in  : in  std_logic_vector(11 downto 0);
+        data_out : out Std_logic_vector(31 downto 0) );
+end bootup_rom;
+
+architecture silly of bootup_rom is
+
+  signal reg_addr_in : std_logic_vector(11 downto 0);
+  signal not_freeze : std_logic;
+  signal Hi,Lo    : std_logic;
+
+begin  -- silly
+
+  Hi <= '1';
+
+  Lo <= '0';
+
+  not_freeze <= not freeze;
+
+  process(reg_addr_in)
+  begin
+    case reg_addr_in is
+      when address_0  => data_out <= instruction_0;
+      when address_1  => data_out <= instruction_1;
+      when address_2  => data_out <= instruction_2;
+      when address_3  => data_out <= instruction_3;
+      when address_4  => data_out <= instruction_4;
+      when address_5  => data_out <= instruction_5;
+      when address_6  => data_out <= instruction_6;
+      when address_7  => data_out <= instruction_7;
+      when address_8  => data_out <= instruction_8;
+      when address_9  => data_out <= instruction_9;
+      when address_10  => data_out <= instruction_10;
+      when address_11  => data_out <= instruction_11;
+      when address_12  => data_out <= instruction_12;
+      when address_13  => data_out <= instruction_13;
+      when address_14  => data_out <= instruction_14;
+      when address_15  => data_out <= instruction_15;
+      when address_16  => data_out <= instruction_16;
+      when address_17  => data_out <= instruction_17;
+      when address_18  => data_out <= instruction_18;
+      when address_19  => data_out <= instruction_19;
+      when address_20  => data_out <= instruction_20;
+      when address_21  => data_out <= instruction_21;
+      when address_22  => data_out <= instruction_22;
+      when address_23  => data_out <= instruction_23;
+      when address_24  => data_out <= instruction_24;
+      when address_25  => data_out <= instruction_25;
+      when address_26  => data_out <= instruction_26;
+      when address_27  => data_out <= instruction_27;
+      when address_28  => data_out <= instruction_28;
+      when address_29  => data_out <= instruction_29;
+      when address_30  => data_out <= instruction_30;
+      when address_31  => data_out <= instruction_31;
+      when address_32  => data_out <= instruction_32;
+      when address_33  => data_out <= instruction_33;
+      when address_34  => data_out <= instruction_34;
+      when address_35  => data_out <= instruction_35;
+      when address_36  => data_out <= instruction_36;
+      when address_37  => data_out <= instruction_37;
+      when address_38  => data_out <= instruction_38;
+      when address_39  => data_out <= instruction_39;
+      when address_40  => data_out <= instruction_40;
+      when address_41  => data_out <= instruction_41;
+      when address_42  => data_out <= instruction_42;
+      when address_43  => data_out <= instruction_43;
+      when address_44  => data_out <= instruction_44;
+      when address_45  => data_out <= instruction_45;
+      when address_46  => data_out <= instruction_46;
+      when address_47  => data_out <= instruction_47;
+      when address_48  => data_out <= instruction_48;
+      when address_49  => data_out <= instruction_49;
+      when address_50  => data_out <= instruction_50;
+      when address_51  => data_out <= instruction_51;
+      when address_52  => data_out <= instruction_52;
+      when address_53  => data_out <= instruction_53;
+      when address_54  => data_out <= instruction_54;
+      when address_55  => data_out <= instruction_55;
+      when address_56  => data_out <= instruction_56;
+      when address_57  => data_out <= instruction_57;
+      when address_58  => data_out <= instruction_58;
+      when address_59  => data_out <= instruction_59;
+      when others => data_out <= (others => '0');  -- Diplomatic no-op
+    end case;
+  end process;
+
+  synch : Data_reg
+    generic map ( reg_width => 12)
+    port map ( clk, reset, not_freeze, addr_in, reg_addr_in);
+end silly;

@@ -67,3 +67,7 @@ directories used in ENSC 400
 
 * BUS : 
 	- Description: Bus architecture
+* UP_ISLAND :
+	- Description: CPU block (CPU + BUS + 4 Slaves )
+* Qrisc :
+	- Description: CPU 

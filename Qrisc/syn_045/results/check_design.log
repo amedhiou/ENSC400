@@ -1,0 +1,199 @@
+Warning: In design 'Xi_core', a pin on submodule 'Scc_coproc' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'cop_command[INDEX][1]' is connected to logic 0. 
+   Pin 'cop_command[INDEX][0]' is connected to logic 0. 
+   Pin 'cop_command[OP][5]' is connected to logic 0. 
+   Pin 'cop_command[OP][4]' is connected to logic 0. 
+   Pin 'cop_command[OP][3]' is connected to logic 0. 
+   Pin 'cop_command[OP][2]' is connected to logic 0. 
+   Pin 'cop_command[OP][1]' is connected to logic 0. 
+   Pin 'cop_command[OP][0]' is connected to logic 0. 
+   Pin 'interrupt_vector[1]' is connected to logic 0. 
+   Pin 'interrupt_vector[0]' is connected to logic 0. 
+   Pin 'exc[ILLOP2]' is connected to logic 1. 
+   Pin 'exc[ALU_OFLOW2]' is connected to logic 1. 
+   Pin 'exc[FPU]' is connected to logic 1. 
+Warning: In design 'Xi_core', the same net is connected to more than one pin on submodule 'Scc_coproc'. (LINT-33)
+   Net '*Logic0*' is connected to pins 'cop_command[INDEX][1]', 'cop_command[INDEX][0]', 'cop_command[OP][5]', 'cop_command[OP][4]', 'cop_command[OP][3]', 'cop_command[OP][2]', 'cop_command[OP][1]', 'cop_command[OP][0]', 'interrupt_vector[1]', 'interrupt_vector[0]'. 
+   Net '*Logic1*' is connected to pins 'exc[ILLOP2]', 'exc[ALU_OFLOW2]', 'exc[FPU]'. 
+Warning: In design 'Xi_core', a pin on submodule 'COP1_OUT_REG' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'data_in[1]' is connected to logic 0. 
+   Pin 'data_in[0]' is connected to logic 0. 
+Warning: In design 'Xi_core', the same net is connected to more than one pin on submodule 'COP1_OUT_REG'. (LINT-33)
+   Net '*Logic0*' is connected to pins 'data_in[1]', 'data_in[0]'. 
+Warning: In design 'Xi_core', a pin on submodule 'Mcontrol' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'cop_stall' is connected to logic 1. 
+Warning: In design 'Xi_core', a pin on submodule 'i_chk' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'enable' is connected to logic 0. 
+   Pin 'isbyte' is connected to logic 1. 
+   Pin 'ishalf' is connected to logic 1. 
+Warning: In design 'Xi_core', the same net is connected to more than one pin on submodule 'i_chk'. (LINT-33)
+   Net '*Logic1*' is connected to pins 'isbyte', 'ishalf'. 
+Warning: In design 'Xi_core', output port 'I_ADDR_OUTBUS[1]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'Xi_core', output port 'I_ADDR_OUTBUS[1]' is connected directly to output port 'real_dbg_op'. (LINT-31)
+Warning: In design 'Xi_core', output port 'I_ADDR_OUTBUS[1]' is connected directly to output port 'end_dbg'. (LINT-31)
+Warning: In design 'Xi_core', output port 'I_ADDR_OUTBUS[1]' is connected directly to output port 'I_ADDR_OUTBUS[0]'. (LINT-31)
+Warning: In design 'Xi_core', output port 'I_ADDR_OUTBUS[0]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'Xi_core', port 'dbg_enable' is not connected to any nets. (LINT-28)
+Warning: In design 'Xi_core', port 'ext_bp_request' is not connected to any nets. (LINT-28)
+Warning: In design 'Xi_core', output port 'end_dbg' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'Xi_core', output port 'real_dbg_op' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'Scc_Word_Width32_Iaddr_width24_status_bits49407_intproc_status_bits0_cause_bits16_interrupt_on_exception1_include_sticky_logic1', a pin on submodule 'dec_eword_reg' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'data_in[3]' is connected to logic 1. 
+   Pin 'data_in[2]' is connected to logic 1. 
+Warning: In design 'Scc_Word_Width32_Iaddr_width24_status_bits49407_intproc_status_bits0_cause_bits16_interrupt_on_exception1_include_sticky_logic1', the same net is connected to more than one pin on submodule 'dec_eword_reg'. (LINT-33)
+   Net '*Logic1*' is connected to pins 'data_in[3]', 'data_in[2]'. 
+Warning: In design 'Scc_Word_Width32_Iaddr_width24_status_bits49407_intproc_status_bits0_cause_bits16_interrupt_on_exception1_include_sticky_logic1', cell 'I_6' does not drive any nets. (LINT-1)
+Warning: In design 'Scc_Word_Width32_Iaddr_width24_status_bits49407_intproc_status_bits0_cause_bits16_interrupt_on_exception1_include_sticky_logic1', cell 'I_21' does not drive any nets. (LINT-1)
+Warning: In design 'Scc_Word_Width32_Iaddr_width24_status_bits49407_intproc_status_bits0_cause_bits16_interrupt_on_exception1_include_sticky_logic1', port 'cop_in[31]' is not connected to any nets. (LINT-28)
+Warning: In design 'Scc_Word_Width32_Iaddr_width24_status_bits49407_intproc_status_bits0_cause_bits16_interrupt_on_exception1_include_sticky_logic1', port 'cop_in[30]' is not connected to any nets. (LINT-28)
+Warning: In design 'Scc_Word_Width32_Iaddr_width24_status_bits49407_intproc_status_bits0_cause_bits16_interrupt_on_exception1_include_sticky_logic1', port 'cop_in[29]' is not connected to any nets. (LINT-28)
+Warning: In design 'Scc_Word_Width32_Iaddr_width24_status_bits49407_intproc_status_bits0_cause_bits16_interrupt_on_exception1_include_sticky_logic1', port 'cop_in[28]' is not connected to any nets. (LINT-28)
+Warning: In design 'Scc_Word_Width32_Iaddr_width24_status_bits49407_intproc_status_bits0_cause_bits16_interrupt_on_exception1_include_sticky_logic1', port 'cop_in[27]' is not connected to any nets. (LINT-28)
+Warning: In design 'Scc_Word_Width32_Iaddr_width24_status_bits49407_intproc_status_bits0_cause_bits16_interrupt_on_exception1_include_sticky_logic1', port 'cop_in[26]' is not connected to any nets. (LINT-28)
+Warning: In design 'Scc_Word_Width32_Iaddr_width24_status_bits49407_intproc_status_bits0_cause_bits16_interrupt_on_exception1_include_sticky_logic1', port 'cop_in[25]' is not connected to any nets. (LINT-28)
+Warning: In design 'Scc_Word_Width32_Iaddr_width24_status_bits49407_intproc_status_bits0_cause_bits16_interrupt_on_exception1_include_sticky_logic1', port 'cop_in[24]' is not connected to any nets. (LINT-28)
+Warning: In design 'Scc_Word_Width32_Iaddr_width24_status_bits49407_intproc_status_bits0_cause_bits16_interrupt_on_exception1_include_sticky_logic1', output port 'cop_out[31]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'Scc_Word_Width32_Iaddr_width24_status_bits49407_intproc_status_bits0_cause_bits16_interrupt_on_exception1_include_sticky_logic1', output port 'cop_out[31]' is connected directly to output port 'serve_proc_pointer[0]'. (LINT-31)
+Warning: In design 'Scc_Word_Width32_Iaddr_width24_status_bits49407_intproc_status_bits0_cause_bits16_interrupt_on_exception1_include_sticky_logic1', output port 'cop_out[31]' is connected directly to output port 'serve_proc_pointer[1]'. (LINT-31)
+Warning: In design 'Scc_Word_Width32_Iaddr_width24_status_bits49407_intproc_status_bits0_cause_bits16_interrupt_on_exception1_include_sticky_logic1', output port 'cop_out[31]' is connected directly to output port 'cop_out[24]'. (LINT-31)
+Warning: In design 'Scc_Word_Width32_Iaddr_width24_status_bits49407_intproc_status_bits0_cause_bits16_interrupt_on_exception1_include_sticky_logic1', output port 'cop_out[31]' is connected directly to output port 'cop_out[25]'. (LINT-31)
+Warning: In design 'Scc_Word_Width32_Iaddr_width24_status_bits49407_intproc_status_bits0_cause_bits16_interrupt_on_exception1_include_sticky_logic1', output port 'cop_out[31]' is connected directly to output port 'cop_out[26]'. (LINT-31)
+Warning: In design 'Scc_Word_Width32_Iaddr_width24_status_bits49407_intproc_status_bits0_cause_bits16_interrupt_on_exception1_include_sticky_logic1', output port 'cop_out[31]' is connected directly to output port 'cop_out[27]'. (LINT-31)
+Warning: In design 'Scc_Word_Width32_Iaddr_width24_status_bits49407_intproc_status_bits0_cause_bits16_interrupt_on_exception1_include_sticky_logic1', output port 'cop_out[31]' is connected directly to output port 'cop_out[28]'. (LINT-31)
+Warning: In design 'Scc_Word_Width32_Iaddr_width24_status_bits49407_intproc_status_bits0_cause_bits16_interrupt_on_exception1_include_sticky_logic1', output port 'cop_out[31]' is connected directly to output port 'cop_out[29]'. (LINT-31)
+Warning: In design 'Scc_Word_Width32_Iaddr_width24_status_bits49407_intproc_status_bits0_cause_bits16_interrupt_on_exception1_include_sticky_logic1', output port 'cop_out[31]' is connected directly to output port 'cop_out[30]'. (LINT-31)
+Warning: In design 'Scc_Word_Width32_Iaddr_width24_status_bits49407_intproc_status_bits0_cause_bits16_interrupt_on_exception1_include_sticky_logic1', output port 'cop_out[30]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'Scc_Word_Width32_Iaddr_width24_status_bits49407_intproc_status_bits0_cause_bits16_interrupt_on_exception1_include_sticky_logic1', output port 'cop_out[29]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'Scc_Word_Width32_Iaddr_width24_status_bits49407_intproc_status_bits0_cause_bits16_interrupt_on_exception1_include_sticky_logic1', output port 'cop_out[28]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'Scc_Word_Width32_Iaddr_width24_status_bits49407_intproc_status_bits0_cause_bits16_interrupt_on_exception1_include_sticky_logic1', output port 'cop_out[27]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'Scc_Word_Width32_Iaddr_width24_status_bits49407_intproc_status_bits0_cause_bits16_interrupt_on_exception1_include_sticky_logic1', output port 'cop_out[26]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'Scc_Word_Width32_Iaddr_width24_status_bits49407_intproc_status_bits0_cause_bits16_interrupt_on_exception1_include_sticky_logic1', output port 'cop_out[25]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'Scc_Word_Width32_Iaddr_width24_status_bits49407_intproc_status_bits0_cause_bits16_interrupt_on_exception1_include_sticky_logic1', output port 'cop_out[24]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'Scc_Word_Width32_Iaddr_width24_status_bits49407_intproc_status_bits0_cause_bits16_interrupt_on_exception1_include_sticky_logic1', port 'exc[FPU]' is not connected to any nets. (LINT-28)
+Warning: In design 'Scc_Word_Width32_Iaddr_width24_status_bits49407_intproc_status_bits0_cause_bits16_interrupt_on_exception1_include_sticky_logic1', output port 'serve_proc_pointer[1]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'Scc_Word_Width32_Iaddr_width24_status_bits49407_intproc_status_bits0_cause_bits16_interrupt_on_exception1_include_sticky_logic1', output port 'serve_proc_pointer[0]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'Main_control_include_scc1_include_hrdwit1_rf_registers_addr_width5_Word_Width32_Instr_Width32_Iaddr_width24_reboot_value_upper0_reboot_value_lower0_reset_value_upper0_reset_value_lower4096', input port 'freeze' is connected directly to output port 'D_busy'. (LINT-29)
+Warning: In design 'Main_channel_include_scc1_include_fpu0_include_dbg0_include_shift1_include_rotate1_include_hrdwit1_include_mul1_include_mult1_include_mad1_include_iaddr_check1_include_daddr_check1_shift_count_width5_Word_Width32_Instr_Width32_Daddr_width32_Iaddr_width24', port 'freeze' is not connected to any nets. (LINT-28)
+Warning: In design 'Main_channel_include_scc1_include_fpu0_include_dbg0_include_shift1_include_rotate1_include_hrdwit1_include_mul1_include_mult1_include_mad1_include_iaddr_check1_include_daddr_check1_shift_count_width5_Word_Width32_Instr_Width32_Daddr_width32_Iaddr_width24', port 'd_we' is not connected to any nets. (LINT-28)
+Warning: In design 'Main_channel_include_scc1_include_fpu0_include_dbg0_include_shift1_include_rotate1_include_hrdwit1_include_mul1_include_mult1_include_mad1_include_iaddr_check1_include_daddr_check1_shift_count_width5_Word_Width32_Instr_Width32_Daddr_width32_Iaddr_width24', port 'x_we' is not connected to any nets. (LINT-28)
+Warning: In design 'Addrchk_w24_ckmn0_ckmx0_mxl61439_mxh16384_mnl0_mnh16384', port 'ADDRESS[23]' is not connected to any nets. (LINT-28)
+Warning: In design 'Addrchk_w24_ckmn0_ckmx0_mxl61439_mxh16384_mnl0_mnh16384', port 'ADDRESS[22]' is not connected to any nets. (LINT-28)
+Warning: In design 'Addrchk_w24_ckmn0_ckmx0_mxl61439_mxh16384_mnl0_mnh16384', port 'ADDRESS[21]' is not connected to any nets. (LINT-28)
+Warning: In design 'Addrchk_w24_ckmn0_ckmx0_mxl61439_mxh16384_mnl0_mnh16384', port 'ADDRESS[20]' is not connected to any nets. (LINT-28)
+Warning: In design 'Addrchk_w24_ckmn0_ckmx0_mxl61439_mxh16384_mnl0_mnh16384', port 'ADDRESS[19]' is not connected to any nets. (LINT-28)
+Warning: In design 'Addrchk_w24_ckmn0_ckmx0_mxl61439_mxh16384_mnl0_mnh16384', port 'ADDRESS[18]' is not connected to any nets. (LINT-28)
+Warning: In design 'Addrchk_w24_ckmn0_ckmx0_mxl61439_mxh16384_mnl0_mnh16384', port 'ADDRESS[17]' is not connected to any nets. (LINT-28)
+Warning: In design 'Addrchk_w24_ckmn0_ckmx0_mxl61439_mxh16384_mnl0_mnh16384', port 'ADDRESS[16]' is not connected to any nets. (LINT-28)
+Warning: In design 'Addrchk_w24_ckmn0_ckmx0_mxl61439_mxh16384_mnl0_mnh16384', port 'ADDRESS[15]' is not connected to any nets. (LINT-28)
+Warning: In design 'Addrchk_w24_ckmn0_ckmx0_mxl61439_mxh16384_mnl0_mnh16384', port 'ADDRESS[14]' is not connected to any nets. (LINT-28)
+Warning: In design 'Addrchk_w24_ckmn0_ckmx0_mxl61439_mxh16384_mnl0_mnh16384', port 'ADDRESS[13]' is not connected to any nets. (LINT-28)
+Warning: In design 'Addrchk_w24_ckmn0_ckmx0_mxl61439_mxh16384_mnl0_mnh16384', port 'ADDRESS[12]' is not connected to any nets. (LINT-28)
+Warning: In design 'Addrchk_w24_ckmn0_ckmx0_mxl61439_mxh16384_mnl0_mnh16384', port 'ADDRESS[11]' is not connected to any nets. (LINT-28)
+Warning: In design 'Addrchk_w24_ckmn0_ckmx0_mxl61439_mxh16384_mnl0_mnh16384', port 'ADDRESS[10]' is not connected to any nets. (LINT-28)
+Warning: In design 'Addrchk_w24_ckmn0_ckmx0_mxl61439_mxh16384_mnl0_mnh16384', port 'ADDRESS[9]' is not connected to any nets. (LINT-28)
+Warning: In design 'Addrchk_w24_ckmn0_ckmx0_mxl61439_mxh16384_mnl0_mnh16384', port 'ADDRESS[8]' is not connected to any nets. (LINT-28)
+Warning: In design 'Addrchk_w24_ckmn0_ckmx0_mxl61439_mxh16384_mnl0_mnh16384', port 'ADDRESS[7]' is not connected to any nets. (LINT-28)
+Warning: In design 'Addrchk_w24_ckmn0_ckmx0_mxl61439_mxh16384_mnl0_mnh16384', port 'ADDRESS[6]' is not connected to any nets. (LINT-28)
+Warning: In design 'Addrchk_w24_ckmn0_ckmx0_mxl61439_mxh16384_mnl0_mnh16384', port 'ADDRESS[5]' is not connected to any nets. (LINT-28)
+Warning: In design 'Addrchk_w24_ckmn0_ckmx0_mxl61439_mxh16384_mnl0_mnh16384', port 'ADDRESS[4]' is not connected to any nets. (LINT-28)
+Warning: In design 'Addrchk_w24_ckmn0_ckmx0_mxl61439_mxh16384_mnl0_mnh16384', port 'ADDRESS[3]' is not connected to any nets. (LINT-28)
+Warning: In design 'Addrchk_w24_ckmn0_ckmx0_mxl61439_mxh16384_mnl0_mnh16384', port 'ADDRESS[2]' is not connected to any nets. (LINT-28)
+Warning: In design 'Addrchk_w24_ckmn0_ckmx0_mxl61439_mxh16384_mnl0_mnh16384', output port 'invalid_addr' is connected directly to 'logic 1'. (LINT-52)
+Warning: In design 'Addrchk_w24_ckmn0_ckmx0_mxl61439_mxh16384_mnl0_mnh16384', output port 'invalid_addr' is connected directly to output port 'prot_warn'. (LINT-31)
+Warning: In design 'Addrchk_w24_ckmn0_ckmx0_mxl61439_mxh16384_mnl0_mnh16384', output port 'prot_warn' is connected directly to 'logic 1'. (LINT-52)
+Warning: In design 'Addrchk_w32_ckmn0_ckmx0_mxl65535_mxh16387_mnl61440_mnh16384', port 'ADDRESS[31]' is not connected to any nets. (LINT-28)
+Warning: In design 'Addrchk_w32_ckmn0_ckmx0_mxl65535_mxh16387_mnl61440_mnh16384', port 'ADDRESS[30]' is not connected to any nets. (LINT-28)
+Warning: In design 'Addrchk_w32_ckmn0_ckmx0_mxl65535_mxh16387_mnl61440_mnh16384', port 'ADDRESS[29]' is not connected to any nets. (LINT-28)
+Warning: In design 'Addrchk_w32_ckmn0_ckmx0_mxl65535_mxh16387_mnl61440_mnh16384', port 'ADDRESS[28]' is not connected to any nets. (LINT-28)
+Warning: In design 'Addrchk_w32_ckmn0_ckmx0_mxl65535_mxh16387_mnl61440_mnh16384', port 'ADDRESS[27]' is not connected to any nets. (LINT-28)
+Warning: In design 'Addrchk_w32_ckmn0_ckmx0_mxl65535_mxh16387_mnl61440_mnh16384', port 'ADDRESS[26]' is not connected to any nets. (LINT-28)
+Warning: In design 'Addrchk_w32_ckmn0_ckmx0_mxl65535_mxh16387_mnl61440_mnh16384', port 'ADDRESS[25]' is not connected to any nets. (LINT-28)
+Warning: In design 'Addrchk_w32_ckmn0_ckmx0_mxl65535_mxh16387_mnl61440_mnh16384', port 'ADDRESS[24]' is not connected to any nets. (LINT-28)
+Warning: In design 'Addrchk_w32_ckmn0_ckmx0_mxl65535_mxh16387_mnl61440_mnh16384', port 'ADDRESS[23]' is not connected to any nets. (LINT-28)
+Warning: In design 'Addrchk_w32_ckmn0_ckmx0_mxl65535_mxh16387_mnl61440_mnh16384', port 'ADDRESS[22]' is not connected to any nets. (LINT-28)
+Warning: In design 'Addrchk_w32_ckmn0_ckmx0_mxl65535_mxh16387_mnl61440_mnh16384', port 'ADDRESS[21]' is not connected to any nets. (LINT-28)
+Warning: In design 'Addrchk_w32_ckmn0_ckmx0_mxl65535_mxh16387_mnl61440_mnh16384', port 'ADDRESS[20]' is not connected to any nets. (LINT-28)
+Warning: In design 'Addrchk_w32_ckmn0_ckmx0_mxl65535_mxh16387_mnl61440_mnh16384', port 'ADDRESS[19]' is not connected to any nets. (LINT-28)
+Warning: In design 'Addrchk_w32_ckmn0_ckmx0_mxl65535_mxh16387_mnl61440_mnh16384', port 'ADDRESS[18]' is not connected to any nets. (LINT-28)
+Warning: In design 'Addrchk_w32_ckmn0_ckmx0_mxl65535_mxh16387_mnl61440_mnh16384', port 'ADDRESS[17]' is not connected to any nets. (LINT-28)
+Warning: In design 'Addrchk_w32_ckmn0_ckmx0_mxl65535_mxh16387_mnl61440_mnh16384', port 'ADDRESS[16]' is not connected to any nets. (LINT-28)
+Warning: In design 'Addrchk_w32_ckmn0_ckmx0_mxl65535_mxh16387_mnl61440_mnh16384', port 'ADDRESS[15]' is not connected to any nets. (LINT-28)
+Warning: In design 'Addrchk_w32_ckmn0_ckmx0_mxl65535_mxh16387_mnl61440_mnh16384', port 'ADDRESS[14]' is not connected to any nets. (LINT-28)
+Warning: In design 'Addrchk_w32_ckmn0_ckmx0_mxl65535_mxh16387_mnl61440_mnh16384', port 'ADDRESS[13]' is not connected to any nets. (LINT-28)
+Warning: In design 'Addrchk_w32_ckmn0_ckmx0_mxl65535_mxh16387_mnl61440_mnh16384', port 'ADDRESS[12]' is not connected to any nets. (LINT-28)
+Warning: In design 'Addrchk_w32_ckmn0_ckmx0_mxl65535_mxh16387_mnl61440_mnh16384', port 'ADDRESS[11]' is not connected to any nets. (LINT-28)
+Warning: In design 'Addrchk_w32_ckmn0_ckmx0_mxl65535_mxh16387_mnl61440_mnh16384', port 'ADDRESS[10]' is not connected to any nets. (LINT-28)
+Warning: In design 'Addrchk_w32_ckmn0_ckmx0_mxl65535_mxh16387_mnl61440_mnh16384', port 'ADDRESS[9]' is not connected to any nets. (LINT-28)
+Warning: In design 'Addrchk_w32_ckmn0_ckmx0_mxl65535_mxh16387_mnl61440_mnh16384', port 'ADDRESS[8]' is not connected to any nets. (LINT-28)
+Warning: In design 'Addrchk_w32_ckmn0_ckmx0_mxl65535_mxh16387_mnl61440_mnh16384', port 'ADDRESS[7]' is not connected to any nets. (LINT-28)
+Warning: In design 'Addrchk_w32_ckmn0_ckmx0_mxl65535_mxh16387_mnl61440_mnh16384', port 'ADDRESS[6]' is not connected to any nets. (LINT-28)
+Warning: In design 'Addrchk_w32_ckmn0_ckmx0_mxl65535_mxh16387_mnl61440_mnh16384', port 'ADDRESS[5]' is not connected to any nets. (LINT-28)
+Warning: In design 'Addrchk_w32_ckmn0_ckmx0_mxl65535_mxh16387_mnl61440_mnh16384', port 'ADDRESS[4]' is not connected to any nets. (LINT-28)
+Warning: In design 'Addrchk_w32_ckmn0_ckmx0_mxl65535_mxh16387_mnl61440_mnh16384', port 'ADDRESS[3]' is not connected to any nets. (LINT-28)
+Warning: In design 'Addrchk_w32_ckmn0_ckmx0_mxl65535_mxh16387_mnl61440_mnh16384', port 'ADDRESS[2]' is not connected to any nets. (LINT-28)
+Warning: In design 'Addrchk_w32_ckmn0_ckmx0_mxl65535_mxh16387_mnl61440_mnh16384', output port 'invalid_addr' is connected directly to 'logic 1'. (LINT-52)
+Warning: In design 'Addrchk_w32_ckmn0_ckmx0_mxl65535_mxh16387_mnl61440_mnh16384', output port 'invalid_addr' is connected directly to output port 'prot_warn'. (LINT-31)
+Warning: In design 'Addrchk_w32_ckmn0_ckmx0_mxl65535_mxh16387_mnl61440_mnh16384', output port 'prot_warn' is connected directly to 'logic 1'. (LINT-52)
+Warning: In design 'PCbvgen_Iaddr_width24', cell 'I_4' does not drive any nets. (LINT-1)
+Warning: In design 'Decode_Op32_word_width32_rf_registers_addr_width5', cell 'I_3' does not drive any nets. (LINT-1)
+Warning: In design 'Decode_Op32_word_width32_rf_registers_addr_width5', cell 'I_5' does not drive any nets. (LINT-1)
+Warning: In design 'Decode_Op32_word_width32_rf_registers_addr_width5', input port 'instr[15]' is connected directly to output port 'r3_reg[4]'. (LINT-29)
+Warning: In design 'Decode_Op32_word_width32_rf_registers_addr_width5', input port 'instr[14]' is connected directly to output port 'r3_reg[3]'. (LINT-29)
+Warning: In design 'Decode_Op32_word_width32_rf_registers_addr_width5', input port 'instr[13]' is connected directly to output port 'r3_reg[2]'. (LINT-29)
+Warning: In design 'Decode_Op32_word_width32_rf_registers_addr_width5', input port 'instr[12]' is connected directly to output port 'r3_reg[1]'. (LINT-29)
+Warning: In design 'Decode_Op32_word_width32_rf_registers_addr_width5', input port 'instr[11]' is connected directly to output port 'r3_reg[0]'. (LINT-29)
+Warning: In design 'Decode_Op32_word_width32_rf_registers_addr_width5', output port 'jump_type[5]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'Decode_PC_include_scc1_Word_Width32_Instr_width32_Iaddr_width24', a pin on submodule 'incr' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'in_b[23]' is connected to logic 0. 
+   Pin 'in_b[22]' is connected to logic 0. 
+   Pin 'in_b[21]' is connected to logic 0. 
+   Pin 'in_b[20]' is connected to logic 0. 
+   Pin 'in_b[19]' is connected to logic 0. 
+   Pin 'in_b[18]' is connected to logic 0. 
+   Pin 'in_b[17]' is connected to logic 0. 
+   Pin 'in_b[16]' is connected to logic 0. 
+   Pin 'in_b[15]' is connected to logic 0. 
+   Pin 'in_b[14]' is connected to logic 0. 
+   Pin 'in_b[13]' is connected to logic 0. 
+   Pin 'in_b[12]' is connected to logic 0. 
+   Pin 'in_b[11]' is connected to logic 0. 
+   Pin 'in_b[10]' is connected to logic 0. 
+   Pin 'in_b[9]' is connected to logic 0. 
+   Pin 'in_b[8]' is connected to logic 0. 
+   Pin 'in_b[7]' is connected to logic 0. 
+   Pin 'in_b[6]' is connected to logic 0. 
+   Pin 'in_b[5]' is connected to logic 0. 
+   Pin 'in_b[4]' is connected to logic 0. 
+   Pin 'in_b[3]' is connected to logic 0. 
+   Pin 'in_b[2]' is connected to logic 1. 
+   Pin 'in_b[1]' is connected to logic 0. 
+   Pin 'in_b[0]' is connected to logic 0. 
+Warning: In design 'Decode_PC_include_scc1_Word_Width32_Instr_width32_Iaddr_width24', the same net is connected to more than one pin on submodule 'incr'. (LINT-33)
+   Net '*Logic0*' is connected to pins 'in_b[23]', 'in_b[22]', 'in_b[21]', 'in_b[20]', 'in_b[19]', 'in_b[18]', 'in_b[17]', 'in_b[16]', 'in_b[15]', 'in_b[14]', 'in_b[13]', 'in_b[12]', 'in_b[11]', 'in_b[10]', 'in_b[9]', 'in_b[8]', 'in_b[7]', 'in_b[6]', 'in_b[5]', 'in_b[4]', 'in_b[3]', 'in_b[1]', 'in_b[0]'. 
+Warning: In design 'Decode_PC_include_scc1_Word_Width32_Instr_width32_Iaddr_width24', cell 'I_10' does not drive any nets. (LINT-1)
+Warning: In design 'Decode_PC_include_scc1_Word_Width32_Instr_width32_Iaddr_width24', cell 'I_12' does not drive any nets. (LINT-1)
+Warning: In design 'Decode_PC_include_scc1_Word_Width32_Instr_width32_Iaddr_width24', cell 'B_26' does not drive any nets. (LINT-1)
+Warning: In design 'Decode_PC_include_scc1_Word_Width32_Instr_width32_Iaddr_width24', cell 'C455' does not drive any nets. (LINT-1)
+Warning: In design 'Decode_PC_include_scc1_Word_Width32_Instr_width32_Iaddr_width24', port 'Immediate[31]' is not connected to any nets. (LINT-28)
+Warning: In design 'Decode_PC_include_scc1_Word_Width32_Instr_width32_Iaddr_width24', port 'Immediate[30]' is not connected to any nets. (LINT-28)
+Warning: In design 'Decode_PC_include_scc1_Word_Width32_Instr_width32_Iaddr_width24', port 'Immediate[29]' is not connected to any nets. (LINT-28)
+Warning: In design 'Decode_PC_include_scc1_Word_Width32_Instr_width32_Iaddr_width24', port 'Immediate[28]' is not connected to any nets. (LINT-28)
+Warning: In design 'Decode_PC_include_scc1_Word_Width32_Instr_width32_Iaddr_width24', port 'Immediate[27]' is not connected to any nets. (LINT-28)
+Warning: In design 'Decode_PC_include_scc1_Word_Width32_Instr_width32_Iaddr_width24', port 'Immediate[26]' is not connected to any nets. (LINT-28)
+Warning: In design 'Decode_PC_include_scc1_Word_Width32_Instr_width32_Iaddr_width24', port 'Immediate[25]' is not connected to any nets. (LINT-28)
+Warning: In design 'Decode_PC_include_scc1_Word_Width32_Instr_width32_Iaddr_width24', port 'Immediate[24]' is not connected to any nets. (LINT-28)
+Warning: In design 'Bypass_Logic_rf_registers_addr_width5_1', cell 'I_0' does not drive any nets. (LINT-1)
+Warning: In design 'Bypass_Logic_rf_registers_addr_width5_1', cell 'I_2' does not drive any nets. (LINT-1)
+Warning: In design 'Bypass_Logic_rf_registers_addr_width5_1', output port 'byp_control[1]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'Main_alu_Word_Width32', cell 'C570' does not drive any nets. (LINT-1)
+Warning: In design 'Main_alu_Word_Width32', cell 'C573' does not drive any nets. (LINT-1)
+Warning: In design 'mult_block_Word_Width32_include_mul1_include_mult1_include_mad1', cell 'I_12' does not drive any nets. (LINT-1)
+Warning: In design 'mem_handle_Word_Width32', port 'x_mem_command[MR]' is not connected to any nets. (LINT-28)
+Warning: In design 'mem_handle_Word_Width32', port 'x_mem_command[MW]' is not connected to any nets. (LINT-28)
+Warning: In design 'mem_handle_Word_Width32', port 'x_mem_command[SIGN]' is not connected to any nets. (LINT-28)
+Warning: In design 'mem_handle_Word_Width32', port 'm_mem_command[MR]' is not connected to any nets. (LINT-28)
+Warning: In design 'mem_handle_Word_Width32', port 'm_mem_command[MW]' is not connected to any nets. (LINT-28)
+Warning: In design 'Bypass_Logic_rf_registers_addr_width5_0', cell 'I_0' does not drive any nets. (LINT-1)
+Warning: In design 'Bypass_Logic_rf_registers_addr_width5_0', cell 'I_2' does not drive any nets. (LINT-1)
+Warning: In design 'Bypass_Logic_rf_registers_addr_width5_0', output port 'byp_control[1]' is connected directly to 'logic 0'. (LINT-52)
+1

@@ -1,0 +1,362 @@
+Information: Updating design information... (UID-85)
+Warning: Design 'Xi_core' contains 1 high-fanout nets. A fanout number of 1000 will be used for delay calculations involving these nets. (TIM-134)
+ 
+****************************************
+Report : reference
+Design : Xi_core
+Version: Z-2007.03-SP5
+Date   : Fri Feb  7 14:15:48 2014
+****************************************
+
+Attributes:
+    b - black box (unknown)
+   bo - allows boundary optimization
+    d - dont_touch
+   mo - map_only
+    h - hierarchical
+    n - noncombinational
+    r - removable
+    s - synthetic operator
+    u - contains unmapped logic
+
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+AND2_X1            NangateOpenCellLibrary
+                                  1.064000     100    106.400001  
+AND2_X2            NangateOpenCellLibrary
+                                  1.330000      96    127.680004  
+AND2_X4            NangateOpenCellLibrary
+                                  2.394000       7     16.758000  
+AND3_X1            NangateOpenCellLibrary
+                                  1.330000       8     10.640000  
+AND3_X2            NangateOpenCellLibrary
+                                  1.596000      19     30.323999  
+AND3_X4            NangateOpenCellLibrary
+                                  2.926000       4     11.704000  
+AND4_X1            NangateOpenCellLibrary
+                                  1.596000       2      3.192000  
+AOI21_X1           NangateOpenCellLibrary
+                                  1.064000      31     32.984000  
+AOI21_X2           NangateOpenCellLibrary
+                                  1.862000       2      3.724000  
+AOI21_X4           NangateOpenCellLibrary
+                                  3.458000       1      3.458000  
+AOI22_X1           NangateOpenCellLibrary
+                                  1.330000     742    986.860032  
+AOI22_X2           NangateOpenCellLibrary
+                                  2.394000       1      2.394000  
+AOI211_X1          NangateOpenCellLibrary
+                                  1.330000      68     90.440003  
+AOI221_X1          NangateOpenCellLibrary
+                                  1.596000      72    114.911997  
+AOI221_X2          NangateOpenCellLibrary
+                                  2.926000       2      5.852000  
+AOI221_X4          NangateOpenCellLibrary
+                                  3.458000       1      3.458000  
+AOI222_X1          NangateOpenCellLibrary
+                                  2.128000     204    434.112004  
+CLKBUF_X1          NangateOpenCellLibrary
+                                  0.798000     152    121.295997  
+CLKBUF_X2          NangateOpenCellLibrary
+                                  1.064000       4      4.256000  
+CLKBUF_X3          NangateOpenCellLibrary
+                                  1.330000      59     78.470003  
+DFFR_X1            NangateOpenCellLibrary
+                                  5.320000    1311   6974.520225  n
+DFFR_X2            NangateOpenCellLibrary
+                                  5.852000      22    128.744005  n
+DFFS_X1            NangateOpenCellLibrary
+                                  5.320000      62    329.840011  n
+DFFS_X2            NangateOpenCellLibrary
+                                  5.586000       2     11.172000  n
+INV_X1             NangateOpenCellLibrary
+                                  0.532000     724    385.168004  
+INV_X2             NangateOpenCellLibrary
+                                  0.798000     198    158.003996  
+INV_X4             NangateOpenCellLibrary
+                                  1.330000       9     11.970000  
+INV_X8             NangateOpenCellLibrary
+                                  2.394000       3      7.182000  
+INV_X16            NangateOpenCellLibrary
+                                  4.522000       1      4.522000  
+INV_X32            NangateOpenCellLibrary
+                                  8.778000      18    158.003998  
+NAND2_X1           NangateOpenCellLibrary
+                                  0.798000     173    138.053996  
+NAND2_X2           NangateOpenCellLibrary
+                                  1.330000      13     17.290001  
+NAND2_X4           NangateOpenCellLibrary
+                                  2.394000       8     19.152000  
+NAND3_X1           NangateOpenCellLibrary
+                                  1.064000     140    148.960001  
+NAND3_X2           NangateOpenCellLibrary
+                                  1.862000      12     22.344000  
+NAND3_X4           NangateOpenCellLibrary
+                                  3.458000       5     17.290000  
+NAND4_X1           NangateOpenCellLibrary
+                                  1.330000      68     90.440003  
+NAND4_X2           NangateOpenCellLibrary
+                                  2.394000       1      2.394000  
+NAND4_X4           NangateOpenCellLibrary
+                                  4.788000       1      4.788000  
+NOR2_X1            NangateOpenCellLibrary
+                                  0.798000     110     87.779998  
+NOR2_X2            NangateOpenCellLibrary
+                                  1.330000      10     13.300000  
+NOR2_X4            NangateOpenCellLibrary
+                                  2.394000      13     31.122001  
+NOR3_X1            NangateOpenCellLibrary
+                                  1.064000      55     58.520001  
+NOR3_X2            NangateOpenCellLibrary
+                                  1.862000       2      3.724000  
+NOR3_X4            NangateOpenCellLibrary
+                                  3.724000       1      3.724000  
+NOR4_X1            NangateOpenCellLibrary
+                                  1.330000      68     90.440003  
+NOR4_X2            NangateOpenCellLibrary
+                                  2.394000       1      2.394000  
+OAI21_X1           NangateOpenCellLibrary
+                                  1.064000      91     96.824001  
+OAI21_X2           NangateOpenCellLibrary
+                                  1.862000       2      3.724000  
+OAI22_X1           NangateOpenCellLibrary
+                                  1.330000    1303   1732.990056  
+OAI22_X2           NangateOpenCellLibrary
+                                  2.394000       2      4.788000  
+OAI22_X4           NangateOpenCellLibrary
+                                  4.522000       1      4.522000  
+OAI33_X1           NangateOpenCellLibrary
+                                  1.862000       1      1.862000  
+OAI211_X1          NangateOpenCellLibrary
+                                  1.330000     115    152.950005  
+OAI211_X2          NangateOpenCellLibrary
+                                  2.394000       2      4.788000  
+OAI221_X1          NangateOpenCellLibrary
+                                  1.596000     266    424.535988  
+OAI221_X4          NangateOpenCellLibrary
+                                  3.458000       1      3.458000  
+OAI222_X1          NangateOpenCellLibrary
+                                  2.128000     219    466.032005  
+OAI222_X4          NangateOpenCellLibrary
+                                  3.724000      14     52.136000  
+OR2_X1             NangateOpenCellLibrary
+                                  1.064000     170    180.880002  
+OR2_X2             NangateOpenCellLibrary
+                                  1.330000     321    426.930014  
+OR2_X4             NangateOpenCellLibrary
+                                  2.394000       1      2.394000  
+OR3_X1             NangateOpenCellLibrary
+                                  1.330000       3      3.990000  
+OR4_X1             NangateOpenCellLibrary
+                                  1.596000       3      4.788000  
+XNOR2_X1           NangateOpenCellLibrary
+                                  1.596000      12     19.151999  
+XOR2_X1            NangateOpenCellLibrary
+                                  1.596000      34     54.263999  
+Xi_core_DW01_add_0              139.915999       1    139.915999  h
+Xi_core_DW01_add_1               55.327999       1     55.327999  h
+Xi_core_DW01_add_3              584.136002       1    584.136002  h
+Xi_core_DW01_bsh_1              832.580013       1    832.580013  h
+Xi_core_DW01_cmp6_1             169.708002       1    169.708002  h
+Xi_core_DW01_sub_1              628.558001       1    628.558001  h
+Xi_core_DW_cmp_0                342.076003       1    342.076003  h
+Xi_core_DW_cmp_1                365.218003       1    365.218003  h
+Xi_core_DW_leftsh_1             673.512009       1    673.512009  h
+Xi_core_DW_rbsh_1               832.314013       1    832.314013  h
+Xi_core_DW_rightsh_1            673.778009       1    673.778009  h
+Xi_core_DW_sra_1                709.156010       1    709.156010  h
+-----------------------------------------------------------------------------
+Total 78 references                                 20757.044415
+1
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+        -transition_time
+        -capacitance
+Design : Xi_core
+Version: Z-2007.03-SP5
+Date   : Fri Feb  7 14:15:48 2014
+****************************************
+
+ # A fanout number of 1000 was used for high fanout net computations.
+
+Operating Conditions: slow   Library: NangateOpenCellLibrary
+Wire Load Model Mode: top
+
+  Startpoint: Mcontrol/irfd/q_reg
+              (rising edge-triggered flip-flop clocked by CLK)
+  Endpoint: Mcontrol/Program_counter/out_pc_reg[23]
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: CLK
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  Xi_core            5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                          Cap     Trans      Incr       Path
+  ------------------------------------------------------------------------------------
+  clock CLK (rise edge)                                             0.00       0.00
+  clock network delay (ideal)                                       0.00       0.00
+  Mcontrol/irfd/q_reg/CK (DFFR_X2)                        0.00      0.00 #     0.00 r
+  Mcontrol/irfd/q_reg/QN (DFFR_X2)             79.01      0.33      0.55       0.55 r
+  U5002/ZN (AND2_X1)                           55.98      0.46      0.67       1.22 r
+  U5941/ZN (INV_X1)                             7.91      0.11      0.16       1.38 f
+  U5856/Z (CLKBUF_X1)                           3.86      0.03      0.17       1.55 f
+  U5960/ZN (OR2_X1)                             1.93      0.03      0.18       1.73 f
+  Mcontrol/Operation_decoding32/C2281/ZN (OR2_X2)
+                                                7.38      0.03      0.21       1.93 f
+  U5966/ZN (OAI21_X2)                           8.81      0.12      0.18       2.12 r
+  U5949/ZN (NOR2_X2)                           10.24      0.04      0.10       2.21 f
+  U5771/ZN (NAND2_X4)                          14.59      0.05      0.12       2.33 r
+  U5772/ZN (OR2_X2)                             1.84      0.02      0.09       2.42 r
+  U5018/ZN (OAI21_X1)                           5.41      0.04      0.07       2.49 f
+  U5801/ZN (AOI22_X2)                           1.95      0.08      0.13       2.62 r
+  U3695/ZN (INV_X1)                             1.92      0.02      0.05       2.67 f
+  U3694/ZN (NAND2_X1)                           1.88      0.03      0.07       2.74 r
+  U3692/ZN (NAND2_X1)                           8.07      0.04      0.08       2.82 f
+  Mcontrol/Nextpc_decoding/bta_calc/add_391/B[1] (Xi_core_DW01_add_0)
+                                                                    0.00       2.82 f
+  Mcontrol/Nextpc_decoding/bta_calc/add_391/U1_1/CO (FA_X1)
+                                                3.05      0.05      0.33       3.15 f
+  Mcontrol/Nextpc_decoding/bta_calc/add_391/U1_2/CO (FA_X1)
+                                                6.52      0.06      0.32       3.47 f
+  Mcontrol/Nextpc_decoding/bta_calc/add_391/U40/ZN (NAND2_X1)
+                                                3.89      0.05      0.11       3.58 r
+  Mcontrol/Nextpc_decoding/bta_calc/add_391/U42/ZN (NAND3_X1)
+                                                1.88      0.03      0.08       3.66 f
+  Mcontrol/Nextpc_decoding/bta_calc/add_391/U65/ZN (NAND2_X1)
+                                                3.77      0.05      0.08       3.74 r
+  Mcontrol/Nextpc_decoding/bta_calc/add_391/U67/ZN (NAND3_X2)
+                                                6.73      0.04      0.10       3.84 f
+  Mcontrol/Nextpc_decoding/bta_calc/add_391/U79/ZN (NAND2_X1)
+                                                3.90      0.05      0.10       3.94 r
+  Mcontrol/Nextpc_decoding/bta_calc/add_391/U9/ZN (NAND3_X1)
+                                                3.02      0.04      0.09       4.03 f
+  Mcontrol/Nextpc_decoding/bta_calc/add_391/U85/ZN (NAND2_X1)
+                                                1.88      0.04      0.07       4.10 r
+  Mcontrol/Nextpc_decoding/bta_calc/add_391/U86/ZN (NAND3_X1)
+                                                3.05      0.03      0.08       4.17 f
+  Mcontrol/Nextpc_decoding/bta_calc/add_391/U1_7/CO (FA_X1)
+                                                3.05      0.05      0.29       4.46 f
+  Mcontrol/Nextpc_decoding/bta_calc/add_391/U1_8/CO (FA_X1)
+                                                3.05      0.05      0.30       4.76 f
+  Mcontrol/Nextpc_decoding/bta_calc/add_391/U1_9/CO (FA_X1)
+                                                3.05      0.05      0.30       5.06 f
+  Mcontrol/Nextpc_decoding/bta_calc/add_391/U1_10/CO (FA_X1)
+                                                3.05      0.05      0.30       5.36 f
+  Mcontrol/Nextpc_decoding/bta_calc/add_391/U1_11/CO (FA_X1)
+                                                6.73      0.06      0.32       5.68 f
+  Mcontrol/Nextpc_decoding/bta_calc/add_391/U13/ZN (NAND2_X1)
+                                                1.91      0.04      0.10       5.78 r
+  Mcontrol/Nextpc_decoding/bta_calc/add_391/U8/ZN (NAND3_X1)
+                                                5.13      0.05      0.10       5.87 f
+  Mcontrol/Nextpc_decoding/bta_calc/add_391/U18/ZN (NAND2_X1)
+                                                1.91      0.03      0.09       5.96 r
+  Mcontrol/Nextpc_decoding/bta_calc/add_391/U20/ZN (NAND3_X1)
+                                                3.05      0.03      0.08       6.04 f
+  Mcontrol/Nextpc_decoding/bta_calc/add_391/U1_14/CO (FA_X1)
+                                                6.52      0.06      0.32       6.36 f
+  Mcontrol/Nextpc_decoding/bta_calc/add_391/U27/ZN (NAND2_X1)
+                                                1.91      0.04      0.09       6.44 r
+  Mcontrol/Nextpc_decoding/bta_calc/add_391/U29/ZN (NAND3_X1)
+                                                6.52      0.06      0.11       6.55 f
+  Mcontrol/Nextpc_decoding/bta_calc/add_391/U34/ZN (NAND2_X1)
+                                                1.91      0.03      0.08       6.64 r
+  Mcontrol/Nextpc_decoding/bta_calc/add_391/U22/ZN (NAND3_X1)
+                                                5.04      0.05      0.10       6.73 f
+  Mcontrol/Nextpc_decoding/bta_calc/add_391/U49/ZN (NAND2_X1)
+                                                3.89      0.06      0.10       6.83 r
+  Mcontrol/Nextpc_decoding/bta_calc/add_391/U30/ZN (NAND3_X1)
+                                                3.07      0.04      0.09       6.92 f
+  Mcontrol/Nextpc_decoding/bta_calc/add_391/U54/ZN (NAND2_X1)
+                                                1.88      0.04      0.08       7.00 r
+  Mcontrol/Nextpc_decoding/bta_calc/add_391/U55/ZN (NAND3_X1)
+                                                3.05      0.03      0.08       7.08 f
+  Mcontrol/Nextpc_decoding/bta_calc/add_391/U1_19/CO (FA_X1)
+                                                3.05      0.05      0.29       7.37 f
+  Mcontrol/Nextpc_decoding/bta_calc/add_391/U1_20/CO (FA_X1)
+                                                6.52      0.06      0.32       7.69 f
+  Mcontrol/Nextpc_decoding/bta_calc/add_391/U4/ZN (NAND2_X1)
+                                                1.91      0.04      0.09       7.78 r
+  Mcontrol/Nextpc_decoding/bta_calc/add_391/U6/ZN (NAND3_X1)
+                                                6.52      0.06      0.11       7.88 f
+  Mcontrol/Nextpc_decoding/bta_calc/add_391/U59/ZN (NAND2_X1)
+                                                1.91      0.03      0.08       7.97 r
+  Mcontrol/Nextpc_decoding/bta_calc/add_391/U61/ZN (NAND3_X1)
+                                                3.91      0.04      0.09       8.05 f
+  Mcontrol/Nextpc_decoding/bta_calc/add_391/U69/ZN (NAND2_X1)
+                                                1.88      0.03      0.07       8.13 r
+  Mcontrol/Nextpc_decoding/bta_calc/add_391/U71/ZN (NAND2_X1)
+                                                1.88      0.02      0.05       8.18 f
+  Mcontrol/Nextpc_decoding/bta_calc/add_391/SUM[23] (Xi_core_DW01_add_0)
+                                                                    0.00       8.18 f
+  U5798/ZN (NAND2_X1)                           1.93      0.03      0.06       8.24 r
+  U5796/ZN (AND3_X2)                            1.91      0.03      0.13       8.37 r
+  U5861/ZN (OAI211_X1)                          3.07      0.12      0.09       8.46 f
+  U6034/ZN (NAND2_X1)                           1.88      0.05      0.13       8.58 r
+  U5800/ZN (AND3_X2)                            1.95      0.03      0.13       8.71 r
+  U2349/ZN (INV_X1)                             1.40      0.01      0.03       8.75 f
+  Mcontrol/Program_counter/out_pc_reg[23]/D (DFFR_X1)     0.01      0.01       8.75 f
+  data arrival time                                                            8.75
+
+  clock CLK (rise edge)                                             9.00       9.00
+  clock network delay (ideal)                                       0.00       9.00
+  Mcontrol/Program_counter/out_pc_reg[23]/CK (DFFR_X1)              0.00       9.00 r
+  library setup time                                               -0.15       8.85
+  data required time                                                           8.85
+  ------------------------------------------------------------------------------------
+  data required time                                                           8.85
+  data arrival time                                                           -8.75
+  ------------------------------------------------------------------------------------
+  slack (MET)                                                                  0.09
+
+
+1
+Loading db file '/ensc/fac1/fcampi/SOCLAB/LIBRARIES/NangateOpenCellLibrary_PDKv1_3_v2010_12/Front_End/DB/NangateOpenCellLibrary_slow.db'
+Information: Propagating switching activity (low effort zero delay simulation). (PWR-6)
+Warning: Design has unannotated primary inputs. (PWR-414)
+Warning: Design has unannotated sequential cell outputs. (PWR-415)
+ 
+****************************************
+Report : power
+        -analysis_effort low
+Design : Xi_core
+Version: Z-2007.03-SP5
+Date   : Fri Feb  7 14:15:50 2014
+****************************************
+
+
+Library(s) Used:
+
+    NangateOpenCellLibrary (File: /ensc/fac1/fcampi/SOCLAB/LIBRARIES/NangateOpenCellLibrary_PDKv1_3_v2010_12/Front_End/DB/NangateOpenCellLibrary_slow.db)
+
+
+Operating Conditions: slow   Library: NangateOpenCellLibrary
+Wire Load Model Mode: top
+
+Design        Wire Load Model            Library
+------------------------------------------------
+Xi_core                5K_hvratio_1_1    NangateOpenCellLibrary
+
+
+Global Operating Voltage = 0.95 
+Power-specific unit information :
+    Voltage Units = 1V
+    Capacitance Units = 1.000000ff
+    Time Units = 1ns
+    Dynamic Power Units = 1uW    (derived from V,C,T units)
+    Leakage Power Units = 1nW
+
+
+  Cell Internal Power  = 902.9293 uW   (85%)
+  Net Switching Power  = 156.6775 uW   (15%)
+                         ---------
+Total Dynamic Power    =   1.0596 mW  (100%)
+
+Cell Leakage Power     = 304.8809 uW
+
+1
