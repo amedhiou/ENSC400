@@ -1,0 +1,44 @@
+--------------------------------------------------------------------------
+-- Ahmed Medhioub                                                       --
+-- SFU | ENSC 400 | Spring 2014                                         --
+-- BUS/                                                                 -- 
+--------------------------------------------------------------------------
+
+==========================================================================
+= Description:                                                           =
+==========================================================================
+
+This directory contains the following:
+	- README  : txt file discribing the containt
+	- vhdl/   : directory containing vhdl of register
+		|
+		-> BUS.vhd : File containing "BUS_master" entity 
+		|
+		-> BUS_M_4S.vhd: File contains the top arch of the bus 
+		|		where the Master is connected to the 4
+		|		slaves.
+		|
+		-> Top_BUS.vhd : address multiplexing  
+	
+	- sim/    : Simulation directory
+		|
+		-> modelsim.ini : // to do
+		|
+		-> vsim.wlf : // to do
+		|
+		-> scripts/ : Directory containing simulation scripts
+			|
+			-> compile.csh : compilation script
+				$ source compile.csh
+			
+==========================================================================
+= List of relevent files                                                 =
+==========================================================================
+
+./vhdl/BUS_M_4S.vhd
+./vhdl/BUS.vhd
+./vhdl/Top_BUS.vhd
+./sim/scripts/modelsim.ini
+./sim/scripts/vsim.wlf
+./sim/scripts/compile.csh
+

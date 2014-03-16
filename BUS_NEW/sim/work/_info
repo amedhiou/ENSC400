@@ -1,0 +1,242 @@
+m255
+K3
+13
+cModel Technology
+Z0 d/ensc/grad1/cmc-16/ENSC400/BUS_NEW/sim
+Ebus_master
+Z1 w1394921318
+Z2 DPx4 ieee 15 std_logic_arith 0 22 GJbAT?7@hRQU9IQ702DT]2
+Z3 DPx4 ieee 14 std_logic_1164 0 22 GH1=`jDDBJ=`LM;:Ak`kf2
+Z4 8../vhdl/BUS.vhd
+Z5 F../vhdl/BUS.vhd
+l0
+L13
+VChm;SkWgg=z:@252N0bgU0
+Z6 OE;C;6.5a;42
+32
+Z7 tExplicit 1
+!s100 a9iZBS>0e?GF7USn[o2CX3
+Abehavioral
+R2
+R3
+DEx4 work 10 bus_master 0 22 Chm;SkWgg=z:@252N0bgU0
+l49
+L33
+VdZG8kVfDQ7b?AO7SEPKCW0
+R6
+32
+Z8 Mx2 4 ieee 14 std_logic_1164
+Z9 Mx1 4 ieee 15 std_logic_arith
+R7
+!s100 M3kjX^21WX]B[o@@LHLX^3
+Ebus_mssss
+R1
+R2
+R3
+Z10 8../vhdl/BUS_M_4S.vhd
+Z11 F../vhdl/BUS_M_4S.vhd
+l0
+L16
+VW6Zg6>QgPB4S1V1iLDjc>0
+!s100 l:a8M7WcY6XF1CIf;;9I71
+R6
+32
+R7
+Abehavioral
+R2
+R3
+DEx4 work 9 bus_mssss 0 22 W6Zg6>QgPB4S1V1iLDjc>0
+l258
+L78
+VX4nGB^Mn<m5]iT;0<:_9c2
+!s100 b`AHSllGJDh=MI3P1J^[K2
+R6
+32
+R8
+R9
+R7
+Ecounter
+Z12 w1393971918
+Z13 DPx4 ieee 11 numeric_std 0 22 =NSdli^?T5OD8;4F<blj<3
+R3
+Z14 DPx3 std 6 textio 0 22 m2KQDRRhmF833<<DjYdL70
+Z15 8../../COUNTER/vhdl/counter.vhd
+Z16 F../../COUNTER/vhdl/counter.vhd
+l0
+L29
+V==koB4ST>>cH[4OFJBDMM0
+R6
+32
+R7
+!s100 UXciWzLFRJMh9I_gi^8SB2
+Abeh
+R13
+R3
+R14
+DEx4 work 7 counter 0 22 ==koB4ST>>cH[4OFJBDMM0
+l47
+L41
+VoeIdOi6MZG]6YH@;2hK3E3
+R6
+32
+Mx3 3 std 6 textio
+R8
+Mx1 4 ieee 11 numeric_std
+R7
+!s100 S9Y3Kie=]>a6@OM52:ghW1
+vfifo1
+IeL]N?f4jhDkkflILzfhNW1
+VSD3z1Y;JJzFldih`LKcc>2
+Z17 w1393962633
+Z18 8../../FIFO/vlog/fifo1.v
+Z19 F../../FIFO/vlog/fifo1.v
+L0 4
+Z20 OE;L;6.5a;42
+r1
+31
+Z21 o-L mtiAvm -L mtiOvm -L mtiUPF
+!s100 I?<jRN;K@Bc`3W;mWI52W1
+!s85 0
+vfifomem
+IN<KlSGD>XcEgR]Gjd6OZo0
+V8o6=EOJIIAUF9dDSXnMGK3
+R17
+R18
+R19
+L0 22
+R20
+r1
+31
+R21
+!s100 =PNi>Gg[_:<:L9?X2?Gj[2
+!s85 0
+Ereg
+Z22 w1393896643
+R2
+R3
+Z23 8../../REG/vhdl/REG.vhd
+Z24 F../../REG/vhdl/REG.vhd
+l0
+L14
+V9cHIigGmZ6Z0=>zBc5IY<0
+R6
+32
+R7
+!s100 0LWX?FJCFo4VeKN[dVKH03
+Abehavioral
+R2
+R3
+DEx4 work 3 reg 0 22 9cHIigGmZ6Z0=>zBc5IY<0
+l27
+L23
+V0IBZ]gUfQN=f9oG:hda`m1
+R6
+32
+R8
+R9
+R7
+!s100 CR8dC@QCngA07BZIIH@7D3
+vrptr_empty
+I4nG7KkZ2f9EEX08>PI2OP1
+VJJHW_0KKLET@bZ56>9:CC2
+R17
+R18
+R19
+L0 52
+R20
+r1
+31
+R21
+!s100 HzS0mOnAQ45?`C>3CVQbE3
+!s85 0
+Esram
+Z25 w1394402164
+R2
+R3
+Z26 8../../SRAM/vhdl/SRAM.vhd
+Z27 F../../SRAM/vhdl/SRAM.vhd
+l0
+L13
+VzR9LnG93:D4mm]89M3^i[1
+R6
+32
+R7
+!s100 OCh`ReCEPY:lW@>V`DDl@2
+Abehv
+R2
+R3
+DEx4 work 4 sram 0 22 zR9LnG93:D4mm]89M3^i[1
+l30
+L25
+Vd2R?VC_n51mz?G6]mMi7C2
+R6
+32
+R8
+R9
+R7
+!s100 _BC9m6WW7Ob]`cUm5Unz02
+vsync_r2w
+IfInE8^`90__574BVIln_42
+VM8jXz:YQi>T95adK32E@C1
+R17
+R18
+R19
+L0 33
+R20
+r1
+31
+R21
+!s100 lnJ;:VFfi3`^hTHa>lGO^3
+!s85 0
+vsync_w2r
+Ig:gAYQ?HWF8>AA55VScgz3
+VHG_n9[TdCIO@D16MVTTo[1
+R17
+R18
+R19
+L0 41
+R20
+r1
+31
+R21
+!s100 GAfCX4_gi5YDFl=Z0S81Z3
+!s85 0
+Etop_bus
+Z28 w1394932831
+R2
+R3
+Z29 8../vhdl/Top_BUS.vhd
+Z30 F../vhdl/Top_BUS.vhd
+l0
+L13
+VT;lJ58bNmfjLQS=Mbl[R20
+R6
+32
+R7
+!s100 mRXc`SQK4h8YOk090j_?k2
+Abehavioral
+R2
+R3
+DEx4 work 7 top_bus 0 22 T;lJ58bNmfjLQS=Mbl[R20
+l121
+L88
+V2k`T?^X0ZOhe3=P@Nb2TY3
+R6
+32
+R8
+R9
+R7
+!s100 Zz5V?ZG_^`F>]QL`g:zNH2
+vwptr_full
+I:a7MK[ge2NeoN>JHRFg8M0
+VESiSgFWCadk?4Ql8l92Ob1
+R17
+R18
+R19
+L0 75
+R20
+r1
+31
+R21
+!s100 D:0hTBhL1>^335;AO<RVH1
+!s85 0
